@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Storage Device Manager
+Comment=Management of Storage Devices
+Type=Application
+Exec=gksu -u root /usr/sbin/pysdm
+Icon=gnome-dev-harddisk.png
+Terminal=False
+Categories=GNOME;Application;AudioVideo;X-Ximian-Main;X-Red-Hat-Base;
+StartupNotify=true
