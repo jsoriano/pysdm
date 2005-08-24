@@ -5,8 +5,10 @@ pysdm_PYTHON = \
 	pysdm/blkid.py		\
 	pysdm/constants.py	\
 	pysdm/fstab.py		\
+	pysdm/options_ui.py	\
 	pysdm/pysdm.py		\
-	pysdm/SimpleGladeApp.py	
+	pysdm/SimpleGladeApp.py	\
+	pysdm/fsdata/*
 
 desktopdir = $(datadir)/applications
 desktop_DATA = data/pysdm.desktop
@@ -14,10 +16,6 @@ desktop_DATA = data/pysdm.desktop
 # Glade files
 uidir = $(datadir)/pysdm
 ui_DATA = data/pysdm.glade
-
-# Filesystem data
-fsdatadir = $(datadir)/pysdm/fsdata
-fsdata_DATA = data/fsdata/*
 
 bin_SCRIPTS = scripts/pysdm
 
