@@ -316,7 +316,7 @@ class Mainwindow(SimpleGladeApp):
     #-- Mainwindow.on_apply_clicked {
     def on_apply_clicked(self, widget, *args):
         os.rename(FSTAB, FSTAB + ".BAK")
-        for filesystem in self.fstab:
+        for filesystem in self.fstab.filesystems:
             try:
                 os.mkdirs(filesystem.file)
             except OSError:
