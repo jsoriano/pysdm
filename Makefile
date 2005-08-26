@@ -35,11 +35,11 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-ACLOCAL = ${SHELL} /home/kronoss/GoogleSummerOfCode2005/releases/pysdm-0.1/missing --run aclocal-1.7
-AMTAR = ${SHELL} /home/kronoss/GoogleSummerOfCode2005/releases/pysdm-0.1/missing --run tar
-AUTOCONF = ${SHELL} /home/kronoss/GoogleSummerOfCode2005/releases/pysdm-0.1/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/kronoss/GoogleSummerOfCode2005/releases/pysdm-0.1/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/kronoss/GoogleSummerOfCode2005/releases/pysdm-0.1/missing --run automake-1.7
+ACLOCAL = ${SHELL} /home/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run aclocal-1.7
+AMTAR = ${SHELL} /home/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run tar
+AUTOCONF = ${SHELL} /home/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run automake-1.7
 AWK = gawk
 CYGPATH_W = echo
 DEFS = -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"pysdm\" -DVERSION=\"0.1\" 
@@ -61,7 +61,7 @@ LTLIBOBJS =
 MAINT = #
 MAINTAINER_MODE_FALSE = 
 MAINTAINER_MODE_TRUE = #
-MAKEINFO = ${SHELL} /home/kronoss/GoogleSummerOfCode2005/releases/pysdm-0.1/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run makeinfo
 PACKAGE = pysdm
 PACKAGE_BUGREPORT = 
 PACKAGE_NAME = 
@@ -87,7 +87,7 @@ exec_prefix = ${prefix}
 host_alias = 
 includedir = ${prefix}/include
 infodir = ${prefix}/info
-install_sh = /home/kronoss/GoogleSummerOfCode2005/releases/pysdm-0.1/install-sh
+install_sh = /home/kronoss/GoogleSummerOfCode2005/pysdm-0/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localstatedir = ${prefix}/var
@@ -111,8 +111,14 @@ pysdm_PYTHON = \
 	pysdm/blkid.py		\
 	pysdm/constants.py	\
 	pysdm/fstab.py		\
+	pysdm/options_ui.py	\
 	pysdm/pysdm.py		\
-	pysdm/SimpleGladeApp.py	
+	pysdm/SimpleGladeApp.py
+
+
+fsdatadir = $(pysdmdir)/fsdata
+fsdata_PYTHON = \
+	pysdm/fsdata/*
 
 
 desktopdir = $(datadir)/applications
@@ -121,10 +127,6 @@ desktop_DATA = data/pysdm.desktop
 # Glade files
 uidir = $(datadir)/pysdm
 ui_DATA = data/pysdm.glade
-
-# Filesystem data
-fsdatadir = $(datadir)/pysdm/fsdata
-fsdata_DATA = data/fsdata/*
 
 bin_SCRIPTS = scripts/pysdm
 
@@ -141,12 +143,12 @@ SCRIPTS = $(bin_SCRIPTS)
 
 DIST_SOURCES =
 py_compile = $(top_srcdir)/py-compile
-DATA = $(desktop_DATA) $(fsdata_DATA) $(ui_DATA)
+DATA = $(desktop_DATA) $(ui_DATA)
 
-DIST_COMMON = README $(pysdm_PYTHON) $(srcdir)/Makefile.in \
-	$(srcdir)/configure AUTHORS COPYING ChangeLog INSTALL \
-	Makefile.am NEWS aclocal.m4 configure configure.in install-sh \
-	missing mkinstalldirs py-compile
+DIST_COMMON = README $(fsdata_PYTHON) $(pysdm_PYTHON) \
+	$(srcdir)/Makefile.in $(srcdir)/configure AUTHORS COPYING \
+	ChangeLog INSTALL Makefile.am NEWS aclocal.m4 configure \
+	configure.in install-sh missing mkinstalldirs py-compile
 all: all-am
 
 .SUFFIXES:
@@ -189,6 +191,29 @@ uninstall-binSCRIPTS:
 	  rm -f $(DESTDIR)$(bindir)/$$f; \
 	done
 uninstall-info-am:
+fsdataPYTHON_INSTALL = $(INSTALL_DATA)
+install-fsdataPYTHON: $(fsdata_PYTHON)
+	@$(NORMAL_INSTALL)
+	$(mkinstalldirs) $(DESTDIR)$(fsdatadir)
+	@list='$(fsdata_PYTHON)'; dlist=''; for p in $$list; do\
+	  if test -f "$$p"; then b=; else b="$(srcdir)/"; fi; \
+	  if test -f $$b$$p; then \
+	    d=`echo "$$p" | sed -e 's,^.*/,,'`; \
+	    dlist="$$dlist $$d"; \
+	    echo " $(fsdataPYTHON_INSTALL) $$b$$p $(DESTDIR)$(fsdatadir)/$$d"; \
+	    $(fsdataPYTHON_INSTALL) $$b$$p $(DESTDIR)$(fsdatadir)/$$d; \
+	  else :; fi; \
+	done; \
+	PYTHON=$(PYTHON) $(py_compile) --basedir $(DESTDIR)$(fsdatadir) $$dlist
+
+uninstall-fsdataPYTHON:
+	@$(NORMAL_UNINSTALL)
+	list='$(fsdata_PYTHON)'; for p in $$list; do \
+	  d=`echo "$$p" | sed -e 's,^.*/,,'`; \
+	  rm -f $(DESTDIR)$(fsdatadir)/$$d; \
+	  rm -f $(DESTDIR)$(fsdatadir)/$${d}c; \
+	  rm -f $(DESTDIR)$(fsdatadir)/$${d}o; \
+	done
 pysdmPYTHON_INSTALL = $(INSTALL_DATA)
 install-pysdmPYTHON: $(pysdm_PYTHON)
 	@$(NORMAL_INSTALL)
@@ -229,24 +254,6 @@ uninstall-desktopDATA:
 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
 	  echo " rm -f $(DESTDIR)$(desktopdir)/$$f"; \
 	  rm -f $(DESTDIR)$(desktopdir)/$$f; \
-	done
-fsdataDATA_INSTALL = $(INSTALL_DATA)
-install-fsdataDATA: $(fsdata_DATA)
-	@$(NORMAL_INSTALL)
-	$(mkinstalldirs) $(DESTDIR)$(fsdatadir)
-	@list='$(fsdata_DATA)'; for p in $$list; do \
-	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
-	  f="`echo $$p | sed -e 's|^.*/||'`"; \
-	  echo " $(fsdataDATA_INSTALL) $$d$$p $(DESTDIR)$(fsdatadir)/$$f"; \
-	  $(fsdataDATA_INSTALL) $$d$$p $(DESTDIR)$(fsdatadir)/$$f; \
-	done
-
-uninstall-fsdataDATA:
-	@$(NORMAL_UNINSTALL)
-	@list='$(fsdata_DATA)'; for p in $$list; do \
-	  f="`echo $$p | sed -e 's|^.*/||'`"; \
-	  echo " rm -f $(DESTDIR)$(fsdatadir)/$$f"; \
-	  rm -f $(DESTDIR)$(fsdatadir)/$$f; \
 	done
 uiDATA_INSTALL = $(INSTALL_DATA)
 install-uiDATA: $(ui_DATA)
@@ -289,7 +296,7 @@ distcleancheck_listfiles = find . -type f -print
 distdir: $(DISTFILES)
 	$(am__remove_distdir)
 	mkdir $(distdir)
-	$(mkinstalldirs) $(distdir)/data $(distdir)/pysdm $(distdir)/scripts
+	$(mkinstalldirs) $(distdir)/data $(distdir)/pysdm $(distdir)/pysdm/fsdata $(distdir)/scripts
 	@srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`; \
 	topsrcdirstrip=`echo "$(top_srcdir)" | sed 's|.|.|g'`; \
 	list='$(DISTFILES)'; for file in $$list; do \
@@ -390,7 +397,7 @@ check: check-am
 all-am: Makefile $(SCRIPTS) $(DATA)
 
 installdirs:
-	$(mkinstalldirs) $(DESTDIR)$(bindir) $(DESTDIR)$(pysdmdir) $(DESTDIR)$(desktopdir) $(DESTDIR)$(fsdatadir) $(DESTDIR)$(uidir)
+	$(mkinstalldirs) $(DESTDIR)$(bindir) $(DESTDIR)$(fsdatadir) $(DESTDIR)$(pysdmdir) $(DESTDIR)$(desktopdir) $(DESTDIR)$(uidir)
 install: install-am
 install-exec: install-exec-am
 install-data: install-data-am
@@ -432,7 +439,7 @@ info: info-am
 
 info-am:
 
-install-data-am: install-desktopDATA install-fsdataDATA \
+install-data-am: install-desktopDATA install-fsdataPYTHON \
 	install-pysdmPYTHON install-uiDATA
 
 install-exec-am: install-binSCRIPTS
@@ -462,7 +469,7 @@ ps: ps-am
 ps-am:
 
 uninstall-am: uninstall-binSCRIPTS uninstall-desktopDATA \
-	uninstall-fsdataDATA uninstall-info-am uninstall-pysdmPYTHON \
+	uninstall-fsdataPYTHON uninstall-info-am uninstall-pysdmPYTHON \
 	uninstall-uiDATA
 
 .PHONY: all all-am check check-am clean clean-generic dist dist-all \
@@ -470,12 +477,12 @@ uninstall-am: uninstall-binSCRIPTS uninstall-desktopDATA \
 	distdir distuninstallcheck dvi dvi-am info info-am install \
 	install-am install-binSCRIPTS install-data install-data-am \
 	install-desktopDATA install-exec install-exec-am \
-	install-fsdataDATA install-info install-info-am install-man \
+	install-fsdataPYTHON install-info install-info-am install-man \
 	install-pysdmPYTHON install-strip install-uiDATA installcheck \
 	installcheck-am installdirs maintainer-clean \
 	maintainer-clean-generic mostlyclean mostlyclean-generic pdf \
 	pdf-am ps ps-am uninstall uninstall-am uninstall-binSCRIPTS \
-	uninstall-desktopDATA uninstall-fsdataDATA uninstall-info-am \
+	uninstall-desktopDATA uninstall-fsdataPYTHON uninstall-info-am \
 	uninstall-pysdmPYTHON uninstall-uiDATA
 
 

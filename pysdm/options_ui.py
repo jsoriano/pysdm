@@ -33,7 +33,7 @@ class option_dialog(gtk.Dialog):
 		self.get_child().show_all()
 
 	def set_value(self, value):
-		if len(value) == 0 or not cmp(value[0], "defauls"):
+		if len(value) == 0 or not cmp(value[0], "defaults"):
 			self.set_value(self.defaults)
 		else:
 			for option in value:
