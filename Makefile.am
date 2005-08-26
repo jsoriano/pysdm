@@ -7,7 +7,10 @@ pysdm_PYTHON = \
 	pysdm/fstab.py		\
 	pysdm/options_ui.py	\
 	pysdm/pysdm.py		\
-	pysdm/SimpleGladeApp.py	\
+	pysdm/SimpleGladeApp.py
+
+fsdatadir = $(pysdmdir)/fsdata
+fsdata_PYTHON = \
 	pysdm/fsdata/*
 
 desktopdir = $(datadir)/applications

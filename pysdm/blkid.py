@@ -21,7 +21,7 @@ def is_mountable(device):
 	Uses blkid to check if the given partition is mountable
 		device: the partition to check
 	"""
-	os.system(BLKID_BIN + " -c /dev/null " + device + " >> /dev/null")
+	os.system(BLKID_BIN + " -c /dev/null >> /dev/null")
 	return os.system("cat " + BLKID_CACHE + " | grep " + device + " >> /dev/null")==0
 
 
@@ -31,7 +31,7 @@ def get_vfstype(device):
 		device: the device
 	"""
 
-	os.system(BLKID_BIN + " -c /dev/null " + device + " >> /dev/null")
+	os.system(BLKID_BIN + " -c /dev/null >> /dev/null")
 	cache = file("/etc/blkid.tab")
 	filesystems = cache.readlines()
 	cache.close()

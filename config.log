@@ -27,6 +27,13 @@ hostinfo               = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
 
+PATH: /sbin
+PATH: /bin
+PATH: /usr/sbin
+PATH: /usr/bin
+PATH: /usr/bin/X11
+PATH: /usr/local/sbin
+PATH: /usr/local/bin
 PATH: /usr/local/bin
 PATH: /usr/bin
 PATH: /bin
@@ -46,7 +53,7 @@ configure:1331: result: /usr/bin/install -c
 configure:1342: checking whether build environment is sane
 configure:1385: result: yes
 configure:1418: checking for gawk
-configure:1434: found /usr/bin/gawk
+configure:1434: found /bin/gawk
 configure:1444: result: gawk
 configure:1454: checking whether make sets $(MAKE)
 configure:1474: result: yes
@@ -117,11 +124,11 @@ am_cv_python_version=2.3
 ## Output variables. ##
 ## ----------------- ##
 
-ACLOCAL='${SHELL} /home/kronoss/GoogleSummerOfCode2005/releases/pysdm-0.1/missing --run aclocal-1.7'
-AMTAR='${SHELL} /home/kronoss/GoogleSummerOfCode2005/releases/pysdm-0.1/missing --run tar'
-AUTOCONF='${SHELL} /home/kronoss/GoogleSummerOfCode2005/releases/pysdm-0.1/missing --run autoconf'
-AUTOHEADER='${SHELL} /home/kronoss/GoogleSummerOfCode2005/releases/pysdm-0.1/missing --run autoheader'
-AUTOMAKE='${SHELL} /home/kronoss/GoogleSummerOfCode2005/releases/pysdm-0.1/missing --run automake-1.7'
+ACLOCAL='${SHELL} /home/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run aclocal-1.7'
+AMTAR='${SHELL} /home/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run tar'
+AUTOCONF='${SHELL} /home/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run autoconf'
+AUTOHEADER='${SHELL} /home/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run autoheader'
+AUTOMAKE='${SHELL} /home/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run automake-1.7'
 AWK='gawk'
 CYGPATH_W='echo'
 DEFS='-DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"pysdm\" -DVERSION=\"0.1\" '
@@ -143,7 +150,7 @@ LTLIBOBJS=''
 MAINT='#'
 MAINTAINER_MODE_FALSE=''
 MAINTAINER_MODE_TRUE='#'
-MAKEINFO='${SHELL} /home/kronoss/GoogleSummerOfCode2005/releases/pysdm-0.1/missing --run makeinfo'
+MAKEINFO='${SHELL} /home/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run makeinfo'
 PACKAGE='pysdm'
 PACKAGE_BUGREPORT=''
 PACKAGE_NAME=''
@@ -169,7 +176,7 @@ exec_prefix='${prefix}'
 host_alias=''
 includedir='${prefix}/include'
 infodir='${prefix}/info'
-install_sh='/home/kronoss/GoogleSummerOfCode2005/releases/pysdm-0.1/install-sh'
+install_sh='/home/kronoss/GoogleSummerOfCode2005/pysdm-0/install-sh'
 libdir='${exec_prefix}/lib'
 libexecdir='${exec_prefix}/libexec'
 localstatedir='${prefix}/var'
