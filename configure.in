@@ -1,6 +1,6 @@
 AC_INIT(scripts/pysdm)
 
-AM_INIT_AUTOMAKE(pysdm, 0.1)
+AM_INIT_AUTOMAKE(pysdm, 0.2)
 
 AM_MAINTAINER_MODE
 

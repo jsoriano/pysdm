@@ -1509,7 +1509,7 @@ fi
 
 # Define the identity of the package.
  PACKAGE=pysdm
- VERSION=0.1
+ VERSION=0.2
 
 
 cat >>confdefs.h <<_ACEOF
@@ -1739,8 +1739,8 @@ if test "${enable_schemas_install+set}" = set; then
   case "${enableval}" in
        yes) schemas_install=true ;;
        no)  schemas_install=false ;;
-       *) { { echo "$as_me:$LINENO: error: bad value ${enableval} for --disable-schemas-install" >&5
-echo "$as_me: error: bad value ${enableval} for --disable-schemas-install" >&2;}
+       *) { { echo "$as_me:$LINENO: error: bad value ${enableval} for --enable-schemas-install" >&5
+echo "$as_me: error: bad value ${enableval} for --enable-schemas-install" >&2;}
    { (exit 1); exit 1; }; } ;;
      esac
 else
