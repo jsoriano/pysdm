@@ -1,5 +1,5 @@
 # Source files
-pysdmdir = $(pythondir)/pysdm
+pysdmdir = $(datadir)/pysdm
 pysdm_PYTHON = \
 	pysdm/__init__.py	\
 	pysdm/blkid.py		\

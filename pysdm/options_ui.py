@@ -134,7 +134,7 @@ class option_entry(gtk.HBox):
 		self.entry.set_sensitive(False)
 		
 		self.pack_start(self.check, False, False)
-		self.pack_start(self.entry)
+		self.pack_start(self.entry, False, False)
 
 	def on_toggled(self, widget, *args):
 		self.entry.set_sensitive(self.check.get_active())
@@ -175,7 +175,7 @@ class option_combo(gtk.HBox):
 		self.combo.set_sensitive(False)
 
 		self.pack_start(self.check,False, False)
-		self.pack_start(self.combo)
+		self.pack_start(self.combo, False, False)
 
 	def on_toggled(self, widget, *args):
 		self.combo.set_sensitive(self.check.get_active())

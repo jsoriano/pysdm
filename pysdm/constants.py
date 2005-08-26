@@ -22,17 +22,16 @@
 
 # Get utility functions
 from os.path import join, abspath
+import sys
 
 application = "pysdm"
 
 # Discover the data dir
-root_dir = join(__file__, # site-packages/" + application +  "/__init__.py
-			'..',         # site-packages/serpentine
-			'..',         # python2.*/site-packages
-			'..',         # lib/python2.*
-			'..',         # lib/
-			'..')         # 
+root_dir = join(__file__, 
+			'..',
+			'..',         
+			'..')         
 root_dir = abspath (root_dir)
 
-data_dir = join (root_dir, 'share', 'pysdm')
+data_dir = join (root_dir, 'share', application)
 bin_dir = join (root_dir, 'bin')

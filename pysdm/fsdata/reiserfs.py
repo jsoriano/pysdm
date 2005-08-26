@@ -4,7 +4,7 @@ options.append( \
 	 "hash":	[2, ["rupasov", "tea", "r5", "detect"], "Especify hash function to find files"], \
 	 "nolog":	[0, ["nolog", ""], "Disable reiserfs journaling"], \
 	 "notail":	[0, ["notail", ""], "Disable packing of files into the tree"] \
-	}
+	} \
 	)
 
 defaults = []
