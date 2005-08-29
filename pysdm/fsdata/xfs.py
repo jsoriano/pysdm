@@ -1,13 +1,13 @@
 options = []
 options.append( \
-	{"dmapi":		[0, ["dmapi", ""], "Enable the DMAPI (Data management API)"], \
-	 "noalign":		[0, ["noalign", ""], "Data allocations will not be aligned at stripe unit boundaries"], \
-	 "norecovery":	[0, ["norecovery", ""], "The filesystem will be mounted without running log recovery"], \
-	 "nouuid":		[0, ["nouuid", ""], "Ignore file system uuid"], \
-	 "usrquota":	[0, ["usrquota", ""], "Enable user disk quota"], \
-	 "uqnoenforce":	[0, ["uqnoenforce", ""], "User disk quota limits enforced"], \
-	 "grpquota":	[0, ["grpquota", ""], "Enable group disk quota"], \
-	 "gqnoenforce":	[0, ["gqnoenforce", ""], "Group disk quota limits enforced"] \
+	{"dmapi":		[0, ["dmapi", ""], _("Enable the DMAPI (Data management API)"), 1], \
+	 "noalign":		[0, ["noalign", ""], _("Data allocations will not be aligned at stripe unit boundaries"), 1], \
+	 "norecovery":	[0, ["norecovery", ""], _("The filesystem will be mounted without running log recovery"), 1], \
+	 "nouuid":		[0, ["nouuid", ""], _("Ignore file system uuid"), 1], \
+	 "usrquota":	[0, ["usrquota", ""], _("Enable user disk quota"), 0], \
+	 "uqnoenforce":	[0, ["uqnoenforce", ""], _("User disk quota limits enforced"), 1], \
+	 "grpquota":	[0, ["grpquota", ""], _("Enable group disk quota"), 0], \
+	 "gqnoenforce":	[0, ["gqnoenforce", ""], _("Group disk quota limits enforced"), 1] \
 	} \
 	)
 

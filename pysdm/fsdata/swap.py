@@ -1,6 +1,6 @@
 options = []
 options.append( \
-	{"sw": 	[0, ["sw", ""], "Swap device"] \
+	{"sw": 	[0, ["sw", ""], _("Swap device"), 0] \
 	} \
 	)
 

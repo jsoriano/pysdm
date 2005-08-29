@@ -16,21 +16,37 @@ class option_dialog(gtk.Dialog):
 		super(option_dialog, self).__init__(*args, **kwds)
 
 		self.op_widgets = {}
+
+		tabs = [gtk.ScrolledWindow(), gtk.ScrolledWindow()]
+		self.boxes = [gtk.VBox(), gtk.VBox()]
+		self.boxes[0].set_border_width(10)		
+		self.boxes[1].set_border_width(10)
+
+		tabs[0] = self.boxes[0]
+		tabs[1] = self.boxes[1]
+
+		notebook = gtk.Notebook()
+		self.get_child().pack_start(notebook)
+		notebook.append_page(tabs[0], gtk.Label(_("User options")))
+		notebook.append_page(tabs[1], gtk.Label(_("Advanced options")))
+
 		self.filesystem = filesystem
 		self.defaults = fsdata.defaults['default']
 
 		for op in fsdata.options['default'][0]:
 			op_info = fsdata.options['default'][0][op]
-			self.add_option(op_info[0], op, op_info[1], op_info[2])
+			self.add_option(op_info[0], op, op_info[1], op_info[2], op_info[3])
 		try:
 			self.defaults = self.defaults + fsdata.defaults[filesystem]
 			for op in fsdata.options[filesystem][0]:
 				op_info = fsdata.options[filesystem][0][op]
-				self.add_option(op_info[0], op, op_info[1], op_info[2])
+				self.add_option(op_info[0], op, op_info[1], op_info[2], op_info[3])
 		except KeyError:
 			print "Warning: Unknown especial options for " + filesystem + " filesystem"
 
-		self.get_child().show_all()
+		self.show_all()
+
+
 
 	def set_value(self, value):
 		if len(value) == 0 or not cmp(value[0], "defaults"):
@@ -54,21 +70,24 @@ class option_dialog(gtk.Dialog):
 					continue
 				widget.set_value(option)
 
+
+
 	def get_value(self):
 		value = []
-		op_widgets = self.get_child().get_children()
+		op_widgets = self.op_widgets
 
 		for op_widget in op_widgets:
 			try:
-				op_value = op_widget.get_value()
+				op_value = op_widgets[op_widget].get_value()
 			except AttributeError:
 				continue
 			if len(op_value) > 0:
 				value.append(op_value)
 		return value
+
 	
-	def add_option(self, op_type, op_name, options, description):
-		box = self.get_child()
+	def add_option(self, op_type, op_name, options, description, level=0):
+		box = self.boxes[level]
 		
 		if op_type == OP_CHECK:
 			op_widget = option_check(op_name, options, description)
@@ -82,7 +101,7 @@ class option_dialog(gtk.Dialog):
 		else:
 			print ("Warning: " + op_name + ": unknown option type " + str(op_type))
 			return
-		box.pack_start(op_widget)
+		box.pack_start(op_widget, False, False)
 		self.op_widgets[op_name] = op_widget
 
 
@@ -174,7 +193,7 @@ class option_combo(gtk.HBox):
 		self.combo.set_active(0)
 		self.combo.set_sensitive(False)
 
-		self.pack_start(self.check,False, False)
+		self.pack_start(self.check, False, False)
 		self.pack_start(self.combo, False, False)
 
 	def on_toggled(self, widget, *args):
@@ -185,7 +204,6 @@ class option_combo(gtk.HBox):
 		i = 0
 		while i < self.n:
 			self.combo.set_active(i)
-			print parsed_value[1], self.combo.get_active_text()
 			if not cmp(parsed_value[1], self.combo.get_active_text()):
 				self.check.set_active(True)
 				return

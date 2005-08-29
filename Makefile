@@ -36,25 +36,45 @@ NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
 ACLOCAL = ${SHELL} /media/hda1/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run aclocal-1.7
+ALL_LINGUAS = es
+AMDEP_FALSE = #
+AMDEP_TRUE = 
 AMTAR = ${SHELL} /media/hda1/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run tar
 AUTOCONF = ${SHELL} /media/hda1/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run autoconf
 AUTOHEADER = ${SHELL} /media/hda1/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run autoheader
 AUTOMAKE = ${SHELL} /media/hda1/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run automake-1.7
 AWK = mawk
+CATALOGS =  es.gmo
+CATOBJEXT = .gmo
+CC = gcc
+CCDEPMODE = depmode=none
+CFLAGS = -g -O2
+CPP = gcc -E
+CPPFLAGS = 
 CYGPATH_W = echo
-DEFS = -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"pysdm\" -DVERSION=\"0.2\" 
+DATADIRNAME = share
+DEFS = -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"pysdm\" -DVERSION=\"0.2.1\" -DALL_LINGUAS=\"es\" -DGETTEXT_PACKAGE=\"pysdm\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_LOCALE_H=1 -DHAVE_LC_MESSAGES=1 -DHAVE_BIND_TEXTDOMAIN_CODESET=1 -DHAVE_GETTEXT=1 -DHAVE_DCGETTEXT=1 -DENABLE_NLS=1 
+DEPDIR = .deps
 ECHO_C = 
 ECHO_N = -n
 ECHO_T = 
+EGREP = grep -E
+EXEEXT = 
 GCONFTOOL = /usr/bin/gconftool-2
 GCONF_SCHEMAS_INSTALL_FALSE = #
 GCONF_SCHEMAS_INSTALL_TRUE = 
 GCONF_SCHEMA_CONFIG_SOURCE = xml::/etc/gconf/gconf.xml.defaults
 GCONF_SCHEMA_FILE_DIR = $(sysconfdir)/gconf/schemas
+GETTEXT_PACKAGE = pysdm
+GMOFILES =  es.gmo
+GMSGFMT = /usr/bin/msgfmt
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = ${SHELL} $(install_sh) -c -s
+INSTOBJEXT = .mo
+INTLLIBS = 
+LDFLAGS = 
 LIBOBJS = 
 LIBS = 
 LTLIBOBJS = 
@@ -62,6 +82,9 @@ MAINT = #
 MAINTAINER_MODE_FALSE = 
 MAINTAINER_MODE_TRUE = #
 MAKEINFO = ${SHELL} /media/hda1/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run makeinfo
+MKINSTALLDIRS = ./mkinstalldirs
+MSGFMT = /usr/bin/msgfmt
+OBJEXT = o
 PACKAGE = pysdm
 PACKAGE_BUGREPORT = 
 PACKAGE_NAME = 
@@ -69,6 +92,10 @@ PACKAGE_STRING =
 PACKAGE_TARNAME = 
 PACKAGE_VERSION = 
 PATH_SEPARATOR = :
+POFILES =  es.po
+POSUB = po
+PO_IN_DATADIR_FALSE = 
+PO_IN_DATADIR_TRUE = 
 PYTHON = /usr/bin/python
 PYTHON_EXEC_PREFIX = ${exec_prefix}
 PYTHON_PLATFORM = linux2
@@ -77,9 +104,16 @@ PYTHON_VERSION = 2.4
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = 
-VERSION = 0.2
+USE_NLS = yes
+VERSION = 0.2.1
+XGETTEXT = /usr/bin/xgettext
+ac_ct_CC = gcc
 ac_ct_STRIP = 
+am__fastdepCC_FALSE = 
+am__fastdepCC_TRUE = #
+am__include = include
 am__leading_dot = .
+am__quote = 
 bindir = ${exec_prefix}/bin
 build_alias = 
 datadir = ${prefix}/share
@@ -95,7 +129,7 @@ mandir = ${prefix}/man
 oldincludedir = /usr/include
 pkgpyexecdir = ${pyexecdir}/pysdm
 pkgpythondir = ${pythondir}/pysdm
-prefix = /usr
+prefix = /usr/local
 program_transform_name = s,x,x,
 pyexecdir = ${exec_prefix}/lib/python2.4/site-packages
 pythondir = ${prefix}/lib/python2.4/site-packages
@@ -130,26 +164,36 @@ ui_DATA = data/pysdm.glade
 
 bin_SCRIPTS = scripts/pysdm
 
-EXTRA_DIST = \
+EXTRA_DIST = config.rpath 	\
 	$(bin_SCRIPTS)	\
 	$(ui_DATA)	\
 	$(desktop_DATA)
 
+
+SUBDIRS = po
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
-CONFIG_CLEAN_FILES = pysdm/release.py
+CONFIG_CLEAN_FILES = po/Makefile pysdm/release.py
 SCRIPTS = $(bin_SCRIPTS)
 
 DIST_SOURCES =
 py_compile = $(top_srcdir)/py-compile
 DATA = $(desktop_DATA) $(ui_DATA)
 
+
+RECURSIVE_TARGETS = info-recursive dvi-recursive pdf-recursive \
+	ps-recursive install-info-recursive uninstall-info-recursive \
+	all-recursive install-data-recursive install-exec-recursive \
+	installdirs-recursive install-recursive uninstall-recursive \
+	check-recursive installcheck-recursive
 DIST_COMMON = README $(fsdata_PYTHON) $(pysdm_PYTHON) \
 	$(srcdir)/Makefile.in $(srcdir)/configure AUTHORS COPYING \
-	ChangeLog INSTALL Makefile.am NEWS aclocal.m4 configure \
-	configure.in install-sh missing mkinstalldirs py-compile
-all: all-am
+	ChangeLog INSTALL Makefile.am NEWS aclocal.m4 config.rpath \
+	configure configure.in install-sh missing mkinstalldirs \
+	py-compile
+DIST_SUBDIRS = $(SUBDIRS)
+all: all-recursive
 
 .SUFFIXES:
 
@@ -168,6 +212,8 @@ $(srcdir)/configure: # $(srcdir)/configure.in $(ACLOCAL_M4) $(CONFIGURE_DEPENDEN
 
 $(ACLOCAL_M4): # configure.in 
 	cd $(srcdir) && $(ACLOCAL) $(ACLOCAL_AMFLAGS)
+po/Makefile: $(top_builddir)/config.status $(top_srcdir)/po/Makefile.in
+	cd $(top_builddir) && $(SHELL) ./config.status $@
 pysdm/release.py: $(top_builddir)/config.status $(top_srcdir)/pysdm/release.py.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@
 binSCRIPT_INSTALL = $(INSTALL_SCRIPT)
@@ -273,12 +319,130 @@ uninstall-uiDATA:
 	  echo " rm -f $(DESTDIR)$(uidir)/$$f"; \
 	  rm -f $(DESTDIR)$(uidir)/$$f; \
 	done
+
+# This directory's subdirectories are mostly independent; you can cd
+# into them and run `make' without going through this Makefile.
+# To change the values of `make' variables: instead of editing Makefiles,
+# (1) if the variable is set in `config.status', edit `config.status'
+#     (which will cause the Makefiles to be regenerated when you run `make');
+# (2) otherwise, pass the desired values on the `make' command line.
+$(RECURSIVE_TARGETS):
+	@set fnord $$MAKEFLAGS; amf=$$2; \
+	dot_seen=no; \
+	target=`echo $@ | sed s/-recursive//`; \
+	list='$(SUBDIRS)'; for subdir in $$list; do \
+	  echo "Making $$target in $$subdir"; \
+	  if test "$$subdir" = "."; then \
+	    dot_seen=yes; \
+	    local_target="$$target-am"; \
+	  else \
+	    local_target="$$target"; \
+	  fi; \
+	  (cd $$subdir && $(MAKE) $(AM_MAKEFLAGS) $$local_target) \
+	   || case "$$amf" in *=*) exit 1;; *k*) fail=yes;; *) exit 1;; esac; \
+	done; \
+	if test "$$dot_seen" = "no"; then \
+	  $(MAKE) $(AM_MAKEFLAGS) "$$target-am" || exit 1; \
+	fi; test -z "$$fail"
+
+mostlyclean-recursive clean-recursive distclean-recursive \
+maintainer-clean-recursive:
+	@set fnord $$MAKEFLAGS; amf=$$2; \
+	dot_seen=no; \
+	case "$@" in \
+	  distclean-* | maintainer-clean-*) list='$(DIST_SUBDIRS)' ;; \
+	  *) list='$(SUBDIRS)' ;; \
+	esac; \
+	rev=''; for subdir in $$list; do \
+	  if test "$$subdir" = "."; then :; else \
+	    rev="$$subdir $$rev"; \
+	  fi; \
+	done; \
+	rev="$$rev ."; \
+	target=`echo $@ | sed s/-recursive//`; \
+	for subdir in $$rev; do \
+	  echo "Making $$target in $$subdir"; \
+	  if test "$$subdir" = "."; then \
+	    local_target="$$target-am"; \
+	  else \
+	    local_target="$$target"; \
+	  fi; \
+	  (cd $$subdir && $(MAKE) $(AM_MAKEFLAGS) $$local_target) \
+	   || case "$$amf" in *=*) exit 1;; *k*) fail=yes;; *) exit 1;; esac; \
+	done && test -z "$$fail"
+tags-recursive:
+	list='$(SUBDIRS)'; for subdir in $$list; do \
+	  test "$$subdir" = . || (cd $$subdir && $(MAKE) $(AM_MAKEFLAGS) tags); \
+	done
+ctags-recursive:
+	list='$(SUBDIRS)'; for subdir in $$list; do \
+	  test "$$subdir" = . || (cd $$subdir && $(MAKE) $(AM_MAKEFLAGS) ctags); \
+	done
+
+ETAGS = etags
+ETAGSFLAGS =
+
+CTAGS = ctags
+CTAGSFLAGS =
+
 tags: TAGS
-TAGS:
+
+ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
+	list='$(SOURCES) $(HEADERS) $(LISP) $(TAGS_FILES)'; \
+	unique=`for i in $$list; do \
+	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
+	  done | \
+	  $(AWK) '    { files[$$0] = 1; } \
+	       END { for (i in files) print i; }'`; \
+	mkid -fID $$unique
+
+TAGS: tags-recursive $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) \
+		$(TAGS_FILES) $(LISP)
+	tags=; \
+	here=`pwd`; \
+	if (etags --etags-include --version) >/dev/null 2>&1; then \
+	  include_option=--etags-include; \
+	else \
+	  include_option=--include; \
+	fi; \
+	list='$(SUBDIRS)'; for subdir in $$list; do \
+	  if test "$$subdir" = .; then :; else \
+	    test -f $$subdir/TAGS && \
+	      tags="$$tags $$include_option=$$here/$$subdir/TAGS"; \
+	  fi; \
+	done; \
+	list='$(SOURCES) $(HEADERS)  $(LISP) $(TAGS_FILES)'; \
+	unique=`for i in $$list; do \
+	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
+	  done | \
+	  $(AWK) '    { files[$$0] = 1; } \
+	       END { for (i in files) print i; }'`; \
+	test -z "$(ETAGS_ARGS)$$tags$$unique" \
+	  || $(ETAGS) $(ETAGSFLAGS) $(AM_ETAGSFLAGS) $(ETAGS_ARGS) \
+	     $$tags $$unique
 
 ctags: CTAGS
-CTAGS:
+CTAGS: ctags-recursive $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) \
+		$(TAGS_FILES) $(LISP)
+	tags=; \
+	here=`pwd`; \
+	list='$(SOURCES) $(HEADERS)  $(LISP) $(TAGS_FILES)'; \
+	unique=`for i in $$list; do \
+	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
+	  done | \
+	  $(AWK) '    { files[$$0] = 1; } \
+	       END { for (i in files) print i; }'`; \
+	test -z "$(CTAGS_ARGS)$$tags$$unique" \
+	  || $(CTAGS) $(CTAGSFLAGS) $(AM_CTAGSFLAGS) $(CTAGS_ARGS) \
+	     $$tags $$unique
 
+GTAGS:
+	here=`$(am__cd) $(top_builddir) && pwd` \
+	  && cd $(top_srcdir) \
+	  && gtags -i $(GTAGS_ARGS) $$here
+
+distclean-tags:
+	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 
 top_distdir = .
@@ -296,7 +460,7 @@ distcleancheck_listfiles = find . -type f -print
 distdir: $(DISTFILES)
 	$(am__remove_distdir)
 	mkdir $(distdir)
-	$(mkinstalldirs) $(distdir)/data $(distdir)/pysdm $(distdir)/pysdm/fsdata $(distdir)/scripts
+	$(mkinstalldirs) $(distdir)/data $(distdir)/po $(distdir)/pysdm $(distdir)/pysdm/fsdata $(distdir)/scripts
 	@srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`; \
 	topsrcdirstrip=`echo "$(top_srcdir)" | sed 's|.|.|g'`; \
 	list='$(DISTFILES)'; for file in $$list; do \
@@ -321,6 +485,19 @@ distdir: $(DISTFILES)
 	    test -f $(distdir)/$$file \
 	    || cp -p $$d/$$file $(distdir)/$$file \
 	    || exit 1; \
+	  fi; \
+	done
+	list='$(SUBDIRS)'; for subdir in $$list; do \
+	  if test "$$subdir" = .; then :; else \
+	    test -d $(distdir)/$$subdir \
+	    || mkdir $(distdir)/$$subdir \
+	    || exit 1; \
+	    (cd $$subdir && \
+	      $(MAKE) $(AM_MAKEFLAGS) \
+	        top_distdir="$(top_distdir)" \
+	        distdir=../$(distdir)/$$subdir \
+	        distdir) \
+	      || exit 1; \
 	  fi; \
 	done
 	-find $(distdir) -type d ! -perm -777 -exec chmod a+rwx {} \; -o \
@@ -393,20 +570,21 @@ distcleancheck: distclean
 	       $(distcleancheck_listfiles) ; \
 	       exit 1; } >&2
 check-am: all-am
-check: check-am
+check: check-recursive
 all-am: Makefile $(SCRIPTS) $(DATA)
-
-installdirs:
+installdirs: installdirs-recursive
+installdirs-am:
 	$(mkinstalldirs) $(DESTDIR)$(bindir) $(DESTDIR)$(fsdatadir) $(DESTDIR)$(pysdmdir) $(DESTDIR)$(desktopdir) $(DESTDIR)$(uidir)
-install: install-am
-install-exec: install-exec-am
-install-data: install-data-am
-uninstall: uninstall-am
+
+install: install-recursive
+install-exec: install-exec-recursive
+install-data: install-data-recursive
+uninstall: uninstall-recursive
 
 install-am: all-am
 	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
 
-installcheck: installcheck-am
+installcheck: installcheck-recursive
 install-strip:
 	$(MAKE) $(AM_MAKEFLAGS) INSTALL_PROGRAM="$(INSTALL_STRIP_PROGRAM)" \
 	  install_sh_PROGRAM="$(INSTALL_STRIP_PROGRAM)" INSTALL_STRIP_FLAG=-s \
@@ -422,20 +600,20 @@ distclean-generic:
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
 	@echo "it deletes files that may require special tools to rebuild."
-clean: clean-am
+clean: clean-recursive
 
 clean-am: clean-generic mostlyclean-am
 
-distclean: distclean-am
+distclean: distclean-recursive
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 	-rm -f Makefile
-distclean-am: clean-am distclean-generic
+distclean-am: clean-am distclean-generic distclean-tags
 
-dvi: dvi-am
+dvi: dvi-recursive
 
 dvi-am:
 
-info: info-am
+info: info-recursive
 
 info-am:
 
@@ -444,27 +622,27 @@ install-data-am: install-desktopDATA install-fsdataPYTHON \
 
 install-exec-am: install-binSCRIPTS
 
-install-info: install-info-am
+install-info: install-info-recursive
 
 install-man:
 
 installcheck-am:
 
-maintainer-clean: maintainer-clean-am
+maintainer-clean: maintainer-clean-recursive
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 	-rm -rf $(top_srcdir)/autom4te.cache
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 
-mostlyclean: mostlyclean-am
+mostlyclean: mostlyclean-recursive
 
 mostlyclean-am: mostlyclean-generic
 
-pdf: pdf-am
+pdf: pdf-recursive
 
 pdf-am:
 
-ps: ps-am
+ps: ps-recursive
 
 ps-am:
 
@@ -472,21 +650,29 @@ uninstall-am: uninstall-binSCRIPTS uninstall-desktopDATA \
 	uninstall-fsdataPYTHON uninstall-info-am uninstall-pysdmPYTHON \
 	uninstall-uiDATA
 
-.PHONY: all all-am check check-am clean clean-generic dist dist-all \
-	dist-gzip distcheck distclean distclean-generic distcleancheck \
-	distdir distuninstallcheck dvi dvi-am info info-am install \
-	install-am install-binSCRIPTS install-data install-data-am \
+uninstall-info: uninstall-info-recursive
+
+.PHONY: $(RECURSIVE_TARGETS) CTAGS GTAGS all all-am check check-am clean \
+	clean-generic clean-recursive ctags ctags-recursive dist \
+	dist-all dist-gzip distcheck distclean distclean-generic \
+	distclean-recursive distclean-tags distcleancheck distdir \
+	distuninstallcheck dvi dvi-am dvi-recursive info info-am \
+	info-recursive install install-am install-binSCRIPTS \
+	install-data install-data-am install-data-recursive \
 	install-desktopDATA install-exec install-exec-am \
-	install-fsdataPYTHON install-info install-info-am install-man \
-	install-pysdmPYTHON install-strip install-uiDATA installcheck \
-	installcheck-am installdirs maintainer-clean \
-	maintainer-clean-generic mostlyclean mostlyclean-generic pdf \
-	pdf-am ps ps-am uninstall uninstall-am uninstall-binSCRIPTS \
+	install-exec-recursive install-fsdataPYTHON install-info \
+	install-info-am install-info-recursive install-man \
+	install-pysdmPYTHON install-recursive install-strip \
+	install-uiDATA installcheck installcheck-am installdirs \
+	installdirs-am installdirs-recursive maintainer-clean \
+	maintainer-clean-generic maintainer-clean-recursive mostlyclean \
+	mostlyclean-generic mostlyclean-recursive pdf pdf-am \
+	pdf-recursive ps ps-am ps-recursive tags tags-recursive \
+	uninstall uninstall-am uninstall-binSCRIPTS \
 	uninstall-desktopDATA uninstall-fsdataPYTHON uninstall-info-am \
-	uninstall-pysdmPYTHON uninstall-uiDATA
+	uninstall-info-recursive uninstall-pysdmPYTHON \
+	uninstall-recursive uninstall-uiDATA
 
-
-#SUBDIRS=po
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:

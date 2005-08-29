@@ -13,6 +13,14 @@ import ext3
 options["ext3"] = ext3.options
 defaults["ext3"] = ext3.defaults
 
+import fat
+options["fat"] = fat.options
+defaults["fat"] = fat.defaults
+options["vfat"] = fat.options
+defaults["vfat"] = fat.defaults
+options["msdos"] = fat.options
+defaults["msdos"] = fat.defaults
+
 import ntfs
 options["ntfs"] = ntfs.options
 defaults["ntfs"] = ntfs.defaults
