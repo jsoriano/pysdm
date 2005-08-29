@@ -22,9 +22,9 @@ ui_DATA = data/pysdm.glade
 
 bin_SCRIPTS = scripts/pysdm
 
-EXTRA_DIST =	\
+EXTRA_DIST = config.rpath 	\
 	$(bin_SCRIPTS)	\
 	$(ui_DATA)	\
 	$(desktop_DATA)
 
-#SUBDIRS=po
+SUBDIRS = po

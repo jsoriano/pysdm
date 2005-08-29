@@ -1,0 +1,26 @@
+NAME 	:= @GETTEXT_PACKAGE@
+LANGS   := @ALL_LINGUAS@
+LANGDIR := $(foreach LANG, $(LANGS),$(LANG).mo)
+POTFILES := ../pysdm/release.py
+
+PREFIX := @prefix@
+
+all: $(LANGDIR)
+
+%.mo: %.po
+	msgfmt $< -o $@
+	install $@ $*/LC_MESSAGES/$(NAME).mo
+	rm $@
+
+$(NAME).pot: $(POTFILES)
+	intltool-update --pot --gettext-package=$(NAME)
+
+install:
+	cp -r ./$(LANGS) $(PREFIX)/share/locale/
+
+uninstall:
+	find $(PREFIX)/share/locale/ -name $(NAME).mo -exec rm {} \;
+
+clean:
+	find . -name '*.mo' -exec rm {} \;
+	rm -fr $(LANGS)

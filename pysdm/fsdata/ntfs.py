@@ -1,12 +1,12 @@
 options = []
 options.append( \
-	{"nls":		[1, ["iso8859-1"], "Character set to use for file names"], \
-	 "utf8":	[0, ["utf8", ""], "Use UTF-8 for converting file names"], \
-	 "uni_xlate": [2, ["no", "1", "2"], "Use escape sequences for unknown characters"], \
-	 "posix":	[2, ["0", "1"], "If enabled (1), the file system distinguishes between upper and lower case."], \
-	 "uid":		[1, ["root"], "Owner user of the filesystem"], \
-	 "gid":		[1, ["users"], "Owner group of the filesystem"], \
-	 "umask":	[1, ["227"], "umask for file permissions in octal"] \
+	{"nls":		[1, ["iso8859-1"], _("Character set to use for file names"), 1], \
+	 "utf8":	[0, ["utf8", ""], _("Use UTF-8 for converting file names"), 0], \
+	 "uni_xlate": [2, ["no", "1", "2"], _("Use escape sequences for unknown characters"), 1], \
+	 "posix":	[2, ["0", "1"], _("If enabled (1), the file system distinguishes between upper and lower case."), 0], \
+	 "uid":		[1, ["root"], _("Owner user of the filesystem"), 1], \
+	 "gid":		[1, ["users"], _("Owner group of the filesystem"), 1], \
+	 "umask":	[1, ["227"], _("umask for file permissions in octal"), 0] \
 	} \
 	)
 

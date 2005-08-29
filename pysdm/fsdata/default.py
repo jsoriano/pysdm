@@ -1,18 +1,18 @@
 options = []
 options.append( \
-	{"atime": 	[0, ["atime", "noatime"], "Update file time for each access"], \
-	 "auto":	[0, ["", "noauto"], "The filesystem is mounted in boot time"], \
-	 "dev": 	[0, ["", "nodev"], "Interpret character or block special devices on the file system"], \
-	 "exec":	[0, ["", "noexec"], "Allow execution of binaries"], \
-	 "user":	[0, ["user", ""], "Allows a user to mount the filesystem"], \
-	 "users":	[0, ["users", ""], "Allows any user to mount the filesystem"], \
-	 "group":	[1, [""], "Allow a group to mount this filesystem"], \
-	 "_netdev": [0, ["_netdev", ""], "This file system requires network"], \
-	 "owner":	[0,	["owner", ""], "The owner of the device can mount it"], \
-	 "suid":	[0, ["suid", "nosuid"], "Allow set user identifier"], \
-	 "ro":		[0, ["ro", ""], "Mount file system in read-only mode"], \
-	 "sync":	[0,	["sync", ""], "I/O to the file system should be done synchronously"], \
-	 "dirsync": [0, ["dirsync", ""], "All directory updates should be done synchronously"] \
+	{"atime": 	[0, ["atime", "noatime"], _("Update file time for each access"), 1], \
+	 "auto":	[0, ["", "noauto"], _("The filesystem is mounted in boot time"), 0], \
+	 "dev": 	[0, ["", "nodev"], _("Interpret character or block special devices on the file system"), 1], \
+	 "exec":	[0, ["", "noexec"], _("Allow execution of binaries"), 0], \
+	 "user":	[0, ["user", ""], _("Allows a user to mount and unmount the filesystem"), 0], \
+	 "users":	[0, ["users", ""], _("Allows any user to mount the filesystem"), 0], \
+	 "group":	[1, [""], _("Allow a group to mount this filesystem"), 1], \
+	 "_netdev": [0, ["_netdev", ""], _("This file system requires network"), 1], \
+	 "owner":	[0,	["owner", ""], _("The owner of the device can mount it"), 1], \
+	 "suid":	[0, ["suid", "nosuid"], _("Allow set user identifier"), 1], \
+	 "ro":		[0, ["ro", ""], _("Mount file system in read-only mode"), 0], \
+	 "sync":	[0,	["sync", ""], _("I/O to the file system should be done synchronously"), 1], \
+	 "dirsync": [0, ["dirsync", ""], _("All directory updates should be done synchronously"), 1] \
 	} \
 	)
 

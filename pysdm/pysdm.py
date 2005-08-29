@@ -181,7 +181,10 @@ class Mainwindow(SimpleGladeApp):
                 self.refresh_panel(partition)
                 self.set_options(self.current_FS.mntops)
             else:
-                return    
+                return
+
+        self.get_widget("default_button").set_active(cmp(self.current_FS.mntops[0], "defaults")==0)
+
     #-- Mainwindow.on_partitiontree_cursor_changed }
 
     #-- Mainwindow.on_name_entry_changed {

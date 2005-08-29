@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-08-30 19:20+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#.
+#. * Archivo de cadenas traducibles generado por Glade.
+#. * Añada este archivo a su POTFILES.in de su proyecto.
+#. * NO lo compile como parte de su aplicación.
+#.
+#: ../data/pysdm.glade.h:7
+msgid "Storage Device Manager"
+msgstr ""
+
+#: ../data/pysdm.glade.h:8
+msgid "Type"
+msgstr ""
+
+#: ../data/pysdm.glade.h:9
+msgid "Mountpoint"
+msgstr ""
+
+#: ../data/pysdm.glade.h:10
+msgid "Name"
+msgstr ""
+
+#: ../data/pysdm.glade.h:11
+msgid "..."
+msgstr ""
+
+#: ../data/pysdm.glade.h:12
+msgid "Options"
+msgstr ""
+
+#: ../data/pysdm.glade.h:13
+msgid "Defaults"
+msgstr ""
+
+#: ../data/pysdm.glade.h:14
+msgid "Assistant"
+msgstr ""
+
+#: ../data/pysdm.glade.h:15
+msgid "Information"
+msgstr ""
+
+#: ../data/pysdm.glade.h:16
+msgid "General Configuration"
+msgstr ""
+
+#: ../pysdm/pysdm.py:52
+msgid "Partition List"
+msgstr ""
+
+#: ../pysdm/pysdm.py:173
+msgid "Configure now?"
+msgstr ""
+
+#: ../pysdm/pysdm.py:174
+msgid ""
+" hasn't been configured.\n"
+"Do you want to configure it now?\n"
+msgstr ""
+
+#: ../pysdm/pysdm.py:205
+msgid "Select a file for mountpoint..."
+msgstr ""
+
+#: ../pysdm/pysdm.py:238
+msgid "Select options"
+msgstr ""
