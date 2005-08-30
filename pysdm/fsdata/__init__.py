@@ -1,3 +1,6 @@
+import gettext
+gettext.install("pysdm")
+
 options = {}
 defaults = {}
 
