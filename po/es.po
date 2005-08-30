@@ -1,20 +1,21 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# translation of PACKAGE.
+# Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# <>, 2005.
+# , fuzzy
+# 
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-30 19:20+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2005-08-31 02:07+0200\n"
+"PO-Revision-Date: 2005-08-31 02:14+0200\n"
+"Last-Translator:  <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #.
 #. * Archivo de cadenas traducibles generado por Glade.
@@ -23,19 +24,19 @@ msgstr ""
 #.
 #: ../data/pysdm.glade.h:7
 msgid "Storage Device Manager"
-msgstr ""
+msgstr "Gestor de dispositivos de almacenamiento"
 
 #: ../data/pysdm.glade.h:8
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #: ../data/pysdm.glade.h:9
 msgid "Mountpoint"
-msgstr ""
+msgstr "Punto de Montaje"
 
 #: ../data/pysdm.glade.h:10
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 #: ../data/pysdm.glade.h:11
 msgid "..."
@@ -43,42 +44,293 @@ msgstr ""
 
 #: ../data/pysdm.glade.h:12
 msgid "Options"
-msgstr ""
+msgstr "Opciones"
 
 #: ../data/pysdm.glade.h:13
 msgid "Defaults"
-msgstr ""
+msgstr "Por defecto"
 
 #: ../data/pysdm.glade.h:14
 msgid "Assistant"
-msgstr ""
+msgstr "Asistente"
 
 #: ../data/pysdm.glade.h:15
-msgid "Information"
-msgstr ""
+msgid "Mount"
+msgstr "Montar"
 
 #: ../data/pysdm.glade.h:16
+msgid "Information"
+msgstr "Información"
+
+#: ../data/pysdm.glade.h:17
 msgid "General Configuration"
+msgstr "Configuración General"
+
+#: ../pysdm/fsdata/default.py:3
+msgid "Update file time for each access"
+msgstr "Actualizar indicador de tiempo en cada acceso"
+
+#: ../pysdm/fsdata/default.py:4
+msgid "The filesystem is mounted in boot time"
+msgstr "Montar el sistema de ficheros en el arranque"
+
+#: ../pysdm/fsdata/default.py:5
+msgid "Interpret character or block special devices on the file system"
+msgstr "Interpretar dispositivos de carácteres o bloques"
+
+#: ../pysdm/fsdata/default.py:6
+msgid "Allow execution of binaries"
+msgstr "Permitir ejecución de binarios"
+
+#: ../pysdm/fsdata/default.py:7
+msgid "Allows a user to mount and unmount the filesystem"
+msgstr "Permitir a un usuario montar y desmontar el sistema de archivos"
+
+#: ../pysdm/fsdata/default.py:8
+msgid "Allows any user to mount the filesystem"
+msgstr "Permitir a cualquier usuario montar el sistema de archivos"
+
+#: ../pysdm/fsdata/default.py:9
+msgid "Allow a group to mount this filesystem"
+msgstr "Permitir a un grupo montar el sistema de archivos"
+
+#: ../pysdm/fsdata/default.py:10
+msgid "This file system requires network"
+msgstr "Este sistema de archivos requiere conexión"
+
+#: ../pysdm/fsdata/default.py:11
+msgid "The owner of the device can mount it"
+msgstr "El propietario del dispositivo puede montarlo"
+
+#: ../pysdm/fsdata/default.py:12
+msgid "Allow set user identifier"
+msgstr "Permitir establecer el identificador de usuario (suid)"
+
+#: ../pysdm/fsdata/default.py:13
+msgid "Mount file system in read-only mode"
+msgstr "Sistema de solo lectura"
+
+#: ../pysdm/fsdata/default.py:14
+msgid "I/O to the file system should be done synchronously"
+msgstr "E/S debe hacerse sincrinizadamente"
+
+#: ../pysdm/fsdata/default.py:15
+msgid "All directory updates should be done synchronously"
+msgstr "Todas las actualizaciones de directorios deben hacerse sincronizadamente"
+
+#: ../pysdm/fsdata/ext2.py:3 ../pysdm/fsdata/ext3.py:3
+msgid "Support POSIX access list"
+msgstr "Soporte para listas de acceso POSIX"
+
+#: ../pysdm/fsdata/ext2.py:4 ../pysdm/fsdata/ext3.py:4
+msgid "Minix behaviour for stat information"
+msgstr "Comportamiento Minix para información de estado"
+
+#: ../pysdm/fsdata/ext2.py:5 ../pysdm/fsdata/ext3.py:5
+msgid "Check filesystem at mount time"
+msgstr "Comrpobar sistema de archivos en el momento de montaje"
+
+#: ../pysdm/fsdata/ext2.py:6 ../pysdm/fsdata/ext3.py:6
+msgid "Print debugging info"
+msgstr "Mostrar información de debug"
+
+#: ../pysdm/fsdata/ext2.py:7 ../pysdm/fsdata/ext3.py:7
+msgid "Specify what to do in case of error"
+msgstr "Especificar que hacer en caso de error"
+
+#: ../pysdm/fsdata/ext2.py:8 ../pysdm/fsdata/ext3.py:8
+msgid "Get group id from the directory for a new file"
+msgstr "Obtener identificador de grupo del directorio para la creación de un nuevo archivo"
+
+#: ../pysdm/fsdata/ext2.py:9 ../pysdm/fsdata/ext3.py:9
+msgid "Do not attach buffer_heads to file pagecache"
 msgstr ""
 
-#: ../pysdm/pysdm.py:52
+#: ../pysdm/fsdata/ext2.py:10 ../pysdm/fsdata/ext3.py:10
+msgid "Disables 32 bit user and group id"
+msgstr ""
+
+#: ../pysdm/fsdata/ext2.py:11 ../pysdm/fsdata/ext3.py:11
+msgid "Use old new inode allocator"
+msgstr ""
+
+#: ../pysdm/fsdata/ext2.py:12 ../pysdm/fsdata/ext3.py:12
+msgid "Group allowed to use reserved space"
+msgstr ""
+
+#: ../pysdm/fsdata/ext2.py:13 ../pysdm/fsdata/ext3.py:13
+msgid "User allowed to use reserved space"
+msgstr ""
+
+#: ../pysdm/fsdata/ext2.py:14 ../pysdm/fsdata/ext3.py:14
+msgid "Use a especific block as superblock"
+msgstr ""
+
+#: ../pysdm/fsdata/ext2.py:15 ../pysdm/fsdata/ext3.py:15
+msgid "Support extended attributes"
+msgstr ""
+
+#: ../pysdm/fsdata/ext3.py:16
+msgid "Update journal or especify the inode where it is"
+msgstr ""
+
+#: ../pysdm/fsdata/ext3.py:17
+msgid "Do not load journal on mounting"
+msgstr ""
+
+#: ../pysdm/fsdata/ext3.py:18
+msgid "Especify a journaling mode"
+msgstr ""
+
+#: ../pysdm/fsdata/ext3.py:19
+msgid ""
+"Synchronize data and metadata every specified seconds, 0 for default (5s.)"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:3
+msgid "Set blocksize"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:4 ../pysdm/fsdata/ntfs.py:7
+msgid "Owner user of the filesystem"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:5 ../pysdm/fsdata/ntfs.py:8
+msgid "Owner group of the filesystem"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:6
+msgid "umask for file and directory permissions in octal"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:7
+msgid "umask for directory permissions in octal"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:8 ../pysdm/fsdata/ntfs.py:9
+msgid "umask for file permissions in octal"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:9
+msgid "Select level of character checking in file names"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:10
+msgid "Sets the codepage for converting to shortname characters"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:11
+msgid "Text format conversion mode"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:12
+msgid "Forces the driver to use the CVF module instead of autodetection"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:13
+msgid "Option passed to CVF module"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:14
+msgid "Display debug messages"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:15
+msgid "Specify a 12, 16 or 32 bit fat"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:16 ../pysdm/fsdata/ntfs.py:3
+msgid "Character set to use for file names"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:17
+msgid "Failures do not return errors"
+msgstr ""
+
+#: ../pysdm/fsdata/ntfs.py:4
+msgid "Use UTF-8 for converting file names"
+msgstr ""
+
+#: ../pysdm/fsdata/ntfs.py:5
+msgid "Use escape sequences for unknown characters"
+msgstr ""
+
+#: ../pysdm/fsdata/ntfs.py:6
+msgid ""
+"If enabled (1), the file system distinguishes between upper and lower case."
+msgstr ""
+
+#: ../pysdm/fsdata/reiserfs.py:3
+msgid "Updated filesystem from ReiserFS 3.5 to 3.6"
+msgstr ""
+
+#: ../pysdm/fsdata/reiserfs.py:4
+msgid "Especify hash function to find files"
+msgstr ""
+
+#: ../pysdm/fsdata/reiserfs.py:5
+msgid "Disable reiserfs journaling"
+msgstr ""
+
+#: ../pysdm/fsdata/reiserfs.py:6
+msgid "Disable packing of files into the tree"
+msgstr ""
+
+#: ../pysdm/fsdata/swap.py:3
+msgid "Swap device"
+msgstr ""
+
+#: ../pysdm/fsdata/xfs.py:3
+msgid "Enable the DMAPI (Data management API)"
+msgstr ""
+
+#: ../pysdm/fsdata/xfs.py:4
+msgid "Data allocations will not be aligned at stripe unit boundaries"
+msgstr ""
+
+#: ../pysdm/fsdata/xfs.py:5
+msgid "The filesystem will be mounted without running log recovery"
+msgstr ""
+
+#: ../pysdm/fsdata/xfs.py:6
+msgid "Ignore file system uuid"
+msgstr ""
+
+#: ../pysdm/fsdata/xfs.py:7
+msgid "Enable user disk quota"
+msgstr ""
+
+#: ../pysdm/fsdata/xfs.py:8
+msgid "User disk quota limits enforced"
+msgstr ""
+
+#: ../pysdm/fsdata/xfs.py:9
+msgid "Enable group disk quota"
+msgstr ""
+
+#: ../pysdm/fsdata/xfs.py:10
+msgid "Group disk quota limits enforced"
+msgstr ""
+
+#: ../pysdm/pysdm.py:54
 msgid "Partition List"
-msgstr ""
+msgstr "Particiones"
 
-#: ../pysdm/pysdm.py:173
+#: ../pysdm/pysdm.py:175
 msgid "Configure now?"
 msgstr ""
 
-#: ../pysdm/pysdm.py:174
+#: ../pysdm/pysdm.py:176
 msgid ""
 " hasn't been configured.\n"
 "Do you want to configure it now?\n"
 msgstr ""
 
-#: ../pysdm/pysdm.py:205
+#: ../pysdm/pysdm.py:207
 msgid "Select a file for mountpoint..."
 msgstr ""
 
-#: ../pysdm/pysdm.py:238
+#: ../pysdm/pysdm.py:240
 msgid "Select options"
 msgstr ""
+

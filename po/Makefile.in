@@ -5,15 +5,17 @@ POTFILES := ../pysdm/release.py
 
 PREFIX := @prefix@
 
-all: $(LANGDIR)
+all: $(NAME).pot $(LANGDIR)
 
 %.mo: %.po
 	msgfmt $< -o $@
+	install -d $*/LC_MESSAGES/
 	install $@ $*/LC_MESSAGES/$(NAME).mo
 	rm $@
 
 $(NAME).pot: $(POTFILES)
 	intltool-update --pot --gettext-package=$(NAME)
+	intltool-update $(LANGS)
 
 install:
 	cp -r ./$(LANGS) $(PREFIX)/share/locale/
