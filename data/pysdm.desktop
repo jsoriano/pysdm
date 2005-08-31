@@ -2,7 +2,9 @@
 Version=1.0
 Encoding=UTF-8
 Name=Storage Device Manager
+Name[es]=Dispositivos de Almacenamiento
 Comment=Management of Storage Devices
+Comment[es]=Configurar los dispositivos de almacenamiento
 Type=Application
 Exec=gksudo /usr/bin/pysdm
 Icon=gnome-dev-harddisk.png

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-31 02:07+0200\n"
+"POT-Creation-Date: 2005-08-31 14:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 #. * Añada este archivo a su POTFILES.in de su proyecto.
 #. * NO lo compile como parte de su aplicación.
 #.
-#: ../data/pysdm.glade.h:7
+#: ../data/pysdm.glade.h:7 ../pysdm/pysdm.py:47
 msgid "Storage Device Manager"
 msgstr ""
 
@@ -38,30 +38,26 @@ msgid "Name"
 msgstr ""
 
 #: ../data/pysdm.glade.h:11
-msgid "..."
-msgstr ""
-
-#: ../data/pysdm.glade.h:12
 msgid "Options"
 msgstr ""
 
-#: ../data/pysdm.glade.h:13
-msgid "Defaults"
+#: ../data/pysdm.glade.h:12
+msgid "Set defaults"
 msgstr ""
 
-#: ../data/pysdm.glade.h:14
+#: ../data/pysdm.glade.h:13
 msgid "Assistant"
 msgstr ""
 
-#: ../data/pysdm.glade.h:15
+#: ../data/pysdm.glade.h:14
 msgid "Mount"
 msgstr ""
 
-#: ../data/pysdm.glade.h:16
+#: ../data/pysdm.glade.h:15
 msgid "Information"
 msgstr ""
 
-#: ../data/pysdm.glade.h:17
+#: ../data/pysdm.glade.h:16
 msgid "General Configuration"
 msgstr ""
 
@@ -311,24 +307,24 @@ msgstr ""
 msgid "Group disk quota limits enforced"
 msgstr ""
 
-#: ../pysdm/pysdm.py:54
+#: ../pysdm/pysdm.py:55
 msgid "Partition List"
 msgstr ""
 
-#: ../pysdm/pysdm.py:175
+#: ../pysdm/pysdm.py:182
 msgid "Configure now?"
 msgstr ""
 
-#: ../pysdm/pysdm.py:176
+#: ../pysdm/pysdm.py:183
 msgid ""
 " hasn't been configured.\n"
 "Do you want to configure it now?\n"
 msgstr ""
 
-#: ../pysdm/pysdm.py:207
+#: ../pysdm/pysdm.py:212
 msgid "Select a file for mountpoint..."
 msgstr ""
 
-#: ../pysdm/pysdm.py:240
+#: ../pysdm/pysdm.py:241
 msgid "Select options"
 msgstr ""

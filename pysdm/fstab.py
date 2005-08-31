@@ -10,8 +10,7 @@
 """
 
 import re
-
-
+import os
 
 class Filesystem:
 	spec = ""
@@ -40,6 +39,19 @@ class Filesystem:
 			self.mntops = "defaults"
 
 		return self.spec + "\t" + self.file + "\t" + self.vfstype + "\t" + ops + "\t" + self.freq + "\t" + self.passno
+
+	def mount(self):
+		ops = ""
+		if len(self.mntops) > 0:
+			ops = self.mntops[0]
+
+			for op in self.mntops[1:]:
+				ops = ops + "," + op
+
+		ret = os.system("umount " + self.spec)
+		if ret == 256:
+			return 256
+		return os.system("mount " + self.spec + " " + self.file + " -t " + self.vfstype + " -o " + ops)
 
 	def __repr__(self):
 		return self.toTab()
