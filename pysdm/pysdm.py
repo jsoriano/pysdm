@@ -21,7 +21,7 @@ from SimpleGladeApp import SimpleGladeApp
 from SimpleGladeApp import bindtextdomain
 
 app_name = "pysdm"
-app_version = "0.0.1"
+app_version = "0.3"
 
 glade_dir = ""
 locale_dir = ""
@@ -248,10 +248,26 @@ class Mainwindow(SimpleGladeApp):
     #-- Mainwindow.on_mount_button_clicked {
     def on_mount_button_clicked(self, widget, *args):
         try:
-            os.makedirs(filesystem.file)
+            os.makedirs(self.current_FS.file)
         except OSError:
             pass
-        print self.current_FS.mount()
+
+        mount_ret = self.current_FS.mount()
+
+	if mount_ret==0:
+            return
+        elif mount_ret==256:
+            error_message = _("The file system is busy.\nCan't be remounted with the new location")
+        else:
+            error_message = _("The file system can't be mounted\nmount returned error:") + str(mount_ret)
+        print error_message
+	dialog = gtk.Dialog(_("Mount error"), self.main_widget, gtk.DIALOG_MODAL | gtk.DIALOG_DESTROY_WITH_PARENT, (gtk.STOCK_OK, gtk.RESPONSE_ACCEPT))
+	dialog.vbox.set_border_width(10)
+	dialog.vbox.pack_start(gtk.Label(error_message))
+        dialog.show_all()
+        dialog.run()
+        dialog.destroy()
+
     #-- Mainwindow.on_mount_button_clicked }
 
     #-- Mainwindow.on_apply_clicked {

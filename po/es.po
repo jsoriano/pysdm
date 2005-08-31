@@ -9,13 +9,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-31 14:40+0200\n"
-"PO-Revision-Date: 2005-08-31 12:46+0200\n"
+"POT-Creation-Date: 2005-08-31 16:07+0200\n"
+"PO-Revision-Date: 2005-08-31 16:09+0200\n"
 "Last-Translator:  <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #.
 #. * Archivo de cadenas traducibles generado por Glade.
@@ -337,3 +337,23 @@ msgstr "Elige un directorio como punto de montaje..."
 #: ../pysdm/pysdm.py:241
 msgid "Select options"
 msgstr "Elige opciones"
+
+#: ../pysdm/pysdm.py:260
+msgid ""
+"The file system is busy.\n"
+"Can't be remounted with the new location"
+msgstr ""
+"El sistema de ficheros está ocupado.\n"
+"No puede ser remontado en la nueva ubicación."
+
+#: ../pysdm/pysdm.py:262
+msgid ""
+"The file system can't be mounted\n"
+"mount returned error:"
+msgstr "El sistema de ficheros no pudo ser montado\n"
+"mount devolvió el error:"
+
+#: ../pysdm/pysdm.py:264
+msgid "Mount error"
+msgstr "Error de montaje"
+
