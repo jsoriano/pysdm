@@ -9,20 +9,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-31 02:07+0200\n"
-"PO-Revision-Date: 2005-08-31 02:14+0200\n"
+"POT-Creation-Date: 2005-08-31 14:40+0200\n"
+"PO-Revision-Date: 2005-08-31 12:46+0200\n"
 "Last-Translator:  <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #.
 #. * Archivo de cadenas traducibles generado por Glade.
 #. * Añada este archivo a su POTFILES.in de su proyecto.
 #. * NO lo compile como parte de su aplicación.
 #.
-#: ../data/pysdm.glade.h:7
+#: ../data/pysdm.glade.h:7 ../pysdm/pysdm.py:47
 msgid "Storage Device Manager"
 msgstr "Gestor de dispositivos de almacenamiento"
 
@@ -39,30 +39,26 @@ msgid "Name"
 msgstr "Nombre"
 
 #: ../data/pysdm.glade.h:11
-msgid "..."
-msgstr ""
-
-#: ../data/pysdm.glade.h:12
 msgid "Options"
 msgstr "Opciones"
 
-#: ../data/pysdm.glade.h:13
-msgid "Defaults"
+#: ../data/pysdm.glade.h:12
+msgid "Set defaults"
 msgstr "Por defecto"
 
-#: ../data/pysdm.glade.h:14
+#: ../data/pysdm.glade.h:13
 msgid "Assistant"
 msgstr "Asistente"
 
-#: ../data/pysdm.glade.h:15
+#: ../data/pysdm.glade.h:14
 msgid "Mount"
 msgstr "Montar"
 
-#: ../data/pysdm.glade.h:16
+#: ../data/pysdm.glade.h:15
 msgid "Information"
 msgstr "Información"
 
-#: ../data/pysdm.glade.h:17
+#: ../data/pysdm.glade.h:16
 msgid "General Configuration"
 msgstr "Configuración General"
 
@@ -116,7 +112,8 @@ msgstr "E/S debe hacerse sincrinizadamente"
 
 #: ../pysdm/fsdata/default.py:15
 msgid "All directory updates should be done synchronously"
-msgstr "Todas las actualizaciones de directorios deben hacerse sincronizadamente"
+msgstr ""
+"Todas las actualizaciones de directorios deben hacerse sincronizadamente"
 
 #: ../pysdm/fsdata/ext2.py:3 ../pysdm/fsdata/ext3.py:3
 msgid "Support POSIX access list"
@@ -128,7 +125,7 @@ msgstr "Comportamiento Minix para información de estado"
 
 #: ../pysdm/fsdata/ext2.py:5 ../pysdm/fsdata/ext3.py:5
 msgid "Check filesystem at mount time"
-msgstr "Comrpobar sistema de archivos en el momento de montaje"
+msgstr "Comrpobar sistema de archivos en el momento de mon"
 
 #: ../pysdm/fsdata/ext2.py:6 ../pysdm/fsdata/ext3.py:6
 msgid "Print debugging info"
@@ -140,149 +137,154 @@ msgstr "Especificar que hacer en caso de error"
 
 #: ../pysdm/fsdata/ext2.py:8 ../pysdm/fsdata/ext3.py:8
 msgid "Get group id from the directory for a new file"
-msgstr "Obtener identificador de grupo del directorio para la creación de un nuevo archivo"
+msgstr "Aplicar a los nuevos archivos el identificador de grupo del directorio"
 
 #: ../pysdm/fsdata/ext2.py:9 ../pysdm/fsdata/ext3.py:9
 msgid "Do not attach buffer_heads to file pagecache"
-msgstr ""
+msgstr "No adjuntar cabeceras de buffer al archivo de cache"
 
 #: ../pysdm/fsdata/ext2.py:10 ../pysdm/fsdata/ext3.py:10
 msgid "Disables 32 bit user and group id"
-msgstr ""
+msgstr "Desactivar identificadores de grupo y usuario de 32 bits"
 
 #: ../pysdm/fsdata/ext2.py:11 ../pysdm/fsdata/ext3.py:11
 msgid "Use old new inode allocator"
-msgstr ""
+msgstr "Usar anterior localizador de espacio para nuevos inodos"
 
 #: ../pysdm/fsdata/ext2.py:12 ../pysdm/fsdata/ext3.py:12
 msgid "Group allowed to use reserved space"
-msgstr ""
+msgstr "Grupo que puede usar el espacio reservado"
 
 #: ../pysdm/fsdata/ext2.py:13 ../pysdm/fsdata/ext3.py:13
 msgid "User allowed to use reserved space"
-msgstr ""
+msgstr "Usuario que puede usar el espacio reservado"
 
 #: ../pysdm/fsdata/ext2.py:14 ../pysdm/fsdata/ext3.py:14
 msgid "Use a especific block as superblock"
-msgstr ""
+msgstr "Especificar bloque como superbloque"
 
 #: ../pysdm/fsdata/ext2.py:15 ../pysdm/fsdata/ext3.py:15
 msgid "Support extended attributes"
-msgstr ""
+msgstr "Soportar atributos extendidos"
 
 #: ../pysdm/fsdata/ext3.py:16
 msgid "Update journal or especify the inode where it is"
-msgstr ""
+msgstr "Actualizar journal o especificar el inodo donde está"
 
 #: ../pysdm/fsdata/ext3.py:17
 msgid "Do not load journal on mounting"
-msgstr ""
+msgstr "No cargar journal al montar"
 
 #: ../pysdm/fsdata/ext3.py:18
 msgid "Especify a journaling mode"
-msgstr ""
+msgstr "Especificar un modo de journaling"
 
 #: ../pysdm/fsdata/ext3.py:19
 msgid ""
 "Synchronize data and metadata every specified seconds, 0 for default (5s.)"
 msgstr ""
+"Especificar tiempo de actualización de datos y metadatos (0 para valor por "
+"defecto)"
 
 #: ../pysdm/fsdata/fat.py:3
 msgid "Set blocksize"
-msgstr ""
+msgstr "Establecer el tamaño de bloque"
 
 #: ../pysdm/fsdata/fat.py:4 ../pysdm/fsdata/ntfs.py:7
 msgid "Owner user of the filesystem"
-msgstr ""
+msgstr "Usuario propietario del sistema de ficheros"
 
 #: ../pysdm/fsdata/fat.py:5 ../pysdm/fsdata/ntfs.py:8
 msgid "Owner group of the filesystem"
-msgstr ""
+msgstr "Usuario propietario del sistema de ficheros"
 
 #: ../pysdm/fsdata/fat.py:6
 msgid "umask for file and directory permissions in octal"
-msgstr ""
+msgstr "umask para los permisos de archivos y directorios (en octal)"
 
 #: ../pysdm/fsdata/fat.py:7
 msgid "umask for directory permissions in octal"
-msgstr ""
+msgstr "umask para los permisos de directorios (en octal)"
 
 #: ../pysdm/fsdata/fat.py:8 ../pysdm/fsdata/ntfs.py:9
 msgid "umask for file permissions in octal"
-msgstr ""
+msgstr "umask para los permisos de archivos (en octal)"
 
 #: ../pysdm/fsdata/fat.py:9
 msgid "Select level of character checking in file names"
 msgstr ""
+"Seleccionar nivel de comprobación de carácteres en los nombres de archivos"
 
 #: ../pysdm/fsdata/fat.py:10
 msgid "Sets the codepage for converting to shortname characters"
-msgstr ""
+msgstr "Establecer colección de carácteres para convertir carácteres"
 
 #: ../pysdm/fsdata/fat.py:11
 msgid "Text format conversion mode"
-msgstr ""
+msgstr "Modo de conversión de formato de texto"
 
 #: ../pysdm/fsdata/fat.py:12
 msgid "Forces the driver to use the CVF module instead of autodetection"
-msgstr ""
+msgstr "Forzar al controlador a usar el módulo CVF en lugar de autodetectarlo"
 
 #: ../pysdm/fsdata/fat.py:13
 msgid "Option passed to CVF module"
-msgstr ""
+msgstr "Opción pasada al módulo CVF"
 
 #: ../pysdm/fsdata/fat.py:14
 msgid "Display debug messages"
-msgstr ""
+msgstr "Mostrar mensajes de debug"
 
 #: ../pysdm/fsdata/fat.py:15
 msgid "Specify a 12, 16 or 32 bit fat"
-msgstr ""
+msgstr "Especificar una FAT de 12, 16 o 32 bits"
 
 #: ../pysdm/fsdata/fat.py:16 ../pysdm/fsdata/ntfs.py:3
 msgid "Character set to use for file names"
-msgstr ""
+msgstr "Colección de carácteres para los nombres de archivo"
 
 #: ../pysdm/fsdata/fat.py:17
 msgid "Failures do not return errors"
-msgstr ""
+msgstr "Los fallos no devuelven errores"
 
 #: ../pysdm/fsdata/ntfs.py:4
 msgid "Use UTF-8 for converting file names"
-msgstr ""
+msgstr "Usar UTF-8 para convertir nombres de archivos"
 
 #: ../pysdm/fsdata/ntfs.py:5
 msgid "Use escape sequences for unknown characters"
-msgstr ""
+msgstr "Usar secuencias de escape para carácteres desconocidos"
 
 #: ../pysdm/fsdata/ntfs.py:6
 msgid ""
 "If enabled (1), the file system distinguishes between upper and lower case."
 msgstr ""
+"Si se activa (1), el sistema de ficheros distingue entre mayúsculas y "
+"minúsculas"
 
 #: ../pysdm/fsdata/reiserfs.py:3
 msgid "Updated filesystem from ReiserFS 3.5 to 3.6"
-msgstr ""
+msgstr "Sistema de ficheros actualizado de ReiserFS 3.5 a 3.6"
 
 #: ../pysdm/fsdata/reiserfs.py:4
 msgid "Especify hash function to find files"
-msgstr ""
+msgstr "Especificar función hash para encontrar archivos"
 
 #: ../pysdm/fsdata/reiserfs.py:5
 msgid "Disable reiserfs journaling"
-msgstr ""
+msgstr "Desactivar journaling"
 
 #: ../pysdm/fsdata/reiserfs.py:6
 msgid "Disable packing of files into the tree"
-msgstr ""
+msgstr "Desactivar empaquetado de archivos en el árbol"
 
 #: ../pysdm/fsdata/swap.py:3
 msgid "Swap device"
-msgstr ""
+msgstr "Dispositivo swap"
 
 #: ../pysdm/fsdata/xfs.py:3
 msgid "Enable the DMAPI (Data management API)"
-msgstr ""
+msgstr "Activar DMAPI (API de gestión de datos)"
 
 #: ../pysdm/fsdata/xfs.py:4
 msgid "Data allocations will not be aligned at stripe unit boundaries"
@@ -290,47 +292,48 @@ msgstr ""
 
 #: ../pysdm/fsdata/xfs.py:5
 msgid "The filesystem will be mounted without running log recovery"
-msgstr ""
+msgstr "El sistema de ficheros será montado sin log de recuperación"
 
 #: ../pysdm/fsdata/xfs.py:6
 msgid "Ignore file system uuid"
-msgstr ""
+msgstr "Ignorar uuid"
 
 #: ../pysdm/fsdata/xfs.py:7
 msgid "Enable user disk quota"
-msgstr ""
+msgstr "Activar cuota de usuario"
 
 #: ../pysdm/fsdata/xfs.py:8
 msgid "User disk quota limits enforced"
-msgstr ""
+msgstr "Limites de cuota de usuario forzados"
 
 #: ../pysdm/fsdata/xfs.py:9
 msgid "Enable group disk quota"
-msgstr ""
+msgstr "Activar cuota de grupo"
 
 #: ../pysdm/fsdata/xfs.py:10
 msgid "Group disk quota limits enforced"
-msgstr ""
+msgstr "Limites de cuota de grupo forzados"
 
-#: ../pysdm/pysdm.py:54
+#: ../pysdm/pysdm.py:55
 msgid "Partition List"
 msgstr "Particiones"
 
-#: ../pysdm/pysdm.py:175
+#: ../pysdm/pysdm.py:182
 msgid "Configure now?"
-msgstr ""
+msgstr "¿Configurar ahora?"
 
-#: ../pysdm/pysdm.py:176
+#: ../pysdm/pysdm.py:183
 msgid ""
 " hasn't been configured.\n"
 "Do you want to configure it now?\n"
 msgstr ""
+"·no ha sido configurada.\n"
+"¿Configurar ahora?\n"
 
-#: ../pysdm/pysdm.py:207
+#: ../pysdm/pysdm.py:212
 msgid "Select a file for mountpoint..."
-msgstr ""
+msgstr "Elige un directorio como punto de montaje..."
 
-#: ../pysdm/pysdm.py:240
+#: ../pysdm/pysdm.py:241
 msgid "Select options"
-msgstr ""
-
+msgstr "Elige opciones"

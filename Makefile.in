@@ -189,9 +189,8 @@ RECURSIVE_TARGETS = info-recursive dvi-recursive pdf-recursive \
 	check-recursive installcheck-recursive
 DIST_COMMON = README $(fsdata_PYTHON) $(pysdm_PYTHON) \
 	$(srcdir)/Makefile.in $(srcdir)/configure AUTHORS COPYING \
-	ChangeLog INSTALL Makefile.am NEWS aclocal.m4 config.rpath \
-	configure configure.in install-sh missing mkinstalldirs \
-	py-compile
+	ChangeLog INSTALL Makefile.am NEWS aclocal.m4 configure \
+	configure.in install-sh missing mkinstalldirs py-compile
 DIST_SUBDIRS = $(SUBDIRS)
 all: all-recursive
 

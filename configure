@@ -1580,7 +1580,7 @@ fi
 
 # Define the identity of the package.
  PACKAGE=pysdm
- VERSION=0.2.1
+ VERSION=0.3
 
 
 cat >>confdefs.h <<_ACEOF

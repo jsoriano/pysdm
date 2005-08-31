@@ -18,11 +18,15 @@ $(NAME).pot: $(POTFILES)
 	intltool-update $(LANGS)
 
 install:
-	cp -r ./$(LANGS) $(PREFIX)/share/locale/
+	install -d $(DESTDIR)$(PREFIX)/share/locale/
+	cp -r ./$(LANGS) $(DESTDIR)$(PREFIX)/share/locale/
 
 uninstall:
-	find $(PREFIX)/share/locale/ -name $(NAME).mo -exec rm {} \;
+	find $(DESTDIR)$(PREFIX)/share/locale/ -name $(NAME).mo -exec rm {} \;
 
 clean:
 	find . -name '*.mo' -exec rm {} \;
 	rm -fr $(LANGS)
+
+distclean:
+	rm -f Makefile

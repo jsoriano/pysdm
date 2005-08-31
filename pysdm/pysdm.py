@@ -20,7 +20,7 @@ from fstab import *
 from SimpleGladeApp import SimpleGladeApp
 from SimpleGladeApp import bindtextdomain
 
-app_name = "data"
+app_name = "pysdm"
 app_version = "0.0.1"
 
 glade_dir = ""
@@ -44,6 +44,7 @@ class Mainwindow(SimpleGladeApp):
 
     #-- Mainwindow.new {
     def new(self):
+	self.main_widget.set_title(_("Storage Device Manager"))
         #Load fstab data
         self.fstab = Fstab(FSTAB)
 
@@ -74,11 +75,17 @@ class Mainwindow(SimpleGladeApp):
         mountpoint_entry = self.get_widget("mountpoint_entry")
         type_entry = self.get_widget("type_entry")
 
+        self.get_widget("frame3").set_sensitive(True)
+
         #Root filesystem cannot be modified
-        if filesystem.file == "/":
-            self.get_widget("frame3").set_sensitive(False)
+        if filesystem.file == "/" or cmp(filesystem.vfstype, "swap")==0:
+            self.get_widget("name_entry").set_sensitive(False)
+            self.get_widget("openmountpoint").set_sensitive(False)
+            self.get_widget("mount_button").set_sensitive(False)
         else:
-            self.get_widget("frame3").set_sensitive(True)
+            self.get_widget("name_entry").set_sensitive(True)
+            self.get_widget("openmountpoint").set_sensitive(True)
+            self.get_widget("mount_button").set_sensitive(True)
 
         name_entry.set_text(name)
         mountpoint_entry.set_text(filesystem.file)
@@ -185,8 +192,6 @@ class Mainwindow(SimpleGladeApp):
             else:
                 return
 
-        self.get_widget("default_button").set_active(cmp(self.current_FS.mntops[0], "defaults")==0)
-
     #-- Mainwindow.on_partitiontree_cursor_changed }
 
     #-- Mainwindow.on_name_entry_changed {
@@ -228,7 +233,7 @@ class Mainwindow(SimpleGladeApp):
 
     #-- Mainwindow.on_defaults_button_clicked {
     def on_defaults_button_clicked(self, widget, *args):
-        print "on_defaults_button_clicked called with self.%s" % widget.get_name()
+        self.set_options(["defaults"])
     #-- Mainwindow.on_defaults_button_clicked }
 
     #-- Mainwindow.on_open_options_clicked {
@@ -242,7 +247,11 @@ class Mainwindow(SimpleGladeApp):
 
     #-- Mainwindow.on_mount_button_clicked {
     def on_mount_button_clicked(self, widget, *args):
-        print "on_mount_button_clicked called with self.%s" % widget.get_name()
+        try:
+            os.makedirs(filesystem.file)
+        except OSError:
+            pass
+        print self.current_FS.mount()
     #-- Mainwindow.on_mount_button_clicked }
 
     #-- Mainwindow.on_apply_clicked {

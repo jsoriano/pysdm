@@ -35,15 +35,15 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-ACLOCAL = ${SHELL} /home/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run aclocal-1.7
+ACLOCAL = ${SHELL} /media/hda1/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run aclocal-1.7
 ALL_LINGUAS = es
 AMDEP_FALSE = #
 AMDEP_TRUE = 
-AMTAR = ${SHELL} /home/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run tar
-AUTOCONF = ${SHELL} /home/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run automake-1.7
-AWK = gawk
+AMTAR = ${SHELL} /media/hda1/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run tar
+AUTOCONF = ${SHELL} /media/hda1/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run autoconf
+AUTOHEADER = ${SHELL} /media/hda1/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run autoheader
+AUTOMAKE = ${SHELL} /media/hda1/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run automake-1.7
+AWK = mawk
 CATALOGS =  es.gmo
 CATOBJEXT = .gmo
 CC = gcc
@@ -53,7 +53,7 @@ CPP = gcc -E
 CPPFLAGS = 
 CYGPATH_W = echo
 DATADIRNAME = share
-DEFS = -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"pysdm\" -DVERSION=\"0.2.1\" -DALL_LINGUAS=\"es\" -DGETTEXT_PACKAGE=\"pysdm\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_LOCALE_H=1 -DHAVE_LC_MESSAGES=1 -DHAVE_BIND_TEXTDOMAIN_CODESET=1 -DHAVE_GETTEXT=1 -DHAVE_DCGETTEXT=1 -DENABLE_NLS=1 
+DEFS = -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"pysdm\" -DVERSION=\"0.3\" -DALL_LINGUAS=\"es\" -DGETTEXT_PACKAGE=\"pysdm\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_LOCALE_H=1 -DHAVE_LC_MESSAGES=1 -DHAVE_BIND_TEXTDOMAIN_CODESET=1 -DHAVE_GETTEXT=1 -DHAVE_DCGETTEXT=1 -DENABLE_NLS=1 
 DEPDIR = .deps
 ECHO_C = 
 ECHO_N = -n
@@ -81,7 +81,7 @@ LTLIBOBJS =
 MAINT = #
 MAINTAINER_MODE_FALSE = 
 MAINTAINER_MODE_TRUE = #
-MAKEINFO = ${SHELL} /home/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run makeinfo
+MAKEINFO = ${SHELL} /media/hda1/kronoss/GoogleSummerOfCode2005/pysdm-0/missing --run makeinfo
 MKINSTALLDIRS = ./mkinstalldirs
 MSGFMT = /usr/bin/msgfmt
 OBJEXT = o
@@ -100,12 +100,12 @@ PYTHON = /usr/bin/python
 PYTHON_EXEC_PREFIX = ${exec_prefix}
 PYTHON_PLATFORM = linux2
 PYTHON_PREFIX = ${prefix}
-PYTHON_VERSION = 2.3
+PYTHON_VERSION = 2.4
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = 
 USE_NLS = yes
-VERSION = 0.2.1
+VERSION = 0.3
 XGETTEXT = /usr/bin/xgettext
 ac_ct_CC = gcc
 ac_ct_STRIP = 
@@ -121,7 +121,7 @@ exec_prefix = ${prefix}
 host_alias = 
 includedir = ${prefix}/include
 infodir = ${prefix}/info
-install_sh = /home/kronoss/GoogleSummerOfCode2005/pysdm-0/install-sh
+install_sh = /media/hda1/kronoss/GoogleSummerOfCode2005/pysdm-0/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localstatedir = ${prefix}/var
@@ -129,10 +129,10 @@ mandir = ${prefix}/man
 oldincludedir = /usr/include
 pkgpyexecdir = ${pyexecdir}/pysdm
 pkgpythondir = ${pythondir}/pysdm
-prefix = /usr/local
+prefix = /usr
 program_transform_name = s,x,x,
-pyexecdir = ${exec_prefix}/lib/python2.3/site-packages
-pythondir = ${prefix}/lib/python2.3/site-packages
+pyexecdir = ${exec_prefix}/lib/python2.4/site-packages
+pythondir = ${prefix}/lib/python2.4/site-packages
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
 sysconfdir = ${prefix}/etc
@@ -189,9 +189,8 @@ RECURSIVE_TARGETS = info-recursive dvi-recursive pdf-recursive \
 	check-recursive installcheck-recursive
 DIST_COMMON = README $(fsdata_PYTHON) $(pysdm_PYTHON) \
 	$(srcdir)/Makefile.in $(srcdir)/configure AUTHORS COPYING \
-	ChangeLog INSTALL Makefile.am NEWS aclocal.m4 config.rpath \
-	configure configure.in install-sh missing mkinstalldirs \
-	py-compile
+	ChangeLog INSTALL Makefile.am NEWS aclocal.m4 configure \
+	configure.in install-sh missing mkinstalldirs py-compile
 DIST_SUBDIRS = $(SUBDIRS)
 all: all-recursive
 
