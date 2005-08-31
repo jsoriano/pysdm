@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-31 14:40+0200\n"
+"POT-Creation-Date: 2005-08-31 16:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -327,4 +327,20 @@ msgstr ""
 
 #: ../pysdm/pysdm.py:241
 msgid "Select options"
+msgstr ""
+
+#: ../pysdm/pysdm.py:260
+msgid ""
+"The file system is busy.\n"
+"Can't be remounted with the new location"
+msgstr ""
+
+#: ../pysdm/pysdm.py:262
+msgid ""
+"The file system can't be mounted\n"
+"mount returned error:"
+msgstr ""
+
+#: ../pysdm/pysdm.py:264
+msgid "Mount error"
 msgstr ""
