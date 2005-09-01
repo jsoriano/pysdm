@@ -1,11 +1,24 @@
 NAME 	:= @GETTEXT_PACKAGE@
 LANGS   := @ALL_LINGUAS@
 LANGDIR := $(foreach LANG, $(LANGS),$(LANG).mo)
-POTFILES := ../pysdm/release.py
+POTFILES := \
+        ../data/pysdm.glade.h \
+        ../pysdm/fsdata/constants.py \
+        ../pysdm/fsdata/default.py \
+        ../pysdm/fsdata/ext2.py \
+        ../pysdm/fsdata/ext3.py \
+        ../pysdm/fsdata/fat.py \
+        ../pysdm/fsdata/__init__.py \
+        ../pysdm/fsdata/ntfs.py \
+        ../pysdm/fsdata/reiserfs.py \
+        ../pysdm/fsdata/swap.py \
+        ../pysdm/fsdata/xfs.py \
+        ../pysdm/pysdm.py \
+        ../pysdm/options_ui.py
 
 PREFIX := @prefix@
 
-all: $(NAME).pot $(LANGDIR)
+all: $(LANGDIR)
 
 %.mo: %.po
 	msgfmt $< -o $@
