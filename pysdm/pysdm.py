@@ -282,10 +282,11 @@ class Mainwindow(SimpleGladeApp):
     def on_apply_clicked(self, widget, *args):
         os.rename(FSTAB, FSTAB + ".BAK")
         for filesystem in self.fstab.filesystems:
-            try:
-                os.makedirs(filesystem.file)
-            except OSError:
-                pass
+            if cmp(filesystem.file,"none")!=0:
+                try:
+                    os.makedirs(filesystem.file)
+                except OSError:
+                    pass
         self.fstab.toFile(FSTAB)
     #-- Mainwindow.on_apply_clicked }
 
