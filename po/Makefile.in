@@ -10,7 +10,7 @@ all: $(NAME).pot $(LANGDIR)
 %.mo: %.po
 	msgfmt $< -o $@
 	install -d $*/LC_MESSAGES/
-	install $@ $*/LC_MESSAGES/$(NAME).mo
+	install -m 444 $@ $*/LC_MESSAGES/$(NAME).mo
 	rm $@
 
 $(NAME).pot: $(POTFILES)
