@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-01 12:07+0200\n"
+"POT-Creation-Date: 2005-09-01 15:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,249 +61,279 @@ msgstr ""
 msgid "General Configuration"
 msgstr ""
 
-#: ../pysdm/fsdata/default.py:3
-msgid "Update file time for each access"
+#. mounting options
+#. special files options
+#. journaling options
+#. quota options
+#. performance options
+#. other options
+#: ../pysdm/fsdata/constants.py:8
+msgid "Mounting"
 msgstr ""
 
-#: ../pysdm/fsdata/default.py:4
-msgid "The file system is mounted at boot time"
+#: ../pysdm/fsdata/constants.py:8
+msgid "Special Files"
+msgstr ""
+
+#: ../pysdm/fsdata/constants.py:8
+msgid "Journaling"
+msgstr ""
+
+#: ../pysdm/fsdata/constants.py:8
+msgid "Quota"
+msgstr ""
+
+#: ../pysdm/fsdata/constants.py:8
+msgid "Performance"
+msgstr ""
+
+#: ../pysdm/fsdata/constants.py:8
+msgid "Miscellaneous"
 msgstr ""
 
 #: ../pysdm/fsdata/default.py:5
-msgid "Interpret character or block special devices on the file system"
+msgid "Update file time for each access"
 msgstr ""
 
 #: ../pysdm/fsdata/default.py:6
-msgid "Permit execution of binaries"
+msgid "The file system is mounted at boot time"
 msgstr ""
 
 #: ../pysdm/fsdata/default.py:7
-msgid "Allow a user to mount and unmount the file system"
+msgid "Interpret character or block special devices on the file system"
 msgstr ""
 
 #: ../pysdm/fsdata/default.py:8
-msgid "Allow any user to mount the file system"
+msgid "Permit execution of binaries"
 msgstr ""
 
 #: ../pysdm/fsdata/default.py:9
-msgid "Allow a group to mount this file system"
+msgid "Allow a user to mount and unmount the file system"
 msgstr ""
 
 #: ../pysdm/fsdata/default.py:10
-msgid "This file system requires network"
+msgid "Allow any user to mount the file system"
 msgstr ""
 
 #: ../pysdm/fsdata/default.py:11
-msgid "The owner of the device can mount it"
+msgid "Allow a group to mount this file system"
 msgstr ""
 
 #: ../pysdm/fsdata/default.py:12
-msgid "Allow set user identifier"
+msgid "This file system requires network"
 msgstr ""
 
 #: ../pysdm/fsdata/default.py:13
-msgid "Mount file system in read-only mode"
+msgid "The owner of the device can mount it"
 msgstr ""
 
 #: ../pysdm/fsdata/default.py:14
-msgid "I/O to the file system should be done synchronously"
+msgid "Allow set user identifier"
 msgstr ""
 
 #: ../pysdm/fsdata/default.py:15
+msgid "Mount file system in read-only mode"
+msgstr ""
+
+#: ../pysdm/fsdata/default.py:16
+msgid "I/O to the file system should be done synchronously"
+msgstr ""
+
+#: ../pysdm/fsdata/default.py:17
 msgid "All directory updates should be done synchronously"
 msgstr ""
 
-#: ../pysdm/fsdata/ext2.py:3 ../pysdm/fsdata/ext3.py:3
+#: ../pysdm/fsdata/ext2.py:5 ../pysdm/fsdata/ext3.py:5
 msgid "Support POSIX access list"
 msgstr ""
 
-#: ../pysdm/fsdata/ext2.py:4 ../pysdm/fsdata/ext3.py:4
+#: ../pysdm/fsdata/ext2.py:6 ../pysdm/fsdata/ext3.py:6
 msgid "Minix behaviour for stat information"
 msgstr ""
 
-#: ../pysdm/fsdata/ext2.py:5 ../pysdm/fsdata/ext3.py:5
+#: ../pysdm/fsdata/ext2.py:7 ../pysdm/fsdata/ext3.py:7
 msgid "Check file system at mount time"
 msgstr ""
 
-#: ../pysdm/fsdata/ext2.py:6 ../pysdm/fsdata/ext3.py:6
+#: ../pysdm/fsdata/ext2.py:8 ../pysdm/fsdata/ext3.py:8
 msgid "Print debugging info"
 msgstr ""
 
-#: ../pysdm/fsdata/ext2.py:7 ../pysdm/fsdata/ext3.py:7
+#: ../pysdm/fsdata/ext2.py:9 ../pysdm/fsdata/ext3.py:9
 msgid "Specify what to do in case of error"
 msgstr ""
 
-#: ../pysdm/fsdata/ext2.py:8 ../pysdm/fsdata/ext3.py:8
+#: ../pysdm/fsdata/ext2.py:10 ../pysdm/fsdata/ext3.py:10
 msgid "Get group id from the directory for a new file"
 msgstr ""
 
-#: ../pysdm/fsdata/ext2.py:9 ../pysdm/fsdata/ext3.py:9
+#: ../pysdm/fsdata/ext2.py:11 ../pysdm/fsdata/ext3.py:11
 msgid "Do not attach buffer_heads to file pagecache"
 msgstr ""
 
-#: ../pysdm/fsdata/ext2.py:10 ../pysdm/fsdata/ext3.py:10
+#: ../pysdm/fsdata/ext2.py:12 ../pysdm/fsdata/ext3.py:12
 msgid "Disables 32 bit user and group id"
 msgstr ""
 
-#: ../pysdm/fsdata/ext2.py:11 ../pysdm/fsdata/ext3.py:11
+#: ../pysdm/fsdata/ext2.py:13 ../pysdm/fsdata/ext3.py:13
 msgid "Use old new inode allocator"
 msgstr ""
 
-#: ../pysdm/fsdata/ext2.py:12 ../pysdm/fsdata/ext3.py:12
+#: ../pysdm/fsdata/ext2.py:14 ../pysdm/fsdata/ext3.py:14
 msgid "Group allowed to use reserved space"
 msgstr ""
 
-#: ../pysdm/fsdata/ext2.py:13 ../pysdm/fsdata/ext3.py:13
+#: ../pysdm/fsdata/ext2.py:15 ../pysdm/fsdata/ext3.py:15
 msgid "User allowed to use reserved space"
 msgstr ""
 
-#: ../pysdm/fsdata/ext2.py:14 ../pysdm/fsdata/ext3.py:14
+#: ../pysdm/fsdata/ext2.py:16 ../pysdm/fsdata/ext3.py:16
 msgid "Use a especific block as superblock"
 msgstr ""
 
-#: ../pysdm/fsdata/ext2.py:15 ../pysdm/fsdata/ext3.py:15
+#: ../pysdm/fsdata/ext2.py:17 ../pysdm/fsdata/ext3.py:17
 msgid "Support extended attributes"
 msgstr ""
 
-#: ../pysdm/fsdata/ext3.py:16
+#: ../pysdm/fsdata/ext3.py:18
 msgid "Update journal or specify the inode where it is"
 msgstr ""
 
-#: ../pysdm/fsdata/ext3.py:17
+#: ../pysdm/fsdata/ext3.py:19
 msgid "Do not load journal on mounting"
 msgstr ""
 
-#: ../pysdm/fsdata/ext3.py:18
+#: ../pysdm/fsdata/ext3.py:20
 msgid "Specify a journaling mode"
 msgstr ""
 
-#: ../pysdm/fsdata/ext3.py:19
+#: ../pysdm/fsdata/ext3.py:21
 msgid ""
 "Synchronize data and metadata every specified seconds, 0 for default (5s.)"
 msgstr ""
 
-#: ../pysdm/fsdata/fat.py:3
+#: ../pysdm/fsdata/fat.py:5
 msgid "Set blocksize"
 msgstr ""
 
-#: ../pysdm/fsdata/fat.py:4 ../pysdm/fsdata/ntfs.py:7
+#: ../pysdm/fsdata/fat.py:6 ../pysdm/fsdata/ntfs.py:9
 msgid "Owner user of the filesystem"
 msgstr ""
 
-#: ../pysdm/fsdata/fat.py:5 ../pysdm/fsdata/ntfs.py:8
+#: ../pysdm/fsdata/fat.py:7 ../pysdm/fsdata/ntfs.py:10
 msgid "Owner group of the filesystem"
 msgstr ""
 
-#: ../pysdm/fsdata/fat.py:6
+#: ../pysdm/fsdata/fat.py:8
 msgid "umask for file and directory permissions in octal"
 msgstr ""
 
-#: ../pysdm/fsdata/fat.py:7
+#: ../pysdm/fsdata/fat.py:9
 msgid "umask for directory permissions in octal"
 msgstr ""
 
-#: ../pysdm/fsdata/fat.py:8 ../pysdm/fsdata/ntfs.py:9
+#: ../pysdm/fsdata/fat.py:10 ../pysdm/fsdata/ntfs.py:11
 msgid "umask for file permissions in octal"
 msgstr ""
 
-#: ../pysdm/fsdata/fat.py:9
+#: ../pysdm/fsdata/fat.py:11
 msgid "Select level of character checking in file names"
 msgstr ""
 
-#: ../pysdm/fsdata/fat.py:10
+#: ../pysdm/fsdata/fat.py:12
 msgid "Sets the codepage for converting to shortname characters"
 msgstr ""
 
-#: ../pysdm/fsdata/fat.py:11
+#: ../pysdm/fsdata/fat.py:13
 msgid "Text format conversion mode"
 msgstr ""
 
-#: ../pysdm/fsdata/fat.py:12
+#: ../pysdm/fsdata/fat.py:14
 msgid "Forces the driver to use the CVF module instead of autodetection"
 msgstr ""
 
-#: ../pysdm/fsdata/fat.py:13
+#: ../pysdm/fsdata/fat.py:15
 msgid "Option passed to CVF module"
 msgstr ""
 
-#: ../pysdm/fsdata/fat.py:14
+#: ../pysdm/fsdata/fat.py:16
 msgid "Display debug messages"
 msgstr ""
 
-#: ../pysdm/fsdata/fat.py:15
+#: ../pysdm/fsdata/fat.py:17
 msgid "Specify a 12, 16 or 32 bit fat"
 msgstr ""
 
-#: ../pysdm/fsdata/fat.py:16 ../pysdm/fsdata/ntfs.py:3
+#: ../pysdm/fsdata/fat.py:18 ../pysdm/fsdata/ntfs.py:5
 msgid "Character set to use for file names"
 msgstr ""
 
-#: ../pysdm/fsdata/fat.py:17
+#: ../pysdm/fsdata/fat.py:19
 msgid "Failures do not return errors"
 msgstr ""
 
-#: ../pysdm/fsdata/ntfs.py:4
+#: ../pysdm/fsdata/ntfs.py:6
 msgid "Use UTF-8 for converting file names"
 msgstr ""
 
-#: ../pysdm/fsdata/ntfs.py:5
+#: ../pysdm/fsdata/ntfs.py:7
 msgid "Use escape sequences for unknown characters"
 msgstr ""
 
-#: ../pysdm/fsdata/ntfs.py:6
+#: ../pysdm/fsdata/ntfs.py:8
 msgid ""
 "If enabled (1), the file system distinguishes between upper and lower case."
 msgstr ""
 
-#: ../pysdm/fsdata/reiserfs.py:3
+#: ../pysdm/fsdata/reiserfs.py:5
 msgid "Updated filesystem from ReiserFS 3.5 to 3.6"
 msgstr ""
 
-#: ../pysdm/fsdata/reiserfs.py:4
+#: ../pysdm/fsdata/reiserfs.py:6
 msgid "Specify hash function to find files"
 msgstr ""
 
-#: ../pysdm/fsdata/reiserfs.py:5
+#: ../pysdm/fsdata/reiserfs.py:7
 msgid "Disable reiserfs journaling"
 msgstr ""
 
-#: ../pysdm/fsdata/reiserfs.py:6
+#: ../pysdm/fsdata/reiserfs.py:8
 msgid "Disable packing of files into the tree"
 msgstr ""
 
-#: ../pysdm/fsdata/swap.py:3
+#: ../pysdm/fsdata/swap.py:5
 msgid "Swap device"
 msgstr ""
 
-#: ../pysdm/fsdata/xfs.py:3
+#: ../pysdm/fsdata/xfs.py:5
 msgid "Enable the DMAPI (Data management API)"
 msgstr ""
 
-#: ../pysdm/fsdata/xfs.py:4
+#: ../pysdm/fsdata/xfs.py:6
 msgid "Data allocations will not be aligned at stripe unit boundaries"
 msgstr ""
 
-#: ../pysdm/fsdata/xfs.py:5
+#: ../pysdm/fsdata/xfs.py:7
 msgid "The file system will be mounted without running log recovery"
 msgstr ""
 
-#: ../pysdm/fsdata/xfs.py:6
+#: ../pysdm/fsdata/xfs.py:8
 msgid "Ignore file system uuid"
 msgstr ""
 
-#: ../pysdm/fsdata/xfs.py:7
+#: ../pysdm/fsdata/xfs.py:9
 msgid "Enable user disk quota"
 msgstr ""
 
-#: ../pysdm/fsdata/xfs.py:8
+#: ../pysdm/fsdata/xfs.py:10
 msgid "User disk quota limits enforced"
 msgstr ""
 
-#: ../pysdm/fsdata/xfs.py:9
+#: ../pysdm/fsdata/xfs.py:11
 msgid "Enable group disk quota"
 msgstr ""
 
-#: ../pysdm/fsdata/xfs.py:10
+#: ../pysdm/fsdata/xfs.py:12
 msgid "Group disk quota limits enforced"
 msgstr ""
 
