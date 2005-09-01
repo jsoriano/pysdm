@@ -5,6 +5,8 @@ import gtk
 import re
 import fsdata
 
+fdc = fsdata.constants
+
 OP_CHECK = 0
 OP_ENTRY = 1
 OP_COMBO = 2
@@ -17,18 +19,11 @@ class option_dialog(gtk.Dialog):
 
 		self.op_widgets = {}
 
-		tabs = [gtk.ScrolledWindow(), gtk.ScrolledWindow()]
-		self.boxes = [gtk.VBox(), gtk.VBox()]
-		self.boxes[0].set_border_width(10)		
-		self.boxes[1].set_border_width(10)
-
-		tabs[0] = self.boxes[0]
-		tabs[1] = self.boxes[1]
-
-		notebook = gtk.Notebook()
-		self.get_child().pack_start(notebook)
-		notebook.append_page(tabs[0], gtk.Label(_("User options")))
-		notebook.append_page(tabs[1], gtk.Label(_("Advanced options")))
+		self.boxes = []
+		for i in fdc.GROUPS:
+			box = gtk.VBox()
+			box.set_border_width(10)
+			self.boxes.append(box)
 
 		self.filesystem = filesystem
 		self.defaults = fsdata.defaults['default']
@@ -43,6 +38,13 @@ class option_dialog(gtk.Dialog):
 				self.add_option(op_info[0], op, op_info[1], op_info[2], op_info[3])
 		except KeyError:
 			print "Warning: Unknown especial options for " + filesystem + " filesystem"
+
+		notebook = gtk.Notebook()
+		self.get_child().pack_start(notebook)
+
+		for i in range(len(fdc.GROUPS)):
+			if len(self.boxes[i].get_children()) > 0:
+				notebook.append_page(self.boxes[i], gtk.Label(fdc.GROUPS[i]))
 
 		self.show_all()
 

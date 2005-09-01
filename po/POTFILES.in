@@ -1,5 +1,6 @@
 [encoding:UTF-8]
 data/pysdm.glade.h
+pysdm/fsdata/constants.py
 pysdm/fsdata/default.py
 pysdm/fsdata/ext2.py
 pysdm/fsdata/ext3.py
@@ -10,3 +11,4 @@ pysdm/fsdata/reiserfs.py
 pysdm/fsdata/swap.py
 pysdm/fsdata/xfs.py
 pysdm/pysdm.py
+pysdm/options_ui.py
