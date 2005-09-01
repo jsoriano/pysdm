@@ -2,7 +2,7 @@ options = []
 options.append( \
 	{"acl":			[0, ["acl", ""], _("Support POSIX access list"), 1], \
 	 "bsddf":		[0, ["minixdf", ""], _("Minix behaviour for stat information"), 1], \
-	 "check":		[0, ["check", ""], _("Check filesystem at mount time"), 1], \
+	 "check":		[0, ["check", ""], _("Check file system at mount time"), 1], \
 	 "debug":		[0, ["debug", ""], _("Print debugging info"), 1], \
 	 "errors":		[2, ["continue", "remount-ro", "panic"], _("Specify what to do in case of error"), 0], \
 	 "grpid":		[0, ["grpid", ""], _("Get group id from the directory for a new file"), 1], \

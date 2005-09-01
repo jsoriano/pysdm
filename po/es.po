@@ -9,13 +9,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-31 16:07+0200\n"
-"PO-Revision-Date: 2005-08-31 16:09+0200\n"
+"POT-Creation-Date: 2005-09-01 12:07+0200\n"
+"PO-Revision-Date: 2005-09-01 12:00+0200\n"
 "Last-Translator:  <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #.
 #. * Archivo de cadenas traducibles generado por Glade.
@@ -50,7 +50,7 @@ msgstr "Por defecto"
 msgid "Assistant"
 msgstr "Asistente"
 
-#: ../data/pysdm.glade.h:14
+#: ../data/pysdm.glade.h:14 ../pysdm/pysdm.py:94
 msgid "Mount"
 msgstr "Montar"
 
@@ -67,7 +67,7 @@ msgid "Update file time for each access"
 msgstr "Actualizar indicador de tiempo en cada acceso"
 
 #: ../pysdm/fsdata/default.py:4
-msgid "The filesystem is mounted in boot time"
+msgid "The file system is mounted at boot time"
 msgstr "Montar el sistema de ficheros en el arranque"
 
 #: ../pysdm/fsdata/default.py:5
@@ -75,19 +75,19 @@ msgid "Interpret character or block special devices on the file system"
 msgstr "Interpretar dispositivos de carácteres o bloques"
 
 #: ../pysdm/fsdata/default.py:6
-msgid "Allow execution of binaries"
+msgid "Permit execution of binaries"
 msgstr "Permitir ejecución de binarios"
 
 #: ../pysdm/fsdata/default.py:7
-msgid "Allows a user to mount and unmount the filesystem"
+msgid "Allow a user to mount and unmount the file system"
 msgstr "Permitir a un usuario montar y desmontar el sistema de archivos"
 
 #: ../pysdm/fsdata/default.py:8
-msgid "Allows any user to mount the filesystem"
+msgid "Allow any user to mount the file system"
 msgstr "Permitir a cualquier usuario montar el sistema de archivos"
 
 #: ../pysdm/fsdata/default.py:9
-msgid "Allow a group to mount this filesystem"
+msgid "Allow a group to mount this file system"
 msgstr "Permitir a un grupo montar el sistema de archivos"
 
 #: ../pysdm/fsdata/default.py:10
@@ -108,7 +108,7 @@ msgstr "Sistema de solo lectura"
 
 #: ../pysdm/fsdata/default.py:14
 msgid "I/O to the file system should be done synchronously"
-msgstr "E/S debe hacerse sincrinizadamente"
+msgstr "E/S debe hacerse sincronizadamente"
 
 #: ../pysdm/fsdata/default.py:15
 msgid "All directory updates should be done synchronously"
@@ -124,8 +124,8 @@ msgid "Minix behaviour for stat information"
 msgstr "Comportamiento Minix para información de estado"
 
 #: ../pysdm/fsdata/ext2.py:5 ../pysdm/fsdata/ext3.py:5
-msgid "Check filesystem at mount time"
-msgstr "Comrpobar sistema de archivos en el momento de mon"
+msgid "Check file system at mount time"
+msgstr "Comprobar sistema de archivos al montar"
 
 #: ../pysdm/fsdata/ext2.py:6 ../pysdm/fsdata/ext3.py:6
 msgid "Print debugging info"
@@ -168,7 +168,7 @@ msgid "Support extended attributes"
 msgstr "Soportar atributos extendidos"
 
 #: ../pysdm/fsdata/ext3.py:16
-msgid "Update journal or especify the inode where it is"
+msgid "Update journal or specify the inode where it is"
 msgstr "Actualizar journal o especificar el inodo donde está"
 
 #: ../pysdm/fsdata/ext3.py:17
@@ -176,7 +176,7 @@ msgid "Do not load journal on mounting"
 msgstr "No cargar journal al montar"
 
 #: ../pysdm/fsdata/ext3.py:18
-msgid "Especify a journaling mode"
+msgid "Specify a journaling mode"
 msgstr "Especificar un modo de journaling"
 
 #: ../pysdm/fsdata/ext3.py:19
@@ -267,7 +267,7 @@ msgid "Updated filesystem from ReiserFS 3.5 to 3.6"
 msgstr "Sistema de ficheros actualizado de ReiserFS 3.5 a 3.6"
 
 #: ../pysdm/fsdata/reiserfs.py:4
-msgid "Especify hash function to find files"
+msgid "Specify hash function to find files"
 msgstr "Especificar función hash para encontrar archivos"
 
 #: ../pysdm/fsdata/reiserfs.py:5
@@ -291,7 +291,7 @@ msgid "Data allocations will not be aligned at stripe unit boundaries"
 msgstr ""
 
 #: ../pysdm/fsdata/xfs.py:5
-msgid "The filesystem will be mounted without running log recovery"
+msgid "The file system will be mounted without running log recovery"
 msgstr "El sistema de ficheros será montado sin log de recuperación"
 
 #: ../pysdm/fsdata/xfs.py:6
@@ -318,11 +318,15 @@ msgstr "Limites de cuota de grupo forzados"
 msgid "Partition List"
 msgstr "Particiones"
 
-#: ../pysdm/pysdm.py:182
+#: ../pysdm/pysdm.py:92
+msgid "Remount"
+msgstr "Remontar"
+
+#: ../pysdm/pysdm.py:188
 msgid "Configure now?"
 msgstr "¿Configurar ahora?"
 
-#: ../pysdm/pysdm.py:183
+#: ../pysdm/pysdm.py:189
 msgid ""
 " hasn't been configured.\n"
 "Do you want to configure it now?\n"
@@ -330,15 +334,15 @@ msgstr ""
 "·no ha sido configurada.\n"
 "¿Configurar ahora?\n"
 
-#: ../pysdm/pysdm.py:212
+#: ../pysdm/pysdm.py:220
 msgid "Select a file for mountpoint..."
 msgstr "Elige un directorio como punto de montaje..."
 
-#: ../pysdm/pysdm.py:241
+#: ../pysdm/pysdm.py:249
 msgid "Select options"
 msgstr "Elige opciones"
 
-#: ../pysdm/pysdm.py:260
+#: ../pysdm/pysdm.py:268
 msgid ""
 "The file system is busy.\n"
 "Can't be remounted with the new location"
@@ -346,14 +350,14 @@ msgstr ""
 "El sistema de ficheros está ocupado.\n"
 "No puede ser remontado en la nueva ubicación."
 
-#: ../pysdm/pysdm.py:262
+#: ../pysdm/pysdm.py:270
 msgid ""
 "The file system can't be mounted\n"
 "mount returned error:"
-msgstr "El sistema de ficheros no pudo ser montado\n"
+msgstr ""
+"El sistema de ficheros no pudo ser montado\n"
 "mount devolvió el error:"
 
-#: ../pysdm/pysdm.py:264
+#: ../pysdm/pysdm.py:272
 msgid "Mount error"
 msgstr "Error de montaje"
-

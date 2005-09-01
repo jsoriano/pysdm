@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-31 16:07+0200\n"
+"POT-Creation-Date: 2005-09-01 12:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,7 +49,7 @@ msgstr ""
 msgid "Assistant"
 msgstr ""
 
-#: ../data/pysdm.glade.h:14
+#: ../data/pysdm.glade.h:14 ../pysdm/pysdm.py:94
 msgid "Mount"
 msgstr ""
 
@@ -66,7 +66,7 @@ msgid "Update file time for each access"
 msgstr ""
 
 #: ../pysdm/fsdata/default.py:4
-msgid "The filesystem is mounted in boot time"
+msgid "The file system is mounted at boot time"
 msgstr ""
 
 #: ../pysdm/fsdata/default.py:5
@@ -74,19 +74,19 @@ msgid "Interpret character or block special devices on the file system"
 msgstr ""
 
 #: ../pysdm/fsdata/default.py:6
-msgid "Allow execution of binaries"
+msgid "Permit execution of binaries"
 msgstr ""
 
 #: ../pysdm/fsdata/default.py:7
-msgid "Allows a user to mount and unmount the filesystem"
+msgid "Allow a user to mount and unmount the file system"
 msgstr ""
 
 #: ../pysdm/fsdata/default.py:8
-msgid "Allows any user to mount the filesystem"
+msgid "Allow any user to mount the file system"
 msgstr ""
 
 #: ../pysdm/fsdata/default.py:9
-msgid "Allow a group to mount this filesystem"
+msgid "Allow a group to mount this file system"
 msgstr ""
 
 #: ../pysdm/fsdata/default.py:10
@@ -122,7 +122,7 @@ msgid "Minix behaviour for stat information"
 msgstr ""
 
 #: ../pysdm/fsdata/ext2.py:5 ../pysdm/fsdata/ext3.py:5
-msgid "Check filesystem at mount time"
+msgid "Check file system at mount time"
 msgstr ""
 
 #: ../pysdm/fsdata/ext2.py:6 ../pysdm/fsdata/ext3.py:6
@@ -166,7 +166,7 @@ msgid "Support extended attributes"
 msgstr ""
 
 #: ../pysdm/fsdata/ext3.py:16
-msgid "Update journal or especify the inode where it is"
+msgid "Update journal or specify the inode where it is"
 msgstr ""
 
 #: ../pysdm/fsdata/ext3.py:17
@@ -174,7 +174,7 @@ msgid "Do not load journal on mounting"
 msgstr ""
 
 #: ../pysdm/fsdata/ext3.py:18
-msgid "Especify a journaling mode"
+msgid "Specify a journaling mode"
 msgstr ""
 
 #: ../pysdm/fsdata/ext3.py:19
@@ -260,7 +260,7 @@ msgid "Updated filesystem from ReiserFS 3.5 to 3.6"
 msgstr ""
 
 #: ../pysdm/fsdata/reiserfs.py:4
-msgid "Especify hash function to find files"
+msgid "Specify hash function to find files"
 msgstr ""
 
 #: ../pysdm/fsdata/reiserfs.py:5
@@ -284,7 +284,7 @@ msgid "Data allocations will not be aligned at stripe unit boundaries"
 msgstr ""
 
 #: ../pysdm/fsdata/xfs.py:5
-msgid "The filesystem will be mounted without running log recovery"
+msgid "The file system will be mounted without running log recovery"
 msgstr ""
 
 #: ../pysdm/fsdata/xfs.py:6
@@ -311,36 +311,40 @@ msgstr ""
 msgid "Partition List"
 msgstr ""
 
-#: ../pysdm/pysdm.py:182
+#: ../pysdm/pysdm.py:92
+msgid "Remount"
+msgstr ""
+
+#: ../pysdm/pysdm.py:188
 msgid "Configure now?"
 msgstr ""
 
-#: ../pysdm/pysdm.py:183
+#: ../pysdm/pysdm.py:189
 msgid ""
 " hasn't been configured.\n"
 "Do you want to configure it now?\n"
 msgstr ""
 
-#: ../pysdm/pysdm.py:212
+#: ../pysdm/pysdm.py:220
 msgid "Select a file for mountpoint..."
 msgstr ""
 
-#: ../pysdm/pysdm.py:241
+#: ../pysdm/pysdm.py:249
 msgid "Select options"
 msgstr ""
 
-#: ../pysdm/pysdm.py:260
+#: ../pysdm/pysdm.py:268
 msgid ""
 "The file system is busy.\n"
 "Can't be remounted with the new location"
 msgstr ""
 
-#: ../pysdm/pysdm.py:262
+#: ../pysdm/pysdm.py:270
 msgid ""
 "The file system can't be mounted\n"
 "mount returned error:"
 msgstr ""
 
-#: ../pysdm/pysdm.py:264
+#: ../pysdm/pysdm.py:272
 msgid "Mount error"
 msgstr ""

@@ -78,7 +78,7 @@ class Mainwindow(SimpleGladeApp):
         self.get_widget("frame3").set_sensitive(True)
 
         #Root filesystem cannot be modified
-        if filesystem.file == "/" or cmp(filesystem.vfstype, "swap")==0:
+        if filesystem.file == "/" or cmp(filesystem.file, "none")==0:
             self.get_widget("name_entry").set_sensitive(False)
             self.get_widget("openmountpoint").set_sensitive(False)
             self.get_widget("mount_button").set_sensitive(False)
@@ -86,6 +86,12 @@ class Mainwindow(SimpleGladeApp):
             self.get_widget("name_entry").set_sensitive(True)
             self.get_widget("openmountpoint").set_sensitive(True)
             self.get_widget("mount_button").set_sensitive(True)
+        
+        mount_label = self.get_widget("mount_button").get_child().get_child().get_children()[1]
+        if(filesystem.is_mounted()):
+            mount_label.set_text(_("Remount"))
+        else:
+            mount_label.set_text(_("Mount"))
 
         name_entry.set_text(name)
         mountpoint_entry.set_text(filesystem.file)
@@ -196,6 +202,8 @@ class Mainwindow(SimpleGladeApp):
 
     #-- Mainwindow.on_name_entry_changed {
     def on_name_entry_changed(self, widget, *args):
+        if cmp(self.current_FS.file, "none")==0:
+            return
         path = re.split("/", self.current_FS.file)
         npath = ""
         for folder in path[1:len(path)-1]:

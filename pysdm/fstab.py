@@ -48,10 +48,19 @@ class Filesystem:
 			for op in self.mntops[1:]:
 				ops = ops + "," + op
 
-		ret = os.system("umount " + self.spec)
-		if ret == 256:
-			return 256
+		if self.is_mounted():
+			ret = os.system("umount " + self.spec)
+			if ret != 0:
+				return ret
 		return os.system("mount " + self.spec + " " + self.file + " -t " + self.vfstype + " -o " + ops)
+
+	def is_mounted(self):
+		mtab = file("/etc/mtab", "r")
+		lines = mtab.readlines()
+		for line in lines:
+			if line.find(self.spec):
+				return True
+		return False
 
 	def __repr__(self):
 		return self.toTab()
@@ -114,8 +123,17 @@ class Fstab:
 
 	def toTab(self):
 		ret = ""
+		col_l = []
 		for fs in self.filesystems:
-			ret = ret + fs.toTab() + "\n"
+			cols = re.compile("\t").split(fs.toTab())
+			if len(col_l)==0: col_l = [0]*len(cols)
+			for i in range(len(cols)):
+				if col_l[i] < len(cols[i]): col_l[i] = len(cols[i])
+		for fs in self.filesystems:
+			cols = re.compile("\t").split(fs.toTab())
+			for i in range(len(cols)):
+				ret = ret + cols[i].ljust(col_l[i] + 2)
+			ret = ret + "\n"
 		return ret
 
 	def	toFile(self, fstab):
