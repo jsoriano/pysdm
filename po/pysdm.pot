@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-01 15:11+0200\n"
+"POT-Creation-Date: 2005-09-02 23:26+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 #. * Añada este archivo a su POTFILES.in de su proyecto.
 #. * NO lo compile como parte de su aplicación.
 #.
-#: ../data/pysdm.glade.h:7 ../pysdm/pysdm.py:47
+#: ../data/pysdm.glade.h:7 ../pysdm/pysdm.py:52
 msgid "Storage Device Manager"
 msgstr ""
 
@@ -33,7 +33,7 @@ msgstr ""
 msgid "Mountpoint"
 msgstr ""
 
-#: ../data/pysdm.glade.h:10
+#: ../data/pysdm.glade.h:10 ../data/pysdm.glade.h:21
 msgid "Name"
 msgstr ""
 
@@ -49,7 +49,7 @@ msgstr ""
 msgid "Assistant"
 msgstr ""
 
-#: ../data/pysdm.glade.h:14 ../pysdm/pysdm.py:94
+#: ../data/pysdm.glade.h:14 ../pysdm/pysdm.py:107
 msgid "Mount"
 msgstr ""
 
@@ -59,6 +59,74 @@ msgstr ""
 
 #: ../data/pysdm.glade.h:16
 msgid "General Configuration"
+msgstr ""
+
+#: ../data/pysdm.glade.h:17
+msgid "name"
+msgstr ""
+
+#: ../data/pysdm.glade.h:18
+msgid "vendor"
+msgstr ""
+
+#: ../data/pysdm.glade.h:19
+msgid "model"
+msgstr ""
+
+#: ../data/pysdm.glade.h:20
+msgid "serial"
+msgstr ""
+
+#: ../data/pysdm.glade.h:22
+msgid "Vendor"
+msgstr ""
+
+#: ../data/pysdm.glade.h:23
+msgid "Model"
+msgstr ""
+
+#: ../data/pysdm.glade.h:24
+msgid "Serial"
+msgstr ""
+
+#: ../data/pysdm.glade.h:25
+msgid "Bus"
+msgstr ""
+
+#: ../data/pysdm.glade.h:26
+msgid "bus"
+msgstr ""
+
+#: ../data/pysdm.glade.h:27
+msgid "Attributes"
+msgstr ""
+
+#: ../data/pysdm.glade.h:28
+msgid "Up"
+msgstr ""
+
+#: ../data/pysdm.glade.h:29
+msgid "Down"
+msgstr ""
+
+#: ../data/pysdm.glade.h:30
+msgid "Edit"
+msgstr ""
+
+#: ../data/pysdm.glade.h:31
+msgid "Delete"
+msgstr ""
+
+#: ../data/pysdm.glade.h:32
+msgid "New"
+msgstr ""
+
+#: ../data/pysdm.glade.h:33 ../pysdm/pysdm.py:69
+msgid "Rules"
+msgstr ""
+
+#: ../data/pysdm.glade.h:34
+msgid "Dynamic configuration rules"
 msgstr ""
 
 #. mounting options
@@ -128,7 +196,7 @@ msgid "The owner of the device can mount it"
 msgstr ""
 
 #: ../pysdm/fsdata/default.py:14
-msgid "Allow set user identifier"
+msgid "Permit executables to change user/group identity"
 msgstr ""
 
 #: ../pysdm/fsdata/default.py:15
@@ -298,7 +366,11 @@ msgid "Disable reiserfs journaling"
 msgstr ""
 
 #: ../pysdm/fsdata/reiserfs.py:8
-msgid "Disable packing of files into the tree"
+msgid "Disable efficient in-tree"
+msgstr ""
+
+#: ../pysdm/fsdata/reiserfs.py:9
+msgid "), G_P] \t} \t)"
 msgstr ""
 
 #: ../pysdm/fsdata/swap.py:5
@@ -337,44 +409,100 @@ msgstr ""
 msgid "Group disk quota limits enforced"
 msgstr ""
 
-#: ../pysdm/pysdm.py:55
+#: ../pysdm/pysdm.py:63
 msgid "Partition List"
 msgstr ""
 
-#: ../pysdm/pysdm.py:92
+#: ../pysdm/pysdm.py:105
 msgid "Remount"
 msgstr ""
 
-#: ../pysdm/pysdm.py:188
+#: ../pysdm/pysdm.py:118
+msgid "Unknown"
+msgstr ""
+
+#: ../pysdm/pysdm.py:236
 msgid "Configure now?"
 msgstr ""
 
-#: ../pysdm/pysdm.py:189
+#: ../pysdm/pysdm.py:237
 msgid ""
 " hasn't been configured.\n"
 "Do you want to configure it now?\n"
 msgstr ""
 
-#: ../pysdm/pysdm.py:220
+#: ../pysdm/pysdm.py:270
 msgid "Select a file for mountpoint..."
 msgstr ""
 
-#: ../pysdm/pysdm.py:249
+#: ../pysdm/pysdm.py:299
 msgid "Select options"
 msgstr ""
 
-#: ../pysdm/pysdm.py:268
+#: ../pysdm/pysdm.py:318
 msgid ""
 "The file system is busy.\n"
 "Can't be remounted with the new location"
 msgstr ""
 
-#: ../pysdm/pysdm.py:270
+#: ../pysdm/pysdm.py:320
 msgid ""
 "The file system can't be mounted\n"
 "mount returned error:"
 msgstr ""
 
-#: ../pysdm/pysdm.py:272
+#: ../pysdm/pysdm.py:322
 msgid "Mount error"
+msgstr ""
+
+#: ../pysdm/pysdm.py:373 ../pysdm/pysdm.py:396
+msgid "New rule..."
+msgstr ""
+
+#: ../pysdm/sysfs.py:14
+msgid "Name is"
+msgstr ""
+
+#: ../pysdm/sysfs.py:15
+msgid "Bus is"
+msgstr ""
+
+#: ../pysdm/sysfs.py:16
+msgid "Vendor is"
+msgstr ""
+
+#: ../pysdm/sysfs.py:17
+msgid "Model is"
+msgstr ""
+
+#: ../pysdm/sysfs.py:18
+msgid "Serial is"
+msgstr ""
+
+#: ../pysdm/sysfs.py:20
+msgid "Specify a device file name"
+msgstr ""
+
+#: ../pysdm/sysfs.py:21
+msgid "Specify users rigths"
+msgstr ""
+
+#: ../pysdm/sysfs.py:22
+msgid "Specify owner group"
+msgstr ""
+
+#: ../pysdm/sysfs.py:23
+msgid "Specify owner user"
+msgstr ""
+
+#: ../pysdm/sysfs.py:24
+msgid "Create a link with this name"
+msgstr ""
+
+#: ../pysdm/sysfs.py:60
+msgid "Conditions"
+msgstr ""
+
+#: ../pysdm/sysfs.py:64
+msgid "Actions"
 msgstr ""

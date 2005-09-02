@@ -11,7 +11,7 @@ options.append( \
 	 "group":	[1, [""], _("Allow a group to mount this file system"), G_M], \
 	 "_netdev": [0, ["_netdev", ""], _("This file system requires network"), G_O], \
 	 "owner":	[0,	["owner", ""], _("The owner of the device can mount it"), G_M], \
-	 "suid":	[0, ["suid", "nosuid"], _("Allow set user identifier"), G_S], \
+	 "suid":	[0, ["suid", "nosuid"], _("Permit executables to change user/group identity"), G_S], \
 	 "ro":		[0, ["ro", ""], _("Mount file system in read-only mode"), G_M], \
 	 "sync":	[0,	["sync", ""], _("I/O to the file system should be done synchronously"), G_P], \
 	 "dirsync": [0, ["dirsync", ""], _("All directory updates should be done synchronously"), G_P] \

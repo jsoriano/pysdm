@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-01 15:11+0200\n"
-"PO-Revision-Date: 2005-09-01 15:14+0200\n"
+"POT-Creation-Date: 2005-09-02 23:26+0200\n"
+"PO-Revision-Date: 2005-09-02 23:31+0200\n"
 "Last-Translator:  <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 #. * Añada este archivo a su POTFILES.in de su proyecto.
 #. * NO lo compile como parte de su aplicación.
 #.
-#: ../data/pysdm.glade.h:7 ../pysdm/pysdm.py:47
+#: ../data/pysdm.glade.h:7 ../pysdm/pysdm.py:52
 msgid "Storage Device Manager"
 msgstr "Gestor de dispositivos de almacenamiento"
 
@@ -34,7 +34,7 @@ msgstr "Tipo"
 msgid "Mountpoint"
 msgstr "Punto de Montaje"
 
-#: ../data/pysdm.glade.h:10
+#: ../data/pysdm.glade.h:10 ../data/pysdm.glade.h:21
 msgid "Name"
 msgstr "Nombre"
 
@@ -50,7 +50,7 @@ msgstr "Por defecto"
 msgid "Assistant"
 msgstr "Asistente"
 
-#: ../data/pysdm.glade.h:14 ../pysdm/pysdm.py:94
+#: ../data/pysdm.glade.h:14 ../pysdm/pysdm.py:107
 msgid "Mount"
 msgstr "Montar"
 
@@ -61,6 +61,74 @@ msgstr "Información"
 #: ../data/pysdm.glade.h:16
 msgid "General Configuration"
 msgstr "Configuración General"
+
+#: ../data/pysdm.glade.h:17
+msgid "name"
+msgstr "nombre"
+
+#: ../data/pysdm.glade.h:18
+msgid "vendor"
+msgstr "Vendedor"
+
+#: ../data/pysdm.glade.h:19
+msgid "model"
+msgstr "Modelo"
+
+#: ../data/pysdm.glade.h:20
+msgid "serial"
+msgstr "Número de serie"
+
+#: ../data/pysdm.glade.h:22
+msgid "Vendor"
+msgstr "Vendedor"
+
+#: ../data/pysdm.glade.h:23
+msgid "Model"
+msgstr "Modelo"
+
+#: ../data/pysdm.glade.h:24
+msgid "Serial"
+msgstr "Número de Serie"
+
+#: ../data/pysdm.glade.h:25
+msgid "Bus"
+msgstr "Bus"
+
+#: ../data/pysdm.glade.h:26
+msgid "bus"
+msgstr "bus"
+
+#: ../data/pysdm.glade.h:27
+msgid "Attributes"
+msgstr "Atributos"
+
+#: ../data/pysdm.glade.h:28
+msgid "Up"
+msgstr "Subir"
+
+#: ../data/pysdm.glade.h:29
+msgid "Down"
+msgstr "Bajar"
+
+#: ../data/pysdm.glade.h:30
+msgid "Edit"
+msgstr "Editar"
+
+#: ../data/pysdm.glade.h:31
+msgid "Delete"
+msgstr "Borrar"
+
+#: ../data/pysdm.glade.h:32
+msgid "New"
+msgstr "Nuevo"
+
+#: ../data/pysdm.glade.h:33 ../pysdm/pysdm.py:69
+msgid "Rules"
+msgstr "Reglas"
+
+#: ../data/pysdm.glade.h:34
+msgid "Dynamic configuration rules"
+msgstr "Reglas de configuración dinámica"
 
 #. mounting options
 #. special files options
@@ -129,8 +197,8 @@ msgid "The owner of the device can mount it"
 msgstr "El propietario del dispositivo puede montarlo"
 
 #: ../pysdm/fsdata/default.py:14
-msgid "Allow set user identifier"
-msgstr "Permitir establecer el identificador de usuario (suid)"
+msgid "Permit executables to change user/group identity"
+msgstr "Permitir a los ejecutables cambiar el identificador de usuario/grupo"
 
 #: ../pysdm/fsdata/default.py:15
 msgid "Mount file system in read-only mode"
@@ -305,8 +373,12 @@ msgid "Disable reiserfs journaling"
 msgstr "Desactivar journaling"
 
 #: ../pysdm/fsdata/reiserfs.py:8
-msgid "Disable packing of files into the tree"
+msgid "Disable efficient in-tree"
 msgstr "Desactivar empaquetado de archivos en el árbol"
+
+#: ../pysdm/fsdata/reiserfs.py:9
+msgid "), G_P] \t} \t)"
+msgstr ""
 
 #: ../pysdm/fsdata/swap.py:5
 msgid "Swap device"
@@ -344,19 +416,23 @@ msgstr "Activar cuota de grupo"
 msgid "Group disk quota limits enforced"
 msgstr "Limites de cuota de grupo forzados"
 
-#: ../pysdm/pysdm.py:55
+#: ../pysdm/pysdm.py:63
 msgid "Partition List"
 msgstr "Particiones"
 
-#: ../pysdm/pysdm.py:92
+#: ../pysdm/pysdm.py:105
 msgid "Remount"
 msgstr "Remontar"
 
-#: ../pysdm/pysdm.py:188
+#: ../pysdm/pysdm.py:118
+msgid "Unknown"
+msgstr "Desconocido"
+
+#: ../pysdm/pysdm.py:236
 msgid "Configure now?"
 msgstr "¿Configurar ahora?"
 
-#: ../pysdm/pysdm.py:189
+#: ../pysdm/pysdm.py:237
 msgid ""
 " hasn't been configured.\n"
 "Do you want to configure it now?\n"
@@ -364,15 +440,15 @@ msgstr ""
 "·no ha sido configurada.\n"
 "¿Configurar ahora?\n"
 
-#: ../pysdm/pysdm.py:220
+#: ../pysdm/pysdm.py:270
 msgid "Select a file for mountpoint..."
 msgstr "Elige un directorio como punto de montaje..."
 
-#: ../pysdm/pysdm.py:249
+#: ../pysdm/pysdm.py:299
 msgid "Select options"
 msgstr "Elige opciones"
 
-#: ../pysdm/pysdm.py:268
+#: ../pysdm/pysdm.py:318
 msgid ""
 "The file system is busy.\n"
 "Can't be remounted with the new location"
@@ -380,7 +456,7 @@ msgstr ""
 "El sistema de ficheros está ocupado.\n"
 "No puede ser remontado en la nueva ubicación."
 
-#: ../pysdm/pysdm.py:270
+#: ../pysdm/pysdm.py:320
 msgid ""
 "The file system can't be mounted\n"
 "mount returned error:"
@@ -388,9 +464,64 @@ msgstr ""
 "El sistema de ficheros no pudo ser montado\n"
 "mount devolvió el error:"
 
-#: ../pysdm/pysdm.py:272
+#: ../pysdm/pysdm.py:322
 msgid "Mount error"
 msgstr "Error de montaje"
+
+#: ../pysdm/pysdm.py:373 ../pysdm/pysdm.py:396
+msgid "New rule..."
+msgstr "Nueva regla..."
+
+#: ../pysdm/sysfs.py:14
+msgid "Name is"
+msgstr "Nombre es"
+
+#: ../pysdm/sysfs.py:15
+msgid "Bus is"
+msgstr "Bus es"
+
+#: ../pysdm/sysfs.py:16
+msgid "Vendor is"
+msgstr "Vendedor es"
+
+#: ../pysdm/sysfs.py:17
+msgid "Model is"
+msgstr "Modelo es"
+
+#: ../pysdm/sysfs.py:18
+msgid "Serial is"
+msgstr "Número de serie es"
+
+#: ../pysdm/sysfs.py:20
+msgid "Specify a device file name"
+msgstr "Especificar un nombre de archivo de dispositivo"
+
+#: ../pysdm/sysfs.py:21
+msgid "Specify users rigths"
+msgstr "Especificar permisos de usuario"
+
+#: ../pysdm/sysfs.py:22
+msgid "Specify owner group"
+msgstr "Especificar Grupo propietario"
+
+#: ../pysdm/sysfs.py:23
+msgid "Specify owner user"
+msgstr "Especificar usuario propietario"
+
+#: ../pysdm/sysfs.py:24
+msgid "Create a link with this name"
+msgstr "Crear un enlace con este nombre"
+
+#: ../pysdm/sysfs.py:60
+msgid "Conditions"
+msgstr "Condiciones"
+
+#: ../pysdm/sysfs.py:64
+msgid "Actions"
+msgstr "Acciones"
+
+#~ msgid "Allow set user identifier"
+#~ msgstr "Permitir establecer el identificador de usuario (suid)"
 
 #~ msgid "User options"
 #~ msgstr "Opciones de usuario"

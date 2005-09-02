@@ -104,20 +104,17 @@ class Block:
 		if name.find("hd")==0: self.attributes["bus"] = "ide"
 		else: self.attributes["bus"] = "scsi"
 		
-
-		exp = re.compile("^.+(\d+),\s+(\d+).+\s+(\w+)$")
-
-		ls = os.popen("ls -l /dev")
-		for dev in ls.readlines()[1:]:
-			if dev[0] != 'b': continue
-			parsed_dev = exp.match(dev)
-			if parsed_dev == None:
-				continue
-			parsed_dev = parsed_dev.groups()
-           
-			if parsed_dev[0] == self.major and parsed_dev[1] == self.minor:
-				self.dev = "/dev/" + parsed_dev[2]
-		ls.close()
+		majorminor = "%x,%x\n" % (int(self.major),int(self.minor))
+		if os.popen("stat -c %t,%T /dev/" + self.name).readline() == majorminor:
+			self.dev = "/dev/" + self.name
+		else:
+			for file_name in os.popen("find /dev -type b -regex \"[^\.]*\"").readlines():
+				ps = os.popen("stat -c %t,%T " + file_name)
+				stat = ps.readline()
+				ps.close()
+				if stat.find(majorminor)==0:
+					self.dev = file_name
+					return
 
 class UdevRule:
 	def __init__(self, rule=""):
