@@ -14,6 +14,7 @@ POTFILES := \
         ../pysdm/fsdata/swap.py \
         ../pysdm/fsdata/xfs.py \
         ../pysdm/pysdm.py \
+	../pysdm/sysfs.py \
         ../pysdm/options_ui.py
 
 PREFIX := @prefix@

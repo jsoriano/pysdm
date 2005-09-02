@@ -58,7 +58,7 @@ class Filesystem:
 		mtab = file("/etc/mtab", "r")
 		lines = mtab.readlines()
 		for line in lines:
-			if line.find(self.spec):
+			if line.find(self.spec) >= 0:
 				return True
 		return False
 

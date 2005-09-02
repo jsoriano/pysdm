@@ -1,3 +1,6 @@
+Version 0.3.1   Jaime Soriano Pastor <kronoss@kronoss.org>
+	* udev management (testing)
+
 Version 0.3.1	Jaime Soriano Pastor <kronoss@kronoss.org>
 	* New options grouping
 	* Fixed formatting of fstab
