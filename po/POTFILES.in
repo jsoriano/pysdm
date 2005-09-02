@@ -12,3 +12,4 @@ pysdm/fsdata/swap.py
 pysdm/fsdata/xfs.py
 pysdm/pysdm.py
 pysdm/options_ui.py
+pysdm/sysfs.py
