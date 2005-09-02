@@ -176,14 +176,16 @@ class Mainwindow(SimpleGladeApp):
                 block_path = "/sys/block/" + device + "/" + partition
 
             try:
-                os.stat(block_path)
-                #os.stat("/dev/" + partition)
-                partitions.append(partition)
-                block = Block(partition, device)
-                self.blocks[block.name] = block
-                self.blocks[block.dev] = block
+               	os.stat(block_path)
+               	#os.stat("/dev/" + partition)
+               	partitions.append(partition)
+               	block = Block(partition, device)
+               	self.blocks[block.name] = block
+               	self.blocks[block.dev] = block
             except OSError:
-                pass
+    	        pass
+            except AttributeError:
+                print "Not suitable dev for " + block.name
             
         return partitions
     #-- Mainwindow custom methods }
