@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 """
@@ -21,8 +20,8 @@ def is_mountable(device):
 	Uses blkid to check if the given partition is mountable
 		device: the partition to check
 	"""
-	os.system(BLKID_BIN + " -c /dev/null >> /dev/null")
-	return os.system("cat " + BLKID_CACHE + " | grep " + device + " >> /dev/null")==0
+	#os.system(BLKID_BIN + " -c /dev/null >> /dev/null")
+	return os.system(BLKID_BIN + " -c /dev/null | grep " + device + " >> /dev/null")==0
 
 
 def get_vfstype(device):
@@ -31,11 +30,10 @@ def get_vfstype(device):
 		device: the device
 	"""
 
-	os.system(BLKID_BIN + " -c /dev/null >> /dev/null")
-	cache = file("/etc/blkid.tab")
-	filesystems = cache.readlines()
+	#os.system(BLKID_BIN + " -c /dev/null >> /dev/null")
+	#cache = file("/etc/blkid.tab")
+	cache = os.popen(BLKID_BIN + " -c /dev/null " + device)
+	filesystem = cache.readline()
+	if filesystem == None: return "auto"
 	cache.close()
-	for line in filesystems:
-		if re.compile(".+" + device + ".+").search(line):
-			return re.compile(".+TYPE=\"(\w+)\".+").match(line).groups()[0]
-	return "auto"
+	return re.compile(".+TYPE=\"(\w+)\".+").match(filesystem).groups()[0]

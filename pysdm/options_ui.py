@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: UTF8 -*-
 
 import gtk
@@ -51,26 +50,26 @@ class option_dialog(gtk.Dialog):
 
 
 	def set_value(self, value):
-		if len(value) == 0 or not cmp(value[0], "defaults"):
-			self.set_value(self.defaults)
-		else:
-			for option in value:
-				op_name = re.compile("([\w_]+)=?.*").match(option).groups()[0]
-				try:
-					if self.op_widgets.has_key(op_name):
-						widget = self.op_widgets[op_name]
-					elif fsdata.options['default'][1].has_key(op_name):
-						widget = self.op_widgets[fsdata.options['default'][1][op_name]]
-					elif fsdata.options.has_key(self.filesystem) and \
-							fsdata.options[self.filesystem][1].has_key(op_name):
-						widget = self.op_widgets[fsdata.options['default'][1][op_name]]
-					else:
-						print "Warning: Unknown option: " + option
-						continue
-				except:
+		value = self.defaults + value
+
+		for option in value:
+			if type(option)!=str or len(option)==0: continue
+			op_name = re.compile("([\w_]+)=?.*").match(option).groups()[0]
+			try:
+				if self.op_widgets.has_key(op_name):
+					widget = self.op_widgets[op_name]
+				elif fsdata.options['default'][1].has_key(op_name):
+					widget = self.op_widgets[fsdata.options['default'][1][op_name]]
+				elif fsdata.options.has_key(self.filesystem) and \
+						fsdata.options[self.filesystem][1].has_key(op_name):
+					widget = self.op_widgets[fsdata.options['default'][1][op_name]]
+				else:
 					print "Warning: Unknown option: " + option
 					continue
-				widget.set_value(option)
+			except:
+				print "Warning: Unknown option: " + option
+				continue
+			widget.set_value(option)
 
 
 

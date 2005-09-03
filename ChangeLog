@@ -1,4 +1,17 @@
-Version 0.3.999999999   Jaime Soriano Pastor <kronoss@kronoss.org>
+Version 0.4	Jaime Soriano Pastor <kronoss@kronoss.org>
+	* File systems can be removed from fstab
+	* Partitions whithout fstab entry can have udev rules now
+	* Preserve fstab comments and empty lines
+	* File systems can be unmounted now
+	* (no)diratime option added
+	* Fixed some fstab formatting bugs
+	* Fixed blkid caching problem
+	* Fixed default options
+	* Fixed XFS quota options 
+	* Fixed exception when all default options are selected
+	* Spanish l10n updated
+
+Version 0.3.9   Jaime Soriano Pastor <kronoss@kronoss.org>
 	* udev management (testing)
 
 Version 0.3.1	Jaime Soriano Pastor <kronoss@kronoss.org>

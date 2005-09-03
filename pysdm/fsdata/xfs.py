@@ -7,15 +7,15 @@ options.append( \
 	 "norecovery":	[0, ["norecovery", ""], _("The file system will be mounted without running log recovery"), G_J], \
 	 "nouuid":		[0, ["nouuid", ""], _("Ignore file system uuid"), G_O], \
 	 "usrquota":	[0, ["usrquota", ""], _("Enable user disk quota"), G_Q], \
-	 "uqnoenforce":	[0, ["uqnoenforce", ""], _("User disk quota limits enforced"), G_Q], \
-	 "grpquota":	[0, ["grpquota", ""], _("Enable group disk quota"), G_Q], \
-	 "gqnoenforce":	[0, ["gqnoenforce", ""], _("Group disk quota limits enforced"), G_Q] \
+	 "grpquota":	[0, ["grpquota", ""], _("Enable group disk quota"), G_Q] \
 	} \
 	)
 
 options.append( \
 	{"dmapi":	"xdsm", \
-	 "quota":	"usrquota" \
+	 "quota":	"usrquota", \
+	 "uqnoenforce": "usrquota", \
+	 "gqnoenforce": "grpquota", \
 	} \
 	)
 
