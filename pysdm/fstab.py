@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 """
@@ -47,12 +46,10 @@ class Filesystem:
 
 			for op in self.mntops[1:]:
 				ops = ops + "," + op
-
-		if self.is_mounted():
-			ret = os.system("umount " + self.spec)
-			if ret != 0:
-				return ret
 		return os.system("mount " + self.spec + " " + self.file + " -t " + self.vfstype + " -o " + ops)
+
+	def umount(self):
+		return os.system("umount " + self.spec)
 
 	def is_mounted(self):
 		mtab = file("/etc/mtab", "r")
@@ -69,10 +66,9 @@ class Filesystem:
 
 class Fstab:
 	"Abstraction class for fstab file"
-	filesystems = []
-
 
 	def __init__(self, fstab):
+		self.filesystems = []
 		self.fromFile(fstab)
 
 
@@ -81,23 +77,22 @@ class Fstab:
 
 
 	def getFS(self, spec, file):
-		i=0
-		for fs in self.filesystems:	
+		for fs in self.filesystems:
+			if type(fs) == str: continue
 			if (fs.spec==spec and (fs.file==file or file==None)) or (fs.file==file and spec==None):
 				return fs
-			i = i + 1
 		return None
 
-
 	def delFS(self, spec, file):
-		i = self.getFS(spec, file)
-		if i == None:
-			return None
-		else:
-			deleted = self.filesystems[i]
-			del self.filesystems[i]
-			return deleted
-
+		i=0
+		for fs in self.filesystems:
+			if type(fs) != str:
+				if fs.spec==spec and fs.file==file:
+					deleted = self.filesystems[i]
+					del self.filesystems[i]
+					return deleted
+			i = i + 1
+		return None
 
 	def parseFS(self, fs):
 		exp = "^(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\d)\s+(\d)\s+$"
@@ -110,6 +105,7 @@ class Fstab:
 
 
 	def fromFile(self, fstab):
+		self.lines = []
 		fstabfile = file(fstab, "r")
 		n = 0
 
@@ -117,6 +113,8 @@ class Fstab:
 			parsed = self.parseFS(line)
 			if parsed != None:
 				self.addFS(parsed)
+			else:
+				self.addFS(line)
 
 		fstabfile.close()
 
@@ -125,15 +123,19 @@ class Fstab:
 		ret = ""
 		col_l = []
 		for fs in self.filesystems:
+			if type(fs) == str: continue
 			cols = re.compile("\t").split(fs.toTab())
 			if len(col_l)==0: col_l = [0]*len(cols)
 			for i in range(len(cols)):
 				if col_l[i] < len(cols[i]): col_l[i] = len(cols[i])
 		for fs in self.filesystems:
-			cols = re.compile("\t").split(fs.toTab())
-			for i in range(len(cols)):
-				ret = ret + cols[i].ljust(col_l[i] + 2)
-			ret = ret + "\n"
+			if type(fs) == str:
+				ret = ret + fs
+			else:
+				cols = re.compile("\t").split(fs.toTab())
+				for i in range(len(cols)):
+					ret = ret + cols[i].ljust(col_l[i] + 2)
+				ret = ret + "\n"
 		return ret
 
 	def	toFile(self, fstab):

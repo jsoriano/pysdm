@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-02 23:26+0200\n"
-"PO-Revision-Date: 2005-09-02 23:31+0200\n"
+"POT-Creation-Date: 2005-09-03 18:21+0200\n"
+"PO-Revision-Date: 2005-09-03 18:26+0200\n"
 "Last-Translator:  <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 #. * Añada este archivo a su POTFILES.in de su proyecto.
 #. * NO lo compile como parte de su aplicación.
 #.
-#: ../data/pysdm.glade.h:7 ../pysdm/pysdm.py:52
+#: ../data/pysdm.glade.h:7 ../pysdm/pysdm.py:51
 msgid "Storage Device Manager"
 msgstr "Gestor de dispositivos de almacenamiento"
 
@@ -34,7 +34,7 @@ msgstr "Tipo"
 msgid "Mountpoint"
 msgstr "Punto de Montaje"
 
-#: ../data/pysdm.glade.h:10 ../data/pysdm.glade.h:21
+#: ../data/pysdm.glade.h:10 ../data/pysdm.glade.h:22
 msgid "Name"
 msgstr "Nombre"
 
@@ -50,83 +50,87 @@ msgstr "Por defecto"
 msgid "Assistant"
 msgstr "Asistente"
 
-#: ../data/pysdm.glade.h:14 ../pysdm/pysdm.py:107
+#: ../data/pysdm.glade.h:14 ../pysdm/pysdm.py:112 ../pysdm/pysdm.py:345
 msgid "Mount"
 msgstr "Montar"
 
 #: ../data/pysdm.glade.h:15
+msgid "Remove"
+msgstr "Eliminar"
+
+#: ../data/pysdm.glade.h:16
 msgid "Information"
 msgstr "Información"
 
-#: ../data/pysdm.glade.h:16
+#: ../data/pysdm.glade.h:17
 msgid "General Configuration"
 msgstr "Configuración General"
 
-#: ../data/pysdm.glade.h:17
+#: ../data/pysdm.glade.h:18
 msgid "name"
 msgstr "nombre"
 
-#: ../data/pysdm.glade.h:18
-msgid "vendor"
-msgstr "Vendedor"
-
 #: ../data/pysdm.glade.h:19
-msgid "model"
-msgstr "Modelo"
+msgid "vendor"
+msgstr "vendedor"
 
 #: ../data/pysdm.glade.h:20
+msgid "model"
+msgstr "modelo"
+
+#: ../data/pysdm.glade.h:21
 msgid "serial"
 msgstr "Número de serie"
 
-#: ../data/pysdm.glade.h:22
+#: ../data/pysdm.glade.h:23
 msgid "Vendor"
 msgstr "Vendedor"
 
-#: ../data/pysdm.glade.h:23
+#: ../data/pysdm.glade.h:24
 msgid "Model"
 msgstr "Modelo"
 
-#: ../data/pysdm.glade.h:24
+#: ../data/pysdm.glade.h:25
 msgid "Serial"
 msgstr "Número de Serie"
 
-#: ../data/pysdm.glade.h:25
+#: ../data/pysdm.glade.h:26
 msgid "Bus"
 msgstr "Bus"
 
-#: ../data/pysdm.glade.h:26
+#: ../data/pysdm.glade.h:27
 msgid "bus"
 msgstr "bus"
 
-#: ../data/pysdm.glade.h:27
+#: ../data/pysdm.glade.h:28
 msgid "Attributes"
 msgstr "Atributos"
 
-#: ../data/pysdm.glade.h:28
+#: ../data/pysdm.glade.h:29
 msgid "Up"
 msgstr "Subir"
 
-#: ../data/pysdm.glade.h:29
+#: ../data/pysdm.glade.h:30
 msgid "Down"
 msgstr "Bajar"
 
-#: ../data/pysdm.glade.h:30
+#: ../data/pysdm.glade.h:31
 msgid "Edit"
 msgstr "Editar"
 
-#: ../data/pysdm.glade.h:31
+#: ../data/pysdm.glade.h:32
 msgid "Delete"
 msgstr "Borrar"
 
-#: ../data/pysdm.glade.h:32
+#: ../data/pysdm.glade.h:33
 msgid "New"
 msgstr "Nuevo"
 
-#: ../data/pysdm.glade.h:33 ../pysdm/pysdm.py:69
+#: ../data/pysdm.glade.h:34 ../pysdm/pysdm.py:68
 msgid "Rules"
 msgstr "Reglas"
 
-#: ../data/pysdm.glade.h:34
+#: ../data/pysdm.glade.h:35
 msgid "Dynamic configuration rules"
 msgstr "Reglas de configuración dinámica"
 
@@ -165,53 +169,56 @@ msgid "Update file time for each access"
 msgstr "Actualizar indicador de tiempo en cada acceso"
 
 #: ../pysdm/fsdata/default.py:6
+msgid "Update directory time for each access"
+msgstr "Actualizar indicador de tiempo de directorios en cada acceso"
+
+#: ../pysdm/fsdata/default.py:7
 msgid "The file system is mounted at boot time"
 msgstr "Montar el sistema de ficheros en el arranque"
 
-#: ../pysdm/fsdata/default.py:7
+#: ../pysdm/fsdata/default.py:8
 msgid "Interpret character or block special devices on the file system"
 msgstr "Interpretar dispositivos de carácteres o bloques"
 
-#: ../pysdm/fsdata/default.py:8
+#: ../pysdm/fsdata/default.py:9
 msgid "Permit execution of binaries"
 msgstr "Permitir ejecución de binarios"
 
-#: ../pysdm/fsdata/default.py:9
+#: ../pysdm/fsdata/default.py:10
 msgid "Allow a user to mount and unmount the file system"
 msgstr "Permitir a un usuario montar y desmontar el sistema de archivos"
 
-#: ../pysdm/fsdata/default.py:10
+#: ../pysdm/fsdata/default.py:11
 msgid "Allow any user to mount the file system"
 msgstr "Permitir a cualquier usuario montar el sistema de archivos"
 
-#: ../pysdm/fsdata/default.py:11
+#: ../pysdm/fsdata/default.py:12
 msgid "Allow a group to mount this file system"
 msgstr "Permitir a un grupo montar el sistema de archivos"
 
-#: ../pysdm/fsdata/default.py:12
+#: ../pysdm/fsdata/default.py:13
 msgid "This file system requires network"
 msgstr "Este sistema de archivos requiere conexión"
 
-#: ../pysdm/fsdata/default.py:13
+#: ../pysdm/fsdata/default.py:14
 msgid "The owner of the device can mount it"
 msgstr "El propietario del dispositivo puede montarlo"
 
-#: ../pysdm/fsdata/default.py:14
+#: ../pysdm/fsdata/default.py:15
 msgid "Permit executables to change user/group identity"
 msgstr "Permitir a los ejecutables cambiar el identificador de usuario/grupo"
 
-#: ../pysdm/fsdata/default.py:15
+#: ../pysdm/fsdata/default.py:16
 msgid "Mount file system in read-only mode"
 msgstr "Sistema de solo lectura"
 
-#: ../pysdm/fsdata/default.py:16
+#: ../pysdm/fsdata/default.py:17
 msgid "I/O to the file system should be done synchronously"
 msgstr "E/S debe hacerse sincronizadamente"
 
-#: ../pysdm/fsdata/default.py:17
+#: ../pysdm/fsdata/default.py:18
 msgid "All directory updates should be done synchronously"
-msgstr ""
-"Todas las actualizaciones de directorios deben hacerse sincronizadamente"
+msgstr "Todas las actualizaciones de directorios deben hacerse sincronizadamente"
 
 #: ../pysdm/fsdata/ext2.py:5 ../pysdm/fsdata/ext3.py:5
 msgid "Support POSIX access list"
@@ -310,8 +317,7 @@ msgstr "umask para los permisos de archivos (en octal)"
 
 #: ../pysdm/fsdata/fat.py:11
 msgid "Select level of character checking in file names"
-msgstr ""
-"Seleccionar nivel de comprobación de carácteres en los nombres de archivos"
+msgstr "Seleccionar nivel de comprobación de carácteres en los nombres de archivos"
 
 #: ../pysdm/fsdata/fat.py:12
 msgid "Sets the codepage for converting to shortname characters"
@@ -373,12 +379,8 @@ msgid "Disable reiserfs journaling"
 msgstr "Desactivar journaling"
 
 #: ../pysdm/fsdata/reiserfs.py:8
-msgid "Disable efficient in-tree"
+msgid "Disable efficient in-tree storage of small files"
 msgstr "Desactivar empaquetado de archivos en el árbol"
-
-#: ../pysdm/fsdata/reiserfs.py:9
-msgid "), G_P] \t} \t)"
-msgstr ""
 
 #: ../pysdm/fsdata/swap.py:5
 msgid "Swap device"
@@ -405,34 +407,26 @@ msgid "Enable user disk quota"
 msgstr "Activar cuota de usuario"
 
 #: ../pysdm/fsdata/xfs.py:10
-msgid "User disk quota limits enforced"
-msgstr "Limites de cuota de usuario forzados"
-
-#: ../pysdm/fsdata/xfs.py:11
 msgid "Enable group disk quota"
 msgstr "Activar cuota de grupo"
 
-#: ../pysdm/fsdata/xfs.py:12
-msgid "Group disk quota limits enforced"
-msgstr "Limites de cuota de grupo forzados"
-
-#: ../pysdm/pysdm.py:63
+#: ../pysdm/pysdm.py:62
 msgid "Partition List"
 msgstr "Particiones"
 
-#: ../pysdm/pysdm.py:105
-msgid "Remount"
-msgstr "Remontar"
+#: ../pysdm/pysdm.py:110 ../pysdm/pysdm.py:343
+msgid "Unmount"
+msgstr "Desmontar"
 
-#: ../pysdm/pysdm.py:118
+#: ../pysdm/pysdm.py:126
 msgid "Unknown"
 msgstr "Desconocido"
 
-#: ../pysdm/pysdm.py:236
+#: ../pysdm/pysdm.py:243
 msgid "Configure now?"
 msgstr "¿Configurar ahora?"
 
-#: ../pysdm/pysdm.py:237
+#: ../pysdm/pysdm.py:244
 msgid ""
 " hasn't been configured.\n"
 "Do you want to configure it now?\n"
@@ -440,23 +434,23 @@ msgstr ""
 "·no ha sido configurada.\n"
 "¿Configurar ahora?\n"
 
-#: ../pysdm/pysdm.py:270
+#: ../pysdm/pysdm.py:281
 msgid "Select a file for mountpoint..."
 msgstr "Elige un directorio como punto de montaje..."
 
-#: ../pysdm/pysdm.py:299
+#: ../pysdm/pysdm.py:310
 msgid "Select options"
 msgstr "Elige opciones"
 
-#: ../pysdm/pysdm.py:318
+#: ../pysdm/pysdm.py:329
 msgid ""
 "The file system is busy.\n"
-"Can't be remounted with the new location"
+"Can't be unmounted"
 msgstr ""
 "El sistema de ficheros está ocupado.\n"
-"No puede ser remontado en la nueva ubicación."
+"No puede ser desmontado"
 
-#: ../pysdm/pysdm.py:320
+#: ../pysdm/pysdm.py:331
 msgid ""
 "The file system can't be mounted\n"
 "mount returned error:"
@@ -464,11 +458,23 @@ msgstr ""
 "El sistema de ficheros no pudo ser montado\n"
 "mount devolvió el error:"
 
-#: ../pysdm/pysdm.py:322
+#: ../pysdm/pysdm.py:332
 msgid "Mount error"
 msgstr "Error de montaje"
 
-#: ../pysdm/pysdm.py:373 ../pysdm/pysdm.py:396
+#: ../pysdm/pysdm.py:352
+msgid "Remove filesystem?"
+msgstr "¿Eliminar sistema de archivos?"
+
+#: ../pysdm/pysdm.py:354
+msgid ""
+"This action will delete file system configuration\n"
+"Are you sure?"
+msgstr ""
+"Esta acción eliminará la configuración de este sistema de ficheros,"
+"¿estás seguro?"
+
+#: ../pysdm/pysdm.py:404 ../pysdm/pysdm.py:426
 msgid "New rule..."
 msgstr "Nueva regla..."
 
@@ -519,6 +525,12 @@ msgstr "Condiciones"
 #: ../pysdm/sysfs.py:64
 msgid "Actions"
 msgstr "Acciones"
+
+#~ msgid "User disk quota limits enforced"
+#~ msgstr "Limites de cuota de usuario forzados"
+
+#~ msgid "Group disk quota limits enforced"
+#~ msgstr "Limites de cuota de grupo forzados"
 
 #~ msgid "Allow set user identifier"
 #~ msgstr "Permitir establecer el identificador de usuario (suid)"

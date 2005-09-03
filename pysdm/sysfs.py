@@ -105,7 +105,7 @@ class Block:
 		else: self.attributes["bus"] = "scsi"
 		
 		majorminor = "%x,%x\n" % (int(self.major),int(self.minor))
-		if os.popen("stat -c %t,%T /dev/" + self.name).readline() == majorminor:
+		if os.popen("stat -c %t,%T /dev/" + self.name + " 2> /dev/null").readline() == majorminor:
 			self.dev = "/dev/" + self.name
 		else:
 			for file_name in os.popen("find /dev -type b -regex \"[^\.]*\"").readlines():
@@ -113,7 +113,7 @@ class Block:
 				stat = ps.readline()
 				ps.close()
 				if stat.find(majorminor)==0:
-					self.dev = file_name
+					self.dev = file_name[:len(file_name)-1]
 					return
 
 class UdevRule:
@@ -125,10 +125,10 @@ class UdevRule:
 
 		if len(rule)==0: return
 
-		regexp_condition = re.compile("([\w{}]+)==\"([\w\-\*\[\]]+)\"")
-		regexp_action = re.compile("(\w+)=\"([\w/%]+)\"")
+		regexp_condition = re.compile("([\w{}]+)==\"([\w\-\*\[\]\,]+)\"")
+		regexp_action = re.compile("(\w+)=\"(.+)\"")
 
-		parameters = re.split("[, ]+",rule)
+		parameters = re.split(",\s\s*",rule)
 
 		for parameter in parameters:
 			match = regexp_condition.match(parameter)
@@ -147,6 +147,7 @@ class UdevRule:
 		for condition in self.conditions:
 			regex = re.compile(self.conditions[condition])
 			attribute = block.attributes[rule2block[condition]]
+			if attribute == None: return False
 			match = match and (regex.match(attribute)!=None)
 		return match
 

@@ -40,8 +40,10 @@ uninstall:
 
 clean:
 	find . -name '*.mo' -exec rm {} \;
+	rm -fr POTFILES
 	rm -fr $(LANGS)
 
 distclean:
 	rm -f Makefile
+	rm -f POTFILES
 	rm -fr $(LANGS)

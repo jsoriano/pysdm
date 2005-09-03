@@ -12,6 +12,7 @@ gchar *s = N_("Options");
 gchar *s = N_("Set defaults");
 gchar *s = N_("Assistant");
 gchar *s = N_("Mount");
+gchar *s = N_("Remove");
 gchar *s = N_("Information");
 gchar *s = N_("General Configuration");
 gchar *s = N_("name");
