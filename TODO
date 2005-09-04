@@ -1,0 +1,5 @@
+Functionality:
+- changes white-space formatting of fstab
+- wishlist: configure other fstab entries (proc, sys, bind mounts)
+- swap devices have way too many options
+- use a separator instead of so many tabs to not lose track of which options are available
