@@ -36,10 +36,10 @@ install:
 	cp -r ./$(LANGS) $(DESTDIR)$(PREFIX)/share/locale/
 
 uninstall:
-	find $(DESTDIR)$(PREFIX)/share/locale/ -name $(NAME).mo -exec rm {} \;
+	find $(DESTDIR)$(PREFIX)/share/locale/ -name $(NAME).mo -exec rm -f {} \;
 
 clean:
-	find . -name '*.mo' -exec rm {} \;
+	find . -name '*.mo' -exec rm -f {} \;
 	rm -fr POTFILES
 	rm -fr $(LANGS)
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-03 18:21+0200\n"
+"POT-Creation-Date: 2006-05-14 16:24+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 #. * Añada este archivo a su POTFILES.in de su proyecto.
 #. * NO lo compile como parte de su aplicación.
 #.
-#: ../data/pysdm.glade.h:7 ../pysdm/pysdm.py:51
+#: ../data/pysdm.glade.h:7 ../pysdm/pysdm.py:52
 msgid "Storage Device Manager"
 msgstr ""
 
@@ -49,7 +49,7 @@ msgstr ""
 msgid "Assistant"
 msgstr ""
 
-#: ../data/pysdm.glade.h:14 ../pysdm/pysdm.py:112 ../pysdm/pysdm.py:345
+#: ../data/pysdm.glade.h:14 ../pysdm/pysdm.py:113 ../pysdm/pysdm.py:347
 msgid "Mount"
 msgstr ""
 
@@ -58,7 +58,7 @@ msgid "Remove"
 msgstr ""
 
 #: ../data/pysdm.glade.h:16
-msgid "Information"
+msgid "<b>Information</b>"
 msgstr ""
 
 #: ../data/pysdm.glade.h:17
@@ -102,7 +102,7 @@ msgid "bus"
 msgstr ""
 
 #: ../data/pysdm.glade.h:28
-msgid "Attributes"
+msgid "<b>Attributes</b>"
 msgstr ""
 
 #: ../data/pysdm.glade.h:29
@@ -125,8 +125,8 @@ msgstr ""
 msgid "New"
 msgstr ""
 
-#: ../data/pysdm.glade.h:34 ../pysdm/pysdm.py:68
-msgid "Rules"
+#: ../data/pysdm.glade.h:34
+msgid "<b>Rules</b>"
 msgstr ""
 
 #: ../data/pysdm.glade.h:35
@@ -405,54 +405,54 @@ msgstr ""
 msgid "Enable group disk quota"
 msgstr ""
 
-#: ../pysdm/pysdm.py:62
+#: ../pysdm/pysdm.py:63
 msgid "Partition List"
 msgstr ""
 
-#: ../pysdm/pysdm.py:110 ../pysdm/pysdm.py:343
+#: ../pysdm/pysdm.py:69
+msgid "Rules"
+msgstr ""
+
+#: ../pysdm/pysdm.py:111 ../pysdm/pysdm.py:345
 msgid "Unmount"
 msgstr ""
 
-#: ../pysdm/pysdm.py:126
+#: ../pysdm/pysdm.py:127
 msgid "Unknown"
 msgstr ""
 
-#: ../pysdm/pysdm.py:243
+#: ../pysdm/pysdm.py:245
 msgid "Configure now?"
 msgstr ""
 
-#: ../pysdm/pysdm.py:244
+#: ../pysdm/pysdm.py:246
 msgid ""
 " hasn't been configured.\n"
 "Do you want to configure it now?\n"
 msgstr ""
 
-#: ../pysdm/pysdm.py:281
+#: ../pysdm/pysdm.py:283
 msgid "Select a file for mountpoint..."
 msgstr ""
 
-#: ../pysdm/pysdm.py:310
+#: ../pysdm/pysdm.py:312
 msgid "Select options"
 msgstr ""
 
-#: ../pysdm/pysdm.py:329
+#: ../pysdm/pysdm.py:331
 msgid ""
 "The file system is busy.\n"
 "Can't be unmounted"
 msgstr ""
 
-#: ../pysdm/pysdm.py:331
+#: ../pysdm/pysdm.py:333
 msgid ""
 "The file system can't be mounted\n"
 "mount returned error:"
 msgstr ""
 
-#: ../pysdm/pysdm.py:332
+#: ../pysdm/pysdm.py:334
 msgid "Mount error"
-msgstr ""
-
-#: ../pysdm/pysdm.py:352
-msgid "Remove filesystem?"
 msgstr ""
 
 #: ../pysdm/pysdm.py:354
@@ -461,8 +461,16 @@ msgid ""
 "Are you sure?"
 msgstr ""
 
-#: ../pysdm/pysdm.py:404 ../pysdm/pysdm.py:426
+#: ../pysdm/pysdm.py:404 ../pysdm/pysdm.py:430
 msgid "New rule..."
+msgstr ""
+
+#: ../pysdm/pysdm.py:419
+msgid "Remove selected udev rule?"
+msgstr ""
+
+#: ../pysdm/pysdm.py:457
+msgid "You should have root privileges to run this program"
 msgstr ""
 
 #: ../pysdm/sysfs.py:14
@@ -509,6 +517,6 @@ msgstr ""
 msgid "Conditions"
 msgstr ""
 
-#: ../pysdm/sysfs.py:64
+#: ../pysdm/sysfs.py:66
 msgid "Actions"
 msgstr ""

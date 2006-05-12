@@ -58,10 +58,14 @@ class RulesMakerDialog(gtk.Dialog):
 
 		box = gtk.VBox()
 		frame = gtk.Frame(_("Conditions"))
+		frame.set_shadow_type(gtk.SHADOW_NONE)
+		frame.set_border_width(12)
 		frame.add(self.box_conditions)
 		box.pack_start(frame)
 
 		frame = gtk.Frame(_("Actions"))
+		frame.set_border_width(12)
+		frame.set_shadow_type(gtk.SHADOW_NONE)
 		frame.add(self.box_actions)
 		box.pack_start(frame)
 
@@ -104,7 +108,7 @@ class Block:
 		if name.find("hd")==0: self.attributes["bus"] = "ide"
 		else: self.attributes["bus"] = "scsi"
 		
-		majorminor = "%x,%x\n" % (int(self.major),int(self.minor))
+		majorminor = "%x,%x" % (int(self.major),int(self.minor))
 		if os.popen("stat -c %t,%T /dev/" + self.name + " 2> /dev/null").readline() == majorminor:
 			self.dev = "/dev/" + self.name
 		else:
