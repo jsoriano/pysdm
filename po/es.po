@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-03 18:21+0200\n"
-"PO-Revision-Date: 2005-09-03 18:26+0200\n"
+"POT-Creation-Date: 2006-05-14 16:24+0200\n"
+"PO-Revision-Date: 2006-05-14 16:25+0200\n"
 "Last-Translator:  <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 #. * Añada este archivo a su POTFILES.in de su proyecto.
 #. * NO lo compile como parte de su aplicación.
 #.
-#: ../data/pysdm.glade.h:7 ../pysdm/pysdm.py:51
+#: ../data/pysdm.glade.h:7 ../pysdm/pysdm.py:52
 msgid "Storage Device Manager"
 msgstr "Gestor de dispositivos de almacenamiento"
 
@@ -50,7 +50,7 @@ msgstr "Por defecto"
 msgid "Assistant"
 msgstr "Asistente"
 
-#: ../data/pysdm.glade.h:14 ../pysdm/pysdm.py:112 ../pysdm/pysdm.py:345
+#: ../data/pysdm.glade.h:14 ../pysdm/pysdm.py:113 ../pysdm/pysdm.py:347
 msgid "Mount"
 msgstr "Montar"
 
@@ -59,8 +59,8 @@ msgid "Remove"
 msgstr "Eliminar"
 
 #: ../data/pysdm.glade.h:16
-msgid "Information"
-msgstr "Información"
+msgid "<b>Information</b>"
+msgstr "<b>Información</b>"
 
 #: ../data/pysdm.glade.h:17
 msgid "General Configuration"
@@ -103,8 +103,8 @@ msgid "bus"
 msgstr "bus"
 
 #: ../data/pysdm.glade.h:28
-msgid "Attributes"
-msgstr "Atributos"
+msgid "<b>Attributes</b>"
+msgstr "<b>Atributos</b>"
 
 #: ../data/pysdm.glade.h:29
 msgid "Up"
@@ -126,9 +126,9 @@ msgstr "Borrar"
 msgid "New"
 msgstr "Nuevo"
 
-#: ../data/pysdm.glade.h:34 ../pysdm/pysdm.py:68
-msgid "Rules"
-msgstr "Reglas"
+#: ../data/pysdm.glade.h:34
+msgid "<b>Rules</b>"
+msgstr "<b>Reglas</b>"
 
 #: ../data/pysdm.glade.h:35
 msgid "Dynamic configuration rules"
@@ -218,7 +218,8 @@ msgstr "E/S debe hacerse sincronizadamente"
 
 #: ../pysdm/fsdata/default.py:18
 msgid "All directory updates should be done synchronously"
-msgstr "Todas las actualizaciones de directorios deben hacerse sincronizadamente"
+msgstr ""
+"Todas las actualizaciones de directorios deben hacerse sincronizadamente"
 
 #: ../pysdm/fsdata/ext2.py:5 ../pysdm/fsdata/ext3.py:5
 msgid "Support POSIX access list"
@@ -317,7 +318,8 @@ msgstr "umask para los permisos de archivos (en octal)"
 
 #: ../pysdm/fsdata/fat.py:11
 msgid "Select level of character checking in file names"
-msgstr "Seleccionar nivel de comprobación de carácteres en los nombres de archivos"
+msgstr ""
+"Seleccionar nivel de comprobación de carácteres en los nombres de archivos"
 
 #: ../pysdm/fsdata/fat.py:12
 msgid "Sets the codepage for converting to shortname characters"
@@ -410,23 +412,27 @@ msgstr "Activar cuota de usuario"
 msgid "Enable group disk quota"
 msgstr "Activar cuota de grupo"
 
-#: ../pysdm/pysdm.py:62
+#: ../pysdm/pysdm.py:63
 msgid "Partition List"
 msgstr "Particiones"
 
-#: ../pysdm/pysdm.py:110 ../pysdm/pysdm.py:343
+#: ../pysdm/pysdm.py:69
+msgid "Rules"
+msgstr "Reglas"
+
+#: ../pysdm/pysdm.py:111 ../pysdm/pysdm.py:345
 msgid "Unmount"
 msgstr "Desmontar"
 
-#: ../pysdm/pysdm.py:126
+#: ../pysdm/pysdm.py:127
 msgid "Unknown"
 msgstr "Desconocido"
 
-#: ../pysdm/pysdm.py:243
+#: ../pysdm/pysdm.py:245
 msgid "Configure now?"
 msgstr "¿Configurar ahora?"
 
-#: ../pysdm/pysdm.py:244
+#: ../pysdm/pysdm.py:246
 msgid ""
 " hasn't been configured.\n"
 "Do you want to configure it now?\n"
@@ -434,15 +440,15 @@ msgstr ""
 "·no ha sido configurada.\n"
 "¿Configurar ahora?\n"
 
-#: ../pysdm/pysdm.py:281
+#: ../pysdm/pysdm.py:283
 msgid "Select a file for mountpoint..."
 msgstr "Elige un directorio como punto de montaje..."
 
-#: ../pysdm/pysdm.py:310
+#: ../pysdm/pysdm.py:312
 msgid "Select options"
 msgstr "Elige opciones"
 
-#: ../pysdm/pysdm.py:329
+#: ../pysdm/pysdm.py:331
 msgid ""
 "The file system is busy.\n"
 "Can't be unmounted"
@@ -450,7 +456,7 @@ msgstr ""
 "El sistema de ficheros está ocupado.\n"
 "No puede ser desmontado"
 
-#: ../pysdm/pysdm.py:331
+#: ../pysdm/pysdm.py:333
 msgid ""
 "The file system can't be mounted\n"
 "mount returned error:"
@@ -458,25 +464,29 @@ msgstr ""
 "El sistema de ficheros no pudo ser montado\n"
 "mount devolvió el error:"
 
-#: ../pysdm/pysdm.py:332
+#: ../pysdm/pysdm.py:334
 msgid "Mount error"
 msgstr "Error de montaje"
-
-#: ../pysdm/pysdm.py:352
-msgid "Remove filesystem?"
-msgstr "¿Eliminar sistema de archivos?"
 
 #: ../pysdm/pysdm.py:354
 msgid ""
 "This action will delete file system configuration\n"
 "Are you sure?"
 msgstr ""
-"Esta acción eliminará la configuración de este sistema de ficheros,"
-"¿estás seguro?"
+"Esta acción eliminará la configuración de este sistema de ficheros,¿estás "
+"seguro?"
 
-#: ../pysdm/pysdm.py:404 ../pysdm/pysdm.py:426
+#: ../pysdm/pysdm.py:404 ../pysdm/pysdm.py:430
 msgid "New rule..."
 msgstr "Nueva regla..."
+
+#: ../pysdm/pysdm.py:419
+msgid "Remove selected udev rule?"
+msgstr "¿Eliminar regla seleccionada?"
+
+#: ../pysdm/pysdm.py:457
+msgid "You should have root privileges to run this program"
+msgstr "Debes tener privilegios de administrador para ejecutar este programa"
 
 #: ../pysdm/sysfs.py:14
 msgid "Name is"
@@ -522,9 +532,12 @@ msgstr "Crear un enlace con este nombre"
 msgid "Conditions"
 msgstr "Condiciones"
 
-#: ../pysdm/sysfs.py:64
+#: ../pysdm/sysfs.py:66
 msgid "Actions"
 msgstr "Acciones"
+
+#~ msgid "Remove filesystem?"
+#~ msgstr "¿Eliminar sistema de archivos?"
 
 #~ msgid "User disk quota limits enforced"
 #~ msgstr "Limites de cuota de usuario forzados"
