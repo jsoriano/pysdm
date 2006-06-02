@@ -21,6 +21,9 @@ PREFIX := @prefix@
 
 all: $(LANGDIR)
 
+%.po:
+	cp $(NAME).pot $@
+
 %.mo: %.po
 	msgfmt $< -o $@
 	install -d $*/LC_MESSAGES/
