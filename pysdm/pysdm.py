@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: UTF8 -*-
 
 # Python module pysdm.py
@@ -453,7 +452,7 @@ class Mainwindow(SimpleGladeApp):
 #-- main {
 
 def main():
-	if posix.getuid() != 0:
+	if posix.geteuid() != 0:
 		dialog = gtk.MessageDialog(None, 0, gtk.MESSAGE_WARNING, gtk.BUTTONS_OK, _("You should have root privileges to run this program"))
 		dialog.show_all()
 		dialog.run()
