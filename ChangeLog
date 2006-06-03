@@ -1,7 +1,12 @@
+Version 0.4.2	Jaime Soriano Pastor <kronoss@kronoss.org>
+	* Changes in autotools files
+		* configure and Makefile.in removed from CVS
+		* autogen.sh added to CVS
+
 Version 0.4.1	Jaime Soriano Pastor <kronoss@kronoss.org>
 	* Some GUI changes for better GNOME HIG compliance
-    * Show a dialog when not root user and close
-    * Confirmation dialog added when removing udev rule
+	* Show a dialog when not root user and close
+	* Confirmation dialog added when removing udev rule
 	* Fixed pysdm.desktop thanks to Emmet Hikory
 	* Fixed is_mountable() and get_vfstype() functions in blkid.py
 	* Fixed block.dev detection by major minor
