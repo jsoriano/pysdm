@@ -11,6 +11,10 @@
 import re
 import os
 
+def uuidToSpec(uuid):
+	ls = os.popen("readlink -f /dev/disk/by-uuid/" + uuid)
+	return ls.readline().rsplit()[0]
+
 class Filesystem:
 	spec = ""
 	file = ""
@@ -18,14 +22,23 @@ class Filesystem:
 	mntops = []
 	freq = ""
 	passno = ""
+	uuid = None
 
 	def __init__(self, spec, file, vfstype, mntops, freq, passno):
-		self.spec = spec
 		self.file = file
 		self.vfstype = vfstype
 		self.mntops = mntops
 		self.freq = freq
 		self.passno = passno
+
+		exp = "^UUID=(\S+)$"
+		fields = re.compile(exp).match(spec)
+		if fields == None:
+			self.uuid = None
+			self.spec = spec
+		else:
+			self.uuid = fields.groups()[0]
+			self.spec = uuidToSpec(self.uuid)
 
 	def toTab(self):
 		if len(self.mntops) > 0:
@@ -37,7 +50,13 @@ class Filesystem:
 			ops = "defaults"
 			self.mntops = "defaults"
 
-		return self.spec + "\t" + self.file + "\t" + self.vfstype + "\t" + ops + "\t" + self.freq + "\t" + self.passno
+		ret = ""
+		if self.uuid == None:
+			ret = self.spec
+		else:
+			ret = "UUID=" + self.uuid
+		ret += "\t" + self.file + "\t" + self.vfstype + "\t" + ops + "\t" + self.freq + "\t" + self.passno
+		return ret
 
 	def mount(self):
 		ops = ""

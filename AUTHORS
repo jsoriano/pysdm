@@ -2,6 +2,10 @@
 (C) Jaime Soriano Pastor <kronoss@kronoss.org>
 as Google Summer of Code 2005 Student
 
+Colaborations:
+ * jhasse <jhasse@gmail.com> 
+    UUID patch
+
 Thanks to:
  * Martin Pitt, for all the help given for packaging and interface issues as 
    Google Summer of Code 2005 Mentor
