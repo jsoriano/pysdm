@@ -1,20 +1,21 @@
 # French translation of pysdm.
 # Copyright (C) 2008 Free Software Foundation, Inc.
 # This file is distributed under the same license as the pysdm package.
-#
 # Claude Paroz <claude@2xlibre.net>, 2008
-#
+# Marc A. Champlain <email@mchamplain.com>, 2009
+# 
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: pysdm HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-05-14 16:24+0200\n"
-"PO-Revision-Date: 2008-12-29 11:24+0100\n"
-"Last-Translator: laude Paroz <claude@2xlibre.net>\n"
+"PO-Revision-Date: 2009-03-09 10:54+0100\n"
+"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #.
 #. * Archivo de cadenas traducibles generado por Glade.
@@ -79,7 +80,7 @@ msgstr "modèle"
 
 #: ../data/pysdm.glade.h:21
 msgid "serial"
-msgstr "no de série"
+msgstr "numéro de série"
 
 #: ../data/pysdm.glade.h:23
 msgid "Vendor"
@@ -91,7 +92,7 @@ msgstr "Modèle"
 
 #: ../data/pysdm.glade.h:25
 msgid "Serial"
-msgstr "No de série"
+msgstr "Numéro de série"
 
 #: ../data/pysdm.glade.h:26
 msgid "Bus"
@@ -165,7 +166,7 @@ msgstr "Divers"
 
 #: ../pysdm/fsdata/default.py:5
 msgid "Update file time for each access"
-msgstr "Met toujours à jour l'heure d'accès aux fichiers"
+msgstr "Met automatiquement à jour l'heure d'accès au fichiers"
 
 #: ../pysdm/fsdata/default.py:6
 msgid "Update directory time for each access"
@@ -173,7 +174,7 @@ msgstr "Met toujours à jour l'heure d'accès aux répertoires"
 
 #: ../pysdm/fsdata/default.py:7
 msgid "The file system is mounted at boot time"
-msgstr "Le système de fichier est monté à chaque démarrage"
+msgstr "Le système de fichier est monté au démarrage"
 
 #: ../pysdm/fsdata/default.py:8
 msgid "Interpret character or block special devices on the file system"
@@ -181,7 +182,7 @@ msgstr "Interprète les périphériques spéciaux en mode bloc ou caractère sur
 
 #: ../pysdm/fsdata/default.py:9
 msgid "Permit execution of binaries"
-msgstr "Permet l'exécution de programmes binaires"
+msgstr "Permet l'exécution de fichiers binaires"
 
 #: ../pysdm/fsdata/default.py:10
 msgid "Allow a user to mount and unmount the file system"
@@ -213,11 +214,11 @@ msgstr "Monte le système de fichiers en mode lecture seule"
 
 #: ../pysdm/fsdata/default.py:17
 msgid "I/O to the file system should be done synchronously"
-msgstr "E/S du système de fichiers doivent être synchrones"
+msgstr "Les E/S du système de fichiers doivent être synchronisées"
 
 #: ../pysdm/fsdata/default.py:18
 msgid "All directory updates should be done synchronously"
-msgstr "Toutes les mises à jour de répertoires doivent être synchrones"
+msgstr "Toutes les mises à jour de répertoires doivent être synchronisées"
 
 #: ../pysdm/fsdata/ext2.py:5 ../pysdm/fsdata/ext3.py:5
 msgid "Support POSIX access list"
@@ -249,11 +250,11 @@ msgstr ""
 
 #: ../pysdm/fsdata/ext2.py:12 ../pysdm/fsdata/ext3.py:12
 msgid "Disables 32 bit user and group id"
-msgstr "Désactive l'id de groupe et d'utilisateur 32 bits"
+msgstr "Désactive l'identifiant de groupe et d'utilisateur 32 bits"
 
 #: ../pysdm/fsdata/ext2.py:13 ../pysdm/fsdata/ext3.py:13
 msgid "Use old new inode allocator"
-msgstr ""
+msgstr "Utilise l'ancien allocateur de noeud d’index (inode)"
 
 #: ../pysdm/fsdata/ext2.py:14 ../pysdm/fsdata/ext3.py:14
 msgid "Group allowed to use reserved space"
@@ -287,7 +288,7 @@ msgstr "Indique un mode de journalisation"
 msgid ""
 "Synchronize data and metadata every specified seconds, 0 for default (5s.)"
 msgstr ""
-"Synchronise les données et métadonnées chaque seconde indiquée, 0 pour le réglage par défaut (5 s.)"
+"Synchronise les données et métadonnées à chaque seconde indiquée, 0 pour le réglage par défaut (5 s.)"
 
 #: ../pysdm/fsdata/fat.py:5
 msgid "Set blocksize"
@@ -389,7 +390,7 @@ msgstr "Active DMAPI (API de gestion de données)"
 
 #: ../pysdm/fsdata/xfs.py:6
 msgid "Data allocations will not be aligned at stripe unit boundaries"
-msgstr ""
+msgstr "L'allocation de données ne sera pas aligné aux limites des unitées segmentées"
 
 #: ../pysdm/fsdata/xfs.py:7
 msgid "The file system will be mounted without running log recovery"
@@ -530,3 +531,4 @@ msgstr "Conditions"
 #: ../pysdm/sysfs.py:66
 msgid "Actions"
 msgstr "Actions"
+
