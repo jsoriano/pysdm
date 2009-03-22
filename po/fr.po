@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: pysdm HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-05-14 16:24+0200\n"
-"PO-Revision-Date: 2009-03-09 10:54+0100\n"
+"PO-Revision-Date: 2009-03-22 20:19+0100\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -44,7 +44,7 @@ msgstr "Options"
 
 #: ../data/pysdm.glade.h:12
 msgid "Set defaults"
-msgstr ""
+msgstr "Options par défaut"
 
 #: ../data/pysdm.glade.h:13
 msgid "Assistant"
@@ -246,7 +246,7 @@ msgstr "Obtient l'id de groupe d'un nouveau fichier à partir du répertoire"
 
 #: ../pysdm/fsdata/ext2.py:11 ../pysdm/fsdata/ext3.py:11
 msgid "Do not attach buffer_heads to file pagecache"
-msgstr ""
+msgstr "Ne pas attacher l'entête du tampon au cache disque du fichier."
 
 #: ../pysdm/fsdata/ext2.py:12 ../pysdm/fsdata/ext3.py:12
 msgid "Disables 32 bit user and group id"
@@ -378,7 +378,7 @@ msgstr "Désactive la journalisation reiserfs"
 
 #: ../pysdm/fsdata/reiserfs.py:8
 msgid "Disable efficient in-tree storage of small files"
-msgstr ""
+msgstr "Désactiver le stockage efficace en arborescence de petits fichiers"
 
 #: ../pysdm/fsdata/swap.py:5
 msgid "Swap device"
