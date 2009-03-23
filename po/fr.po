@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: pysdm HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-05-14 16:24+0200\n"
-"PO-Revision-Date: 2009-03-22 20:19+0100\n"
+"PO-Revision-Date: 2009-03-23 10:14+0100\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -178,7 +178,7 @@ msgstr "Le système de fichier est monté au démarrage"
 
 #: ../pysdm/fsdata/default.py:8
 msgid "Interpret character or block special devices on the file system"
-msgstr "Interprète les périphériques spéciaux en mode bloc ou caractère sur ce système de fichiers"
+msgstr "Interprète les caractères ou les blocs de périphériques spéciaux sur le système de fichiers."
 
 #: ../pysdm/fsdata/default.py:9
 msgid "Permit execution of binaries"
