@@ -212,7 +212,7 @@ class Mainwindow(SimpleGladeApp):
         iter = model.append(None, (partitions[0],))
 
         for partition in partitions[1:]:
-            device = partition[:len(partition)-1]
+            device = re.compile("([a-z]+)([0-9]+)?").match(partition).groups()[0]
             if lastdevice != device:
                 lastdevice = partition
                 iter = model.append(None, (partition,))

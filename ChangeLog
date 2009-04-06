@@ -1,7 +1,9 @@
 Version 0.4.2	Jaime Soriano Pastor <kronoss@kronoss.org>
+	* Fixed UUID problem thanks to jhasse <jhasse@gmail.com>
 	* Changes in autotools files
 		* configure and Makefile.in removed from CVS
 		* autogen.sh added to CVS
+	* French l10n
 
 Version 0.4.1	Jaime Soriano Pastor <kronoss@kronoss.org>
 	* Some GUI changes for better GNOME HIG compliance
