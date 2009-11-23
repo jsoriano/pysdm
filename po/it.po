@@ -1,0 +1,534 @@
+# Italian translation of pysdm
+# Copyright (C) 2009 Jaime Soriano Pastor
+# This file is distributed under the same license as the pysdm package.
+# Matteo Castelli <Mtt.Castelli@gmail.com>, 2009.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pysdm HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-11-23 10:26+0100\n"
+"PO-Revision-Date: 2009-11-16 05:24+0100\n"
+"Last-Translator: Matteo Castelli <Mtt.Castelli@gmail.com>\n"
+"Language-Team: Matteo Castelli <Mtt.Castelli@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#.
+#. * Archivo de cadenas traducibles generado por Glade.
+#. * Añada este archivo a su POTFILES.in de su proyecto.
+#. * NO lo compile como parte de su aplicación.
+#.
+#: ../data/pysdm.glade.h:7 ../pysdm/pysdm.py:51
+msgid "Storage Device Manager"
+msgstr "Gestore dei Supporti di Memorizzazione"
+
+#: ../data/pysdm.glade.h:8
+msgid "Type"
+msgstr "Tipo"
+
+#: ../data/pysdm.glade.h:9
+msgid "Mountpoint"
+msgstr "Punto di mount"
+
+#: ../data/pysdm.glade.h:10 ../data/pysdm.glade.h:22
+msgid "Name"
+msgstr "Nome"
+
+#: ../data/pysdm.glade.h:11
+msgid "Options"
+msgstr "Opzioni"
+
+#: ../data/pysdm.glade.h:12
+msgid "Set defaults"
+msgstr "Imposta defaults"
+
+#: ../data/pysdm.glade.h:13
+msgid "Assistant"
+msgstr "Assistente"
+
+#: ../data/pysdm.glade.h:14 ../pysdm/pysdm.py:112 ../pysdm/pysdm.py:346
+msgid "Mount"
+msgstr "Monta"
+
+#: ../data/pysdm.glade.h:15
+msgid "Remove"
+msgstr "Rimuovi"
+
+#: ../data/pysdm.glade.h:16
+msgid "<b>Information</b>"
+msgstr "<b>Informazioni</b>"
+
+#: ../data/pysdm.glade.h:17
+msgid "General Configuration"
+msgstr "Configurazione Generale"
+
+#: ../data/pysdm.glade.h:18
+msgid "name"
+msgstr "nome"
+
+#: ../data/pysdm.glade.h:19
+msgid "vendor"
+msgstr "produttore"
+
+#: ../data/pysdm.glade.h:20
+msgid "model"
+msgstr "modello"
+
+#: ../data/pysdm.glade.h:21
+msgid "serial"
+msgstr "numero di serie"
+
+#: ../data/pysdm.glade.h:23
+msgid "Vendor"
+msgstr "Produttore"
+
+#: ../data/pysdm.glade.h:24
+msgid "Model"
+msgstr "Modello"
+
+#: ../data/pysdm.glade.h:25
+msgid "Serial"
+msgstr "Numero di serie"
+
+#: ../data/pysdm.glade.h:26
+msgid "Bus"
+msgstr "Bus"
+
+#: ../data/pysdm.glade.h:27
+msgid "bus"
+msgstr "bus"
+
+#: ../data/pysdm.glade.h:28
+msgid "<b>Attributes</b>"
+msgstr "<b>Attributi</b>"
+
+#: ../data/pysdm.glade.h:29
+msgid "Up"
+msgstr "Sposta su"
+
+#: ../data/pysdm.glade.h:30
+msgid "Down"
+msgstr "Sposta giù"
+
+#: ../data/pysdm.glade.h:31
+msgid "Edit"
+msgstr "Modifica"
+
+#: ../data/pysdm.glade.h:32
+msgid "Delete"
+msgstr "Cancella"
+
+#: ../data/pysdm.glade.h:33
+msgid "New"
+msgstr "Nuovo"
+
+#: ../data/pysdm.glade.h:34
+msgid "<b>Rules</b>"
+msgstr "<b>Regole</b>"
+
+#: ../data/pysdm.glade.h:35
+msgid "Dynamic configuration rules"
+msgstr "Regole dinamiche di configurazione"
+
+#. mounting options
+#. special files options
+#. journaling options
+#. quota options
+#. performance options
+#. other options
+#: ../pysdm/fsdata/constants.py:8
+msgid "Mounting"
+msgstr "Montaggio"
+
+#: ../pysdm/fsdata/constants.py:8
+msgid "Special Files"
+msgstr "File Speciali"
+
+#: ../pysdm/fsdata/constants.py:8
+msgid "Journaling"
+msgstr "Journaling"
+
+#: ../pysdm/fsdata/constants.py:8
+msgid "Quota"
+msgstr "Quota"
+
+#: ../pysdm/fsdata/constants.py:8
+msgid "Performance"
+msgstr "Prestazioni"
+
+#: ../pysdm/fsdata/constants.py:8
+msgid "Miscellaneous"
+msgstr "Varie"
+
+#: ../pysdm/fsdata/default.py:5
+msgid "Update file time for each access"
+msgstr "Aggiorna file time ad ogni accesso"
+
+#: ../pysdm/fsdata/default.py:6
+msgid "Update directory time for each access"
+msgstr "Aggiorna directory time ad ogni accesso"
+
+#: ../pysdm/fsdata/default.py:7
+msgid "The file system is mounted at boot time"
+msgstr "Il file system è montato all'avvio"
+
+#: ../pysdm/fsdata/default.py:8
+msgid "Interpret character or block special devices on the file system"
+msgstr ""
+"Interpreta il carattere o blocca i dispositivi speciali sul file system"
+
+#: ../pysdm/fsdata/default.py:9
+msgid "Permit execution of binaries"
+msgstr "Permetti l'esecuzione di binari"
+
+#: ../pysdm/fsdata/default.py:10
+msgid "Allow a user to mount and unmount the file system"
+msgstr "Permetti a un utente di montare e smontare il file system"
+
+#: ../pysdm/fsdata/default.py:11
+msgid "Allow any user to mount the file system"
+msgstr "Permetti ad ogni utente di montare e smontare il file system"
+
+#: ../pysdm/fsdata/default.py:12
+msgid "Allow a group to mount this file system"
+msgstr "Permetti a un gruppo di montare e smontare il file system"
+
+#: ../pysdm/fsdata/default.py:13
+msgid "This file system requires network"
+msgstr "Il file system richiede una rete"
+
+#: ../pysdm/fsdata/default.py:14
+msgid "The owner of the device can mount it"
+msgstr "Il proprietario della periferica può montarla"
+
+#: ../pysdm/fsdata/default.py:15
+msgid "Permit executables to change user/group identity"
+msgstr "Permetti agli eseguibili di cambiare user/group ID"
+
+#: ../pysdm/fsdata/default.py:16
+msgid "Mount file system in read-only mode"
+msgstr "Monta il file system in sola lettura"
+
+#: ../pysdm/fsdata/default.py:17
+msgid "I/O to the file system should be done synchronously"
+msgstr "I/O al file system devono essere fatti in modo sincrono"
+
+#: ../pysdm/fsdata/default.py:18
+msgid "All directory updates should be done synchronously"
+msgstr ""
+"Tutti gli aggiornamenti di directory devono essere fatti in modo sincrono"
+
+#: ../pysdm/fsdata/ext2.py:5 ../pysdm/fsdata/ext3.py:5
+msgid "Support POSIX access list"
+msgstr "Supporta lista degli accessi POSIX"
+
+#: ../pysdm/fsdata/ext2.py:6 ../pysdm/fsdata/ext3.py:6
+msgid "Minix behaviour for stat information"
+msgstr "Comportamento Minix per le informazioni di stat"
+
+#: ../pysdm/fsdata/ext2.py:7 ../pysdm/fsdata/ext3.py:7
+msgid "Check file system at mount time"
+msgstr "Controlla file system quando viene montato"
+
+#: ../pysdm/fsdata/ext2.py:8 ../pysdm/fsdata/ext3.py:8
+msgid "Print debugging info"
+msgstr "Mostra info di debug"
+
+#: ../pysdm/fsdata/ext2.py:9 ../pysdm/fsdata/ext3.py:9
+msgid "Specify what to do in case of error"
+msgstr "Specifica cosa fare in caso di errore"
+
+#: ../pysdm/fsdata/ext2.py:10 ../pysdm/fsdata/ext3.py:10
+msgid "Get group id from the directory for a new file"
+msgstr "Prendi dalla directory l'id del gruppo per un nuovo file"
+
+#: ../pysdm/fsdata/ext2.py:11 ../pysdm/fsdata/ext3.py:11
+msgid "Do not attach buffer_heads to file pagecache"
+msgstr ""
+
+#: ../pysdm/fsdata/ext2.py:12 ../pysdm/fsdata/ext3.py:12
+msgid "Disables 32 bit user and group id"
+msgstr "Disabilita user/grup id a 32 bit"
+
+#: ../pysdm/fsdata/ext2.py:13 ../pysdm/fsdata/ext3.py:13
+msgid "Use old new inode allocator"
+msgstr ""
+
+#: ../pysdm/fsdata/ext2.py:14 ../pysdm/fsdata/ext3.py:14
+msgid "Group allowed to use reserved space"
+msgstr "Gruppo cui è permesso usare lo spazio riservato"
+
+#: ../pysdm/fsdata/ext2.py:15 ../pysdm/fsdata/ext3.py:15
+msgid "User allowed to use reserved space"
+msgstr "Utente cui è permesso usare lo spazio riservato"
+
+#: ../pysdm/fsdata/ext2.py:16 ../pysdm/fsdata/ext3.py:16
+msgid "Use a especific block as superblock"
+msgstr "Usa un particolare blocco come superblocco"
+
+#: ../pysdm/fsdata/ext2.py:17 ../pysdm/fsdata/ext3.py:17
+msgid "Support extended attributes"
+msgstr "Supporta gli attributi estesi"
+
+#: ../pysdm/fsdata/ext3.py:18
+msgid "Update journal or specify the inode where it is"
+msgstr "Aggiorna il journal o specifica in quale inode si trova"
+
+#: ../pysdm/fsdata/ext3.py:19
+msgid "Do not load journal on mounting"
+msgstr "Non caricare il journal quando viene montato"
+
+#: ../pysdm/fsdata/ext3.py:20
+msgid "Specify a journaling mode"
+msgstr "Specifica il metodo di journaling"
+
+#: ../pysdm/fsdata/ext3.py:21
+msgid ""
+"Synchronize data and metadata every specified seconds, 0 for default (5s.)"
+msgstr "Sincronizza dati e metadati ogni 'x' secondi, 0 per il default (5s.)"
+
+#: ../pysdm/fsdata/fat.py:5
+msgid "Set blocksize"
+msgstr "Imposta la dimensione dei blocchi"
+
+#: ../pysdm/fsdata/fat.py:6 ../pysdm/fsdata/ntfs.py:9
+msgid "Owner user of the filesystem"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:7 ../pysdm/fsdata/ntfs.py:10
+msgid "Owner group of the filesystem"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:8
+msgid "umask for file and directory permissions in octal"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:9
+msgid "umask for directory permissions in octal"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:10 ../pysdm/fsdata/ntfs.py:11
+msgid "umask for file permissions in octal"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:11
+msgid "Select level of character checking in file names"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:12
+msgid "Sets the codepage for converting to shortname characters"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:13
+msgid "Text format conversion mode"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:14
+msgid "Forces the driver to use the CVF module instead of autodetection"
+msgstr "Forza il driver ad usare il modulo CVF al posto dell'autorilevamento"
+
+#: ../pysdm/fsdata/fat.py:15
+msgid "Option passed to CVF module"
+msgstr ""
+
+#: ../pysdm/fsdata/fat.py:16
+msgid "Display debug messages"
+msgstr "Mostra messaggi di debug"
+
+#: ../pysdm/fsdata/fat.py:17
+msgid "Specify a 12, 16 or 32 bit fat"
+msgstr "Specifica fat a 12, 16 o 32 bit"
+
+#: ../pysdm/fsdata/fat.py:18 ../pysdm/fsdata/ntfs.py:5
+msgid "Character set to use for file names"
+msgstr "Set di caratteri da usare per i nomi dei file"
+
+#: ../pysdm/fsdata/fat.py:19
+msgid "Failures do not return errors"
+msgstr "Gli insuccessi non restituiscono errori"
+
+#: ../pysdm/fsdata/ntfs.py:6
+msgid "Use UTF-8 for converting file names"
+msgstr "Usa UTF-8 per convertire i nomi dei files"
+
+#: ../pysdm/fsdata/ntfs.py:7
+msgid "Use escape sequences for unknown characters"
+msgstr "Utilizzare le sequenze di escape per i caratteri sconosciuti"
+
+#: ../pysdm/fsdata/ntfs.py:8
+msgid ""
+"If enabled (1), the file system distinguishes between upper and lower case."
+msgstr "Se abilitato (1), il file system distingue maiuscole e minuscole."
+
+#: ../pysdm/fsdata/reiserfs.py:5
+msgid "Updated filesystem from ReiserFS 3.5 to 3.6"
+msgstr "Aggiorna filesystem ReiserFS 3.5 a 3.6"
+
+#: ../pysdm/fsdata/reiserfs.py:6
+msgid "Specify hash function to find files"
+msgstr "Specifica l'algoritmo di hash per trovare i fie"
+
+#: ../pysdm/fsdata/reiserfs.py:7
+msgid "Disable reiserfs journaling"
+msgstr "Disabilita journaling per ReiserFS"
+
+#: ../pysdm/fsdata/reiserfs.py:8
+msgid "Disable efficient in-tree storage of small files"
+msgstr "Disabilita la memorizzazione ad albero efficiente per i file piccoli"
+
+#: ../pysdm/fsdata/swap.py:5
+msgid "Swap device"
+msgstr "Periferica di swap"
+
+#: ../pysdm/fsdata/xfs.py:5
+msgid "Enable the DMAPI (Data management API)"
+msgstr "Abilita DMAPI (Data management API)"
+
+#: ../pysdm/fsdata/xfs.py:6
+msgid "Data allocations will not be aligned at stripe unit boundaries"
+msgstr ""
+"L'allocazione dei dati non sarè allineata ai limiti di ripartizione dei "
+"blocchi"
+
+#: ../pysdm/fsdata/xfs.py:7
+msgid "The file system will be mounted without running log recovery"
+msgstr "Il file system sarà montato senza l'esecuzione del ripristino log"
+
+#: ../pysdm/fsdata/xfs.py:8
+msgid "Ignore file system uuid"
+msgstr "Ignora uuid del file system"
+
+#: ../pysdm/fsdata/xfs.py:9
+msgid "Enable user disk quota"
+msgstr "Abilita qouta disco per utente"
+
+#: ../pysdm/fsdata/xfs.py:10
+msgid "Enable group disk quota"
+msgstr "Abilita qouta disco per gruppo"
+
+#: ../pysdm/pysdm.py:62
+msgid "Partition List"
+msgstr "Tabella Partizioni"
+
+#: ../pysdm/pysdm.py:68
+msgid "Rules"
+msgstr "Regole"
+
+#: ../pysdm/pysdm.py:110 ../pysdm/pysdm.py:344
+msgid "Unmount"
+msgstr "Smonta"
+
+#: ../pysdm/pysdm.py:126
+msgid "Unknown"
+msgstr "Sconosciuto"
+
+#: ../pysdm/pysdm.py:244
+msgid "Configure now?"
+msgstr "Vuoi configurarlo ora?"
+
+#: ../pysdm/pysdm.py:245
+msgid ""
+" hasn't been configured.\n"
+"Do you want to configure it now?\n"
+msgstr ""
+" non è stato configurato.\n"
+"Vuoi configurarlo ora?\n"
+
+#: ../pysdm/pysdm.py:282
+msgid "Select a file for mountpoint..."
+msgstr "Scegli un file per il punto di mount..."
+
+#: ../pysdm/pysdm.py:311
+msgid "Select options"
+msgstr "Selezionare opzioni"
+
+#: ../pysdm/pysdm.py:330
+msgid ""
+"The file system is busy.\n"
+"Can't be unmounted"
+msgstr ""
+"Il file system è occupato.\n"
+"Non può essere smontato"
+
+#: ../pysdm/pysdm.py:332
+msgid ""
+"The file system can't be mounted\n"
+"mount returned error:"
+msgstr ""
+"Il file system non può essere montato\n"
+"'mount' ha restituito un errore:"
+
+#: ../pysdm/pysdm.py:333
+msgid "Mount error"
+msgstr "Errore di mount"
+
+#: ../pysdm/pysdm.py:353
+msgid ""
+"This action will delete file system configuration\n"
+"Are you sure?"
+msgstr ""
+"Questo cancellerà la configurazione del file system\n"
+"Continuare?"
+
+#: ../pysdm/pysdm.py:403 ../pysdm/pysdm.py:429
+msgid "New rule..."
+msgstr "Nuova regola..."
+
+#: ../pysdm/pysdm.py:418
+msgid "Remove selected udev rule?"
+msgstr "Rimuovere la regola udev selezionata?"
+
+#: ../pysdm/pysdm.py:456
+msgid "You should have root privileges to run this program"
+msgstr "Servono permessi di root per eseguire questo programma"
+
+#: ../pysdm/sysfs.py:14
+msgid "Name is"
+msgstr "Il nome è"
+
+#: ../pysdm/sysfs.py:15
+msgid "Bus is"
+msgstr "Il bus è"
+
+#: ../pysdm/sysfs.py:16
+msgid "Vendor is"
+msgstr "Il produttore è"
+
+#: ../pysdm/sysfs.py:17
+msgid "Model is"
+msgstr "Il modello è"
+
+#: ../pysdm/sysfs.py:18
+msgid "Serial is"
+msgstr "Il numero di serie è"
+
+#: ../pysdm/sysfs.py:20
+msgid "Specify a device file name"
+msgstr "Specifica un nome per il filedella periferica"
+
+#: ../pysdm/sysfs.py:21
+msgid "Specify users rigths"
+msgstr "Specifica i permessi utenti"
+
+#: ../pysdm/sysfs.py:22
+msgid "Specify owner group"
+msgstr "Specifica il gruppo proprietario"
+
+#: ../pysdm/sysfs.py:23
+msgid "Specify owner user"
+msgstr "Specifica l'utente proprietario"
+
+#: ../pysdm/sysfs.py:24
+msgid "Create a link with this name"
+msgstr "Crea un link con questo nome"
+
+#: ../pysdm/sysfs.py:60
+msgid "Conditions"
+msgstr "Condizioni"
+
+#: ../pysdm/sysfs.py:66
+msgid "Actions"
+msgstr "Azioni"
