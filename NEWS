@@ -1,0 +1,9 @@
+Migration to Git
+================
+
+On 27th January of 2018, this repository was "refurbished" by migrating it
+from CVS to Git and by squashing and adding commit messages to some parts
+of history. Old CVS can be checked out with:
+
+cvs -d:pserver:anonymous@pysdm.cvs.sourceforge.net:/cvsroot/pysdm login
+cvs -z3 -d:pserver:anonymous@pysdm.cvs.sourceforge.net:/cvsroot/pysdm co -P pysdm-0
